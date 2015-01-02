@@ -33,7 +33,7 @@ fnc_player_ready = compile preprocessFileLineNumbers "server\initPlayer\serverPl
 
 	};
 	//Player must have either existing loadout or new loadout
-	[_player] call fnc_player_ready;
+	[_clientID, _player] call fnc_player_ready;
 	
 
 

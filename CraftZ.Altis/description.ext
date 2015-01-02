@@ -8,7 +8,9 @@ class Header
 enableDebugConsole = 2;
 
 onLoadIntro = "Welcome to JADC";
-respawn = "NONE";
+respawn = "BASE";
+respawnDelay = 60;
+respawnDialog = 0;
 
 disabledAI = 1;
 briefing = 0;

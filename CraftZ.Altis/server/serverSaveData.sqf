@@ -3,8 +3,7 @@ if (!isServer) exitWith {};
 	
 while {true} do {
 		{
-			if (isPlayer _x  && alive _x) then {
-				sleep 1;
+			if (isPlayer _x  && alive _x && ((damage _x) != 1) && _x in readyUnits) then {
 				_profile		= format["PlayerID_%1", getPlayerUID _x];
 				_player = _x;
 				if (getPlayerUID _x != "") then {
@@ -56,8 +55,9 @@ while {true} do {
 					//[_profile, "customPlayerData", "camonets", _x getVariable "camonet"] call iniDB_write;
 				};
 
-				sleep 1;
+				
 				if (verboseDebug) then { localize format["Player stats saved for %1", name _x]; };
 			};
+			sleep 2.5;
 		} forEach readyUnits;
 };

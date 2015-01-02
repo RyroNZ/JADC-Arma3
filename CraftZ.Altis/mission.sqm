@@ -264,7 +264,7 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={7.4015608,-185.97,8.9978027};
+			position[]={8412.5889,96.9188,25185.652};
 			name="respawn_civilian";
 			type="Empty";
 			colorName="ColorCIV";

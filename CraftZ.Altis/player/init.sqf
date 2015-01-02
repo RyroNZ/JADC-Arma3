@@ -3,22 +3,29 @@ if (!isServer && (player != player)) then { waitUntil {player == player}; waitUn
 "PV_playerLoaded" addPublicVariableEventHandler {
 
 	player groupChat format["Profile loaded for %1", name player];
-
+	
 	
 };
+
+PV_playerLoaded = false;
+player setDamage 0;
 
 
 
 cutText ["LOADING CHARACTER", "BLACK FADED"];
+sleep 10;
 
-10 fadeSound 1;
+10 fadeSound 0.3;
 10 fadeMusic 0.5;
 
-sleep 5;
 PV_clientID = player;
 publicVariableServer "PV_clientID";
-sleep 5;
 
-titleCut ["", "BLACK IN", 5];
+{waitUntil sleep 1; PV_playerLoaded == true};
+titleCut ["CHARACTER LOADED", "BLACK IN", 5];
+
+
+
+
 
 

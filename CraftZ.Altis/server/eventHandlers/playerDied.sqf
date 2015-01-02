@@ -11,11 +11,20 @@ Description: Perform any cleanup required after a player has died
 	_killer = playerKilled_array select 1;
 	_respawn = playerKilled_array select 2;
 	_respawnDelay = playerKilled_array select 3;
-
-	_profile = format["PlayerID_%1", getPlayerUID _player];
-	_profile call iniDB_delete;
+	_playerDeleted = false;
 
 	readyUnits = readyUnits -  [_player];
 	localize format["Removing %1 from readyUnits", str readyUnits];
+
+	_profile = format["PlayerID_%1", getPlayerUID _player];
+	localize format["PlayerDeleted? %1", _playerDeleted];
+	while {!_playerDeleted} do {
+
+		_playerDeleted = _profile call iniDB_delete;
+		localize format["AttemptedDelete; PlayerDeleted? %1 Profile? %2", _playerDeleted, _profile];
+		
+	};
+
+
 
 };

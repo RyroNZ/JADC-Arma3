@@ -6,20 +6,27 @@ Description: Monitor the players health information (ie. hunger, thirst, tempera
 
 */
 
-fnc_status_hunger = compile preprocessFileLineNumbers "server\player\statusHunger.sqf";
-fnc_status_thirst = compile preprocessFileLineNumbers "server\player\statusThirst.sqf";
+fnc_status_hunger = compile preprocessFileLineNumbers "server\player\updateHunger.sqf";
+fnc_status_thirst = compile preprocessFileLineNumbers "server\player\updateThirst.sqf";
+fnc_status_run_speed = compile preprocessFileLineNumbers "server\player\runSpeed.sqf";
 _player = _this select 0;
 
 while {true} do {
 
-	
-	[_player] call fnc_status_hunger;
-	[_player] call fnc_status_thirst;
+	if (_player in readyUnits) then {
 
-	sleep 10;
+	_runSpeed = [_player] call fnc_status_run_speed;
+	[_player, _runSpeed] call fnc_status_hunger;
+	[_player, _runSpeed] call fnc_status_thirst;
+	
+
+	
+	localize format["%1 KPH", str _runSpeed];
 	localize format["Hunger: %1, Thirst: %2, Temperature: %3, Immunity: %4, Toxicity: %5", _player getVariable "hungerLevel", 
 	_player getVariable "thirstLevel", _player getVariable "temperatureLevel", _player getVariable "immunity", _player getVariable "toxicity"];
-
+	
+	};
+	sleep 2;
 	
 
 };
