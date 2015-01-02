@@ -3,7 +3,7 @@ if (!isServer) exitWith {};
 	
 while {true} do {
 		{
-			if (isPlayer _x ) then {
+			if (isPlayer _x  && alive _x) then {
 				sleep 1;
 				_profile		= format["PlayerID_%1", getPlayerUID _x];
 				_player = _x;

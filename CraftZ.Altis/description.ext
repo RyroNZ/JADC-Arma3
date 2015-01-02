@@ -1,1 +1,21 @@
+class Header
+{
+	gameType = Sandbox; // Game type, see 'class' columns in the table below
+	minPlayers = 1; //min # of players the mission supports
+	maxPlayers = 10; //max # of players the mission supports
+};
+
 enableDebugConsole = 2;
+
+onLoadIntro = "Welcome to JADC";
+respawn = "NONE";
+
+disabledAI = 1;
+briefing = 0;
+
+disableChannels[]={0, 1,2,6};
+
+author = "Ryan Post";
+onLoadName ="JADC";
+OnLoadMission="Just another DayZ Clone";
+saving = 0;

@@ -11,14 +11,12 @@ class Mission
 		"A3_Weapons_F_Vests",
 		"a3_weapons_f",
 		"A3_Weapons_F_Headgear",
-		"A3_Weapons_F_Uniforms",
-		"A3_Characters_F_BLUFOR"
+		"A3_Weapons_F_Uniforms"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_Civil",
 		"a3_characters_f",
-		"A3_Characters_F_BLUFOR",
 		"A3_Air_F_EPB_Heli_Light_03",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Weapons_F_Vests",
@@ -57,7 +55,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14742.019,17.91,16717.057};
+					position[]={14712.193,17.91,16623.443};
 					id=0;
 					side="CIV";
 					vehicle="C_man_1";
@@ -70,16 +68,16 @@ class Mission
 		};
 		class Item1
 		{
-			side="WEST";
+			side="CIV";
 			class Vehicles
 			{
 				items=1;
 				class Item0
 				{
-					position[]={14576.382,17.774782,16604.006};
+					position[]={14654.113,17.91,16618.59};
 					id=1;
-					side="WEST";
-					vehicle="B_Soldier_F";
+					side="CIV";
+					vehicle="C_man_1";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
@@ -167,7 +165,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=16;
+		items=17;
 		class Item0
 		{
 			position[]={14383.786,2.4683838,15361.786};
@@ -263,6 +261,13 @@ class Mission
 			position[]={10974.894,4.597827,10338.222};
 			name="spawnPoint_15";
 			type="mil_start";
+		};
+		class Item16
+		{
+			position[]={7.4015608,-185.97,8.9978027};
+			name="respawn_civilian";
+			type="Empty";
+			colorName="ColorCIV";
 		};
 	};
 };

@@ -1,3 +1,10 @@
+/*
+
+Author: Ryan Post
+Date: 8:13 pm 2/01/2015
+Description: Load players profile from database
+*/
+
 if (!isServer) exitWith {};
 
 _clientID = _this select 0;
