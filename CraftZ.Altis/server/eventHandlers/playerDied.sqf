@@ -15,4 +15,7 @@ Description: Perform any cleanup required after a player has died
 	_profile = format["PlayerID_%1", getPlayerUID _player];
 	_profile call iniDB_delete;
 
+	readyUnits = readyUnits -  [_player];
+	localize format["Removing %1 from readyUnits", str readyUnits];
+
 };

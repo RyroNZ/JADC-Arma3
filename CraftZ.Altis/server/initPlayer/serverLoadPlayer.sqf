@@ -3,6 +3,7 @@
 Author: Ryan Post
 Date: 8:13 pm 2/01/2015
 Description: Load players profile from database
+
 */
 
 if (!isServer) exitWith {};
@@ -42,18 +43,24 @@ playerSecWepAttach = [_profile, "playerData", "secWeaponAttachments", "ARRAY"]  
 
 //EXTRA
 
-playerHunger =		[_profile, "playerData", "hunger", "SCALAR"] call iniDB_read;
-playerThirst = 		[_profile, "playerData", "thirst", "SCALAR"] call iniDB_read;
-playerMoney = 		[_profile, "playerData", "money", "SCALAR"] call iniDB_read;
-playerFood = 		[_profile, "playerData", "food", "ARRAY"] call iniDB_read;
-playerWater = 		[_profile, "playerData", "water", "ARRAY"] call iniDB_read;
-playerMedkits = 		[_profile, "playerData", "medkits", "ARRAY"] call iniDB_read;
-playerFuel = 		[_profile, "playerData", "fuel", "ARRAY"] call iniDB_read;
-playerRepairkits = 	[_profile, "playerData", "repairkits", "ARRAY"] call iniDB_read;
-playeFullFuel = 	[_profile, "playerData", "fullfuel", "ARRAY"] call iniDB_read;
-playerEmptyFuel =	[_profile, "playerData", "emptyfuel", "ARRAY"] call iniDB_read;
-playerSpawnBeacons =	[_profile, "playerData", "spawnbeacons", "ARRAY"] call iniDB_read;
-playerCamoNets =		[_profile, "playerData", "camonets", "ARRAY"] call iniDB_read;
+playerHungerLevel =		[_profile, "customPlayerData", "hunger", "SCALAR"] call iniDB_read;
+playerThirstLevel = 		[_profile, "customPlayerData", "thirst", "SCALAR"] call iniDB_read;
+playerMoney = 		[_profile, "customPlayerData", "money", "SCALAR"] call iniDB_read;
+playerTemperature = [_profile, "customPlayerData", "temperature", "SCALAR"] call iniDB_read;
+playerImmunity = [_profile, "customPlayerData", "immunity", "SCALAR"] call iniDB_read;
+playerToxicity = [_profile, "customPlayerData", "toxicity", "SCALAR"] call iniDB_read;
+
+
+
+//playerFood = 		[_profile, "playerData", "food", "ARRAY"] call iniDB_read;
+//playerWater = 		[_profile, "playerData", "water", "ARRAY"] call iniDB_read;
+//playerMedkits = 		[_profile, "playerData", "medkits", "ARRAY"] call iniDB_read;
+//playerFuel = 		[_profile, "playerData", "fuel", "ARRAY"] call iniDB_read;
+//playerRepairkits = 	[_profile, "playerData", "repairkits", "ARRAY"] call iniDB_read;
+//playeFullFuel = 	[_profile, "playerData", "fullfuel", "ARRAY"] call iniDB_read;
+//playerEmptyFuel =	[_profile, "playerData", "emptyfuel", "ARRAY"] call iniDB_read;
+//playerSpawnBeacons =	[_profile, "playerData", "spawnbeacons", "ARRAY"] call iniDB_read;
+//playerCamoNets =		[_profile, "playerData", "camonets", "ARRAY"] call iniDB_read;
 
 
 

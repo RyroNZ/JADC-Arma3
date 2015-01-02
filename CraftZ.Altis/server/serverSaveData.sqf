@@ -38,19 +38,22 @@ while {true} do {
 					
 					//EXTRA
 
-					//[_profile, "playerData", "hunger", _x getVariable hungerLevel] call iniDB_write;
-					//[_profile, "playerData", "thirst", _x getVariable thirstLevel] call iniDB_write;
+					[_profile, "customPlayerData", "hunger", _x getVariable "hungerLevel"] call iniDB_write;
+					[_profile, "customPlayerData", "thirst", _x getVariable "thirstLevel"] call iniDB_write;
+					[_profile, "customPlayerData", "money", _x getVariable "cMoney"] call iniDB_write;
+					[_profile, "customPlayerData", "temperature", _x getVariable "temperatureLevel"] call iniDB_write;
+					[_profile, "customPlayerData", "immunity", _x getVariable "immunity"] call iniDB_write;
+					[_profile, "customPlayerData", "toxicity", _x getVariable "toxicity"] call iniDB_write;
 
-					//[_profile, "playerData", "money", _x getVariable "cmoney"] call iniDB_write;
-					//[_profile, "playerData", "food", _x getVariable "canfood"] call iniDB_write;
-					//[_profile, "playerData", "water", _x getVariable "water"] call iniDB_write;
-					//[_profile, "playerData", "medkits", _x getVariable "medkits"] call iniDB_write;
-					//[_profile, "playerData", "fuel", _x getVariable "fuel"] call iniDB_write;
-					//[_profile, "playerData", "repairkits", _x getVariable "repairkits"] call iniDB_write;
-					//[_profile, "playerData", "fullfuel", _x getVariable "fuelFull"] call iniDB_write;
-					//[_profile, "playerData", "emptyfuel", _x getVariable "fuelEmpty"] call iniDB_write;
-					//[_profile, "playerData", "spawnbeacons", _x getVariable "spawnBeacon"] call iniDB_write;
-					//[_profile, "playerData", "camonets", _x getVariable "camonet"] call iniDB_write;
+					//[_profile, "customPlayerData", "food", _x getVariable "canfood"] call iniDB_write;
+					//[_profile, "customPlayerData", "water", _x getVariable "water"] call iniDB_write;
+					//[_profile, "customPlayerData", "medkits", _x getVariable "medkits"] call iniDB_write;
+					//[_profile, "customPlayerData", "fuel", _x getVariable "fuel"] call iniDB_write;
+					//[_profile, "customPlayerData", "repairkits", _x getVariable "repairkits"] call iniDB_write;
+					//[_profile, "customPlayerData", "fullfuel", _x getVariable "fuelFull"] call iniDB_write;
+					//[_profile, "customPlayerData", "emptyfuel", _x getVariable "fuelEmpty"] call iniDB_write;
+					//[_profile, "customPlayerData", "spawnbeacons", _x getVariable "spawnBeacon"] call iniDB_write;
+					//[_profile, "customPlayerData", "camonets", _x getVariable "camonet"] call iniDB_write;
 				};
 
 				sleep 1;
