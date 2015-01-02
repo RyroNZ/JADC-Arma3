@@ -15,7 +15,15 @@ if (!isNil "_thirstLevel" && (_thirstLevel > 0)) then {
 	if (_thirstLevel > DEFAULT_MAX_THIRST) then {
 		_thirstLevel = DEFAULT_MAX_THIRST;
 	};
-	_thirstLevel = _thirstLevel - ((DEFAULT_THIRST_RATE_MULTI * _runSpeed) - DEFAULT_THIRST_RATE_IDLE);
+
+	if (vehicle _player != _player) then {
+
+		_thirstLevel = _thirstLevel - (DEFAULT_HUNGER_RATE_IDLE * -1);
+
+	} else {
+		_thirstLevel = _thirstLevel - ((DEFAULT_THIRST_RATE_MULTI * _runSpeed) - DEFAULT_THIRST_RATE_IDLE);
+};
+	
 };
 
 if (_thirstLevel <= 0) then {

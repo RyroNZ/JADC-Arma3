@@ -20,6 +20,8 @@ removeAllAssignedItems player;
 cutText ["LOADING CHARACTER", "BLACK FADED"];
 sleep 10;
 
+[] execVM "player\core\clientDynamicWeather.sqf";
+
 10 fadeSound 0.3;
 10 fadeMusic 0.5;
 
@@ -28,9 +30,3 @@ publicVariableServer "PV_clientID";
 
 {waitUntil sleep 1; PV_playerLoaded == true};
 titleCut ["CHARACTER LOADED", "BLACK IN", 5];
-
-
-
-
-
-

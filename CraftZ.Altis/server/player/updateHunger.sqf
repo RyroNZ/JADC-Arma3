@@ -18,7 +18,13 @@ if (!isNil "_hungerLevel" && (_hungerLevel > 0)) then {
 		_hungerLevel = DEFAULT_MAX_HUNGER;
 	};
 
-	_hungerLevel = _hungerLevel - ((DEFAULT_HUNGER_RATE_MULTI * _runSpeed) - DEFAULT_HUNGER_RATE_IDLE);
+	if (vehicle _player != _player) then {
+		_hungerLevel = _hungerLevel - (DEFAULT_HUNGER_RATE_IDLE * -1);
+	} else {
+		_hungerLevel = _hungerLevel - ((DEFAULT_HUNGER_RATE_MULTI * _runSpeed) - DEFAULT_HUNGER_RATE_IDLE);
+	};
+
+	
 
 };
 
