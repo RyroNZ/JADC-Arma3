@@ -1,3 +1,11 @@
+/*
+
+Author: Ryan Post
+Date: 7:01 pm 2/01/2015
+Description: Loads the required scripts for loading/generating new character
+*/
+
+
 fnc_load_player = compile preprocessFileLineNumbers "server\initPlayer\serverLoadPlayer.sqf";
 fnc_set_player_data = compile preprocessFileLineNumbers "server\initPlayer\serverSetPlayerData.sqf";
 fnc_setup_new_player = compile preprocessFileLineNumbers "server\initPlayer\serverSetupNewPlayer.sqf";

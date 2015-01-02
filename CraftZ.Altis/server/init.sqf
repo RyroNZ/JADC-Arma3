@@ -1,3 +1,11 @@
+/*
+
+Author: Ryan Post
+Date: 7:01 pm 2/01/2015
+Description: Sets required variables and scripts to run on the server at startup
+*/
+
+
 call compile preProcessFile "\inidbi\init.sqf";
 
 readyUnits = [];

@@ -170,61 +170,61 @@ class Mission
 		items=16;
 		class Item0
 		{
-			position[]={14317.728,4.0592494,15399.312};
+			position[]={14383.786,2.4683838,15361.786};
 			name="spawnPoint";
 			type="mil_start";
 		};
 		class Item1
 		{
-			position[]={15710.876,2.6768701,15890.846};
+			position[]={15711.6,2.3966625,15872.471};
 			name="spawnPoint_1";
 			type="mil_start";
 		};
 		class Item2
 		{
-			position[]={16733.613,5.3724189,15425.526};
+			position[]={16672.584,2.4761987,15434.975};
 			name="spawnPoint_2";
 			type="mil_start";
 		};
 		class Item3
 		{
-			position[]={17340.043,1.198562,14511.275};
+			position[]={16545.256,3.2237108,15026.479};
 			name="spawnPoint_3";
 			type="mil_start";
 		};
 		class Item4
 		{
-			position[]={16713.945,5.6324415,13108.767};
+			position[]={17441.967,2.4053993,14331.039};
 			name="spawnPoint_4";
 			type="mil_start";
 		};
 		class Item5
 		{
-			position[]={16510.711,3.1349108,11735.748};
+			position[]={16467.984,3.29843,11841.473};
 			name="spawnPoint_5";
 			type="mil_start";
 		};
 		class Item6
 		{
-			position[]={15025.777,4.0401258,11303.2};
+			position[]={15320.846,5.2716913,11501.952};
 			name="spawnPoint_6";
 			type="mil_start";
 		};
 		class Item7
 		{
-			position[]={15879.188,14.682996,10281.974};
+			position[]={14767.08,4.539474,10718.276};
 			name="spawnPoint_7";
 			type="mil_start";
 		};
 		class Item8
 		{
-			position[]={13473.68,7.7706513,14708.937};
+			position[]={13535.62,4.6828322,14703.929};
 			name="spawnPoint_8";
 			type="mil_start";
 		};
 		class Item9
 		{
-			position[]={12930.01,4.521224,14328.207};
+			position[]={12939.578,3.501122,14305.399};
 			name="spawnPoint_9";
 			type="mil_start";
 		};
@@ -236,7 +236,7 @@ class Mission
 		};
 		class Item11
 		{
-			position[]={12640.994,3.1936498,13012.28};
+			position[]={12628.34,4.8487525,13013.732};
 			name="spawnPoint_11";
 			type="mil_start";
 		};
@@ -248,19 +248,19 @@ class Mission
 		};
 		class Item13
 		{
-			position[]={11333.01,11.086332,11019.391};
+			position[]={11355.74,7.3052235,10996.667};
 			name="spawnPoint_13";
 			type="mil_start";
 		};
 		class Item14
 		{
-			position[]={16439.373,3.2171335,9687.6367};
+			position[]={16409.932,2.3395348,9739.3252};
 			name="spawnPoint_14";
 			type="mil_start";
 		};
 		class Item15
 		{
-			position[]={10944.549,6.9463382,10324.645};
+			position[]={10974.894,4.597827,10338.222};
 			name="spawnPoint_15";
 			type="mil_start";
 		};
