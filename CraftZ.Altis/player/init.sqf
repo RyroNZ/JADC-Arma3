@@ -8,9 +8,14 @@ if (!isServer && (player != player)) then { waitUntil {player == player}; waitUn
 };
 
 PV_playerLoaded = false;
-player setDamage 0;
 
-
+removeBackpack player;  
+removeVest player;  
+removeUniform player;  
+removeHeadgear player;  
+removeGoggles player;  
+removeAllWeapons player;  
+removeAllAssignedItems player;
 
 cutText ["LOADING CHARACTER", "BLACK FADED"];
 sleep 10;

@@ -21,14 +21,14 @@ fnc_player_ready = compile preprocessFileLineNumbers "server\initPlayer\serverPl
 
 	if (_profile call iniDB_exists) then {
 
-		localize format["%1 exists!", _profile];
+		diag_log format["%1 exists!", _profile];
 
 		[_clientID, _player, _profile] call fnc_load_player;
 		[_clientID, _player] call fnc_set_player_data;
 
 
 	} else {
-		localize format["%1 does not exist! Setting up new profile", _profile];
+		diag_log format["%1 does not exist! Setting up new profile", _profile];
 		[_player] call fnc_setup_new_player;
 
 	};

@@ -14,14 +14,14 @@ Description: Perform any cleanup required after a player has died
 	_playerDeleted = false;
 
 	readyUnits = readyUnits -  [_player];
-	localize format["Removing %1 from readyUnits", str readyUnits];
+	diag_log format["Removing %1 from readyUnits", str readyUnits];
 
 	_profile = format["PlayerID_%1", getPlayerUID _player];
-	localize format["PlayerDeleted? %1", _playerDeleted];
+	diag_log format["PlayerDeleted? %1", _playerDeleted];
 	while {!_playerDeleted} do {
 
 		_playerDeleted = _profile call iniDB_delete;
-		localize format["AttemptedDelete; PlayerDeleted? %1 Profile? %2", _playerDeleted, _profile];
+		diag_log format["AttemptedDelete; PlayerDeleted? %1 Profile? %2", _playerDeleted, _profile];
 		
 	};
 

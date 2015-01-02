@@ -21,8 +21,8 @@ while {true} do {
 	
 
 	
-	localize format["%1 KPH", str _runSpeed];
-	localize format["Hunger: %1, Thirst: %2, Temperature: %3, Immunity: %4, Toxicity: %5", _player getVariable "hungerLevel", 
+	diag_log format["%1 KPH", str _runSpeed];
+	diag_log format["Hunger: %1, Thirst: %2, Temperature: %3, Immunity: %4, Toxicity: %5", _player getVariable "hungerLevel", 
 	_player getVariable "thirstLevel", _player getVariable "temperatureLevel", _player getVariable "immunity", _player getVariable "toxicity"];
 	
 	};

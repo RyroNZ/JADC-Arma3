@@ -13,7 +13,7 @@ _randSpawnNum = (floor (random (count SPAWN_POINTS - 1))); //a number between 0 
 _selectRandSpawn = SPAWN_POINTS select _randSpawnNum; //choose the spawn from the array
 _player setPos ( getMarkerPos (_selectRandSpawn)); // set the player to this spawn point
 
-localize format["Selected spawnPoint %1 at %2", str _randSpawnNum, str getMarkerPos (_selectRandSpawn)];
+diag_log format["Selected spawnPoint %1 at %2", str _randSpawnNum, str getMarkerPos (_selectRandSpawn)];
 
 
 _player SetVariable ["hungerLevel", DEFAULT_START_HUNGER, true];

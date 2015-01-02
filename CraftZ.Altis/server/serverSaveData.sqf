@@ -56,7 +56,7 @@ while {true} do {
 				};
 
 				
-				if (verboseDebug) then { localize format["Player stats saved for %1", name _x]; };
+				if (verboseDebug) then { diag_log format["Player stats saved for %1", name _x]; };
 			};
 			sleep 2.5;
 		} forEach readyUnits;
