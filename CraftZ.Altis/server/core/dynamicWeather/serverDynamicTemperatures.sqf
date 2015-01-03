@@ -16,5 +16,5 @@ while {true} do {
 		publicVariable "PV_currentTemperatures";
 
 	};
-	sleep 60;
+	sleep 30 + random 60;
 };

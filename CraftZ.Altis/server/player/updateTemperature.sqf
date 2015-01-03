@@ -14,8 +14,17 @@ _temperatureLevel = _player getVariable "temperatureLevel";
 _airTemp = PV_currentTemperatures select 0;
 _waterTemp = PV_currentTemperatures select 1;
 
-_waterHeatLoss = (DEFAULT_WATER_HEAT_LOSS / _waterTemp);
-_airHeatLoss = (DEFAULT_AIR_HEAT_LOSS / _airTemp);
+if (_waterTemp != 0) then {
+	_waterHeatLoss = (DEFAULT_WATER_HEAT_LOSS / _waterTemp);
+} else {
+	_waterHeatLoss = DEFAULT_WATER_HEAT_LOSS;
+};
+
+if (_airTemp != 0) then {
+	_airHeatLoss = (DEFAULT_AIR_HEAT_LOSS / _airTemp);
+} else {
+	_airHeatLoss = DEFAULT_AIR_HEAT_LOSS;
+};
 
 if (_waterHeatLoss < 0) then { _waterHeatLoss = _waterHeatLoss * - 1 };
 if (_airHeatLoss < 0 ) then { _airHeatLoss = _airHeatLoss * -1 };

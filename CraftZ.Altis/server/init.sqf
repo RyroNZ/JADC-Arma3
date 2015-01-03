@@ -23,7 +23,6 @@ DEFAULT_DAMAGE_THIRST = 0.02;
 DEFAULT_MAX_HUNGER = 4500;
 DEFAULT_MAX_THIRST = 2000;
 
-
 //Default temperatures for death or hypothermina. Player can also overheat from infection
 DEFAULT_FREEZE_TEMPERATURE = 25;
 DEFAULT_HYPO_TEMPERATURE = 30;
