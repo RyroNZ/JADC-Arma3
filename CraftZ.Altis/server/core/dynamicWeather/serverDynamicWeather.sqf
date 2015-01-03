@@ -13,7 +13,7 @@ _timesync = _this select 0;
 
 	while { true } do {
 		PV_currentWeather set [4, date];
-		publicvariable "PV_currentWeather";
+		publicVariable "PV_currentWeather";
 		_currentWeather = PV_currentWeather;
 		diag_log format["[server\core\serverDynamicWeather.sqf]: Sending weather information to all players. Rain: %1, Fog: %2, Overcast: %3, Wind: %4, Time: %5:%6", 
 			str (_currentWeather select 0), str (_currentWeather select 1), str (_currentWeather select 2), str (_currentWeather select 3), ((_currentWeather select 4) select 3), ((_currentWeather select 4) select 4)];

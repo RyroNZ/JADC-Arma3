@@ -6,6 +6,7 @@ Description: Sets server ready for saving/additonal scripts after loading data/n
 */
 
 [] execVM "server\core\dynamicWeather\serverDynamicWeather.sqf";
+[] execVM "server\core\dynamicWeather\serverDynamicTemperatures.sqf";
 
 diag_log format["[server\initServer\serverDataReady.sqf]: Server is now ready."];
 serverReady = true;

@@ -11,23 +11,25 @@ if (!isServer && (player != player)) then { waitUntil {player == player}; waitUn
 
 "PV_playerLoaded" addPublicVariableEventHandler {
 
+	_hour = date select 3;
+	_minute = date select 4;
+
 	
 
 	_amPmTime = switch (true) do {
-		case ((date select 3) < 12): {"am"};
-		case ((date select 3) >= 12): {"pm"};
+		case (_hour < 12): {"am"}; // add am if before 12
+		case (_minute >= 12): {"pm"}; // add pm if after 12
 	};
 	_minuteFormat = switch (true) do {
-		case ((date select 4) < 10): {"0" + (str (date select 4))}; //ie. 12:4 PM goes to 12:04 PM
-		case ((date select 4) >= 10): {str (date select 4)}; //ie. 12:14 PM stays 12:14 PM
+		case (_minute < 10): {"0" + (str _minute)}; //ie. 12:4 PM goes to 12:04 PM
+		case (_minute >= 10): {str _minute}; //ie. 12:14 PM stays 12:14 PM
 	};
 	_hourFormat = switch (true) do {
-	case ((date select 3) > 12): {str ((date select 3)-12)};
-	case ((date select 3) <= 12): {str (date select 3)};
+	case (_hour > 12): {str (_minute-12)};// ie. 13:00 goes to 1:00
+	case (_hour <= 12): {str _minute}; //ie. 7:00 stays 7:00
 };
 
 	systemChat format["Time: %1:%2 %3", _hourFormat, _minuteFormat, _amPmTime];
-	
 	
 };
 
@@ -52,5 +54,5 @@ sleep 10;
 PV_clientID = player;
 publicVariableServer "PV_clientID";
 
-{waitUntil sleep 1; PV_playerLoaded == true};
+{waitUntil sleep 1; (_this select 1) == true};
 titleCut ["CHARACTER LOADED", "BLACK IN", 5];

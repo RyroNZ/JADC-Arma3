@@ -9,7 +9,7 @@ currentWeatherStart = true;
 
 "PV_currentWeather" addPublicVariableEventHandler {
 
-	_currentWeather = PV_currentWeather;
+	_currentWeather = _this select 1;
 	_newOverCast = _currentWeather select 2;
 
 
