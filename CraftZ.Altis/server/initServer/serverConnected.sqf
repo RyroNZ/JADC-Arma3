@@ -16,13 +16,13 @@ _profile = format["%1", _server];
 
 if (_profile call iniDB_exists) then {
 
-	diag_log format["%1 exists!", _profile];
+		diag_log format["[server\initServer\serverConnected.sqf]: Profile exists for server. ProfileID: %2", _profile];
 
 	[_server, _profile] call fnc_load_data;
 
 
 	} else {
-		diag_log format["%1 does not exist! Setting up new profile", _profile];
+		diag_log format["[server\initServer\serverConnected.sqf]: Setting up new profile for server. ProfileID: %2", _profile];
 		[_server] call fnc_new_data;
 
 };

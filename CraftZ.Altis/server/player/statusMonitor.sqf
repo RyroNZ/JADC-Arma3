@@ -9,6 +9,7 @@ Description: Monitor the players health information (ie. hunger, thirst, tempera
 fnc_status_hunger = compile preprocessFileLineNumbers "server\player\updateHunger.sqf";
 fnc_status_thirst = compile preprocessFileLineNumbers "server\player\updateThirst.sqf";
 fnc_status_run_speed = compile preprocessFileLineNumbers "server\player\runSpeed.sqf";
+fnc_status_temperature = compile preprocessFileLineNumbers "server\player\updateTemperature.sqf";
 _player = _this select 0;
 
 while {true} do {
@@ -21,9 +22,9 @@ while {true} do {
 	
 
 	
-	diag_log format["%1 KPH", str _runSpeed];
-	diag_log format["Hunger: %1, Thirst: %2, Temperature: %3, Immunity: %4, Toxicity: %5", _player getVariable "hungerLevel", 
-	_player getVariable "thirstLevel", _player getVariable "temperatureLevel", _player getVariable "immunity", _player getVariable "toxicity"];
+	//diag_log format["%1 KPH", str _runSpeed];
+	//diag_log format["Hunger: %1, Thirst: %2, Temperature: %3, Immunity: %4, Toxicity: %5", _player getVariable "hungerLevel", 
+	//_player getVariable "thirstLevel", _player getVariable "temperatureLevel", _player getVariable "immunity", _player getVariable "toxicity"];
 	
 	};
 	sleep 2;

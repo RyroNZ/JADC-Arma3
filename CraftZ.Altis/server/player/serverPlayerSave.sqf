@@ -56,7 +56,7 @@ while {true} do {
 				};
 
 				
-				if (verboseDebug) then { diag_log format["Player stats saved for %1", name _x]; };
+				diag_log format["[server\core\serverPlayerSave.sqf]: Saving profile to database for (%1). ProfileID: %2", name _player ,_profile];
 			};
 			sleep 2.5;
 		} forEach readyUnits;

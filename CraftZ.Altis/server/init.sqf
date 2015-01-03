@@ -32,7 +32,12 @@ DEFAULT_START_CMONEY = 0;
 
 DEFAULT_START_WEATHER = "RAIN";
 DEFAULT_WEATHER_SYNC_DELAY = 60;
-DEFAULT_DELAY_BETWEEN_FORECAST_UPDATES = 90;
+DEFAULT_DELAY_BETWEEN_FORECAST_UPDATES = 2700;
+RANDOM_ADDITIONAL_DELAY_FORECAST = 900;
+
+//Temperature in degrees
+DEFAULT_AVERAGE__AIR_TEMPERATURE = 20;
+DEFAULT_AVERAGE_TEMPERATURE_VARIATION = 9;
 
 SPAWN_POINTS = ["spawnPoint_1","spawnPoint_2","spawnPoint_3","spawnPoint_4","spawnPoint_5","spawnPoint_6","spawnPoint_7","spawnPoint_8","spawnPoint_9","spawnPoint_10","spawnPoint_11","spawnPoint_12","spawnPoint_13","spawnPoint_14","spawnPoint_15"];
 
@@ -45,8 +50,8 @@ serverReady = false;
 
 //Core
 
-[] execVM "server\core\serverPlayerSave.sqf";
-[] execVM "server\core\serverDataSave.sqf";
+[] execVM "server\core\databaseSaving\serverPlayerSave.sqf";
+[] execVM "server\core\databasingSaving\serverDataSave.sqf";
 [] execVM "server\initPlayer\serverPlayerConnected.sqf";
 [] execVM "server\initServer\serverConnected.sqf";
 

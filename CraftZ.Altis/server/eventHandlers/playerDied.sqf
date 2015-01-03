@@ -14,14 +14,13 @@ Description: Perform any cleanup required after a player has died
 	_playerDeleted = false;
 
 	readyUnits = readyUnits -  [_player];
-	diag_log format["Removing %1 from readyUnits", str readyUnits];
+	diag_log format["[server\eventHandlers\playerDied.sqf]: Removing profile for player (%1)", name _player];
 
 	_profile = format["PlayerID_%1", getPlayerUID _player];
-	diag_log format["PlayerDeleted? %1", _playerDeleted];
 	while {!_playerDeleted} do {
 
 		_playerDeleted = _profile call iniDB_delete;
-		diag_log format["AttemptedDelete; PlayerDeleted? %1 Profile? %2", _playerDeleted, _profile];
+		diag_log format["[server\eventHandlers\playerDied.sqf]: Player: %1 PlayerDeleted? %2 Profile? %3", name _player , _playerDeleted, _profile];
 		
 	};
 

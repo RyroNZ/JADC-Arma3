@@ -14,6 +14,5 @@ switch(toUpper(DEFAULT_START_WEATHER)) do {
 		default {
 			// clear
 			PV_currentWeather = [0, 0, 0, [random 3, random 3, true], date];
-			diag_log "Real weather: wrong starting weather";
 		};
 	};

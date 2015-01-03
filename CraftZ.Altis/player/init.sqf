@@ -1,8 +1,32 @@
+/*
+
+Author: Ryan Post
+Date: 2:52 AM 4/01/2015
+Description: initalizes the player locally and loads the required gear etc from the server.
+*/
+
+
+
 if (!isServer && (player != player)) then { waitUntil {player == player}; waitUntil {time > 10}; }; //Check to make sure player is valid
 
 "PV_playerLoaded" addPublicVariableEventHandler {
 
-	player groupChat format["Profile loaded for %1", name player];
+	
+
+	_amPmTime = switch (true) do {
+		case ((date select 3) < 12): {"am"};
+		case ((date select 3) >= 12): {"pm"};
+	};
+	_minuteFormat = switch (true) do {
+		case ((date select 4) < 10): {"0" + (str (date select 4))}; //ie. 12:4 PM goes to 12:04 PM
+		case ((date select 4) >= 10): {str (date select 4)}; //ie. 12:14 PM stays 12:14 PM
+	};
+	_hourFormat = switch (true) do {
+	case ((date select 3) > 12): {str ((date select 3)-12)};
+	case ((date select 3) <= 12): {str (date select 3)};
+};
+
+	systemChat format["Time: %1:%2 %3", _hourFormat, _minuteFormat, _amPmTime];
 	
 	
 };
@@ -19,14 +43,8 @@ removeAllAssignedItems player;
 
 cutText ["LOADING CHARACTER", "BLACK FADED"];
 sleep 10;
+[] execVM "player\core\dynamicWeather\clientDynamicWeather.sqf";
 
-[] execVM "player\core\clientDynamicWeather.sqf";
-
-_amPmTime = switch (true) do {
-	case ((date select 3) < 12): {"am"};
-	case ((date select 3) >= 12): {"pm"};
-};
-systemChat format["Time: %1:%2 %3", date select 3, date select 4, _amPmTime];
 
 10 fadeSound 0.3;
 10 fadeMusic 0.5;

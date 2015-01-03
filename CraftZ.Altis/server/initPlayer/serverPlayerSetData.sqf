@@ -9,7 +9,7 @@ Description: Sets parameters for an existing player on the server (ie. reads fro
 _clientID = _this select 0;
 _player = _this select 1;
 
-diag_log format["ClientID: %1, PlayerID: %2", _clientID, _player];
+diag_log format["[server\initPlayer\serverPlayerSetData.sqf]: Setting data from database to player (%1). ProfileID: %2", name _player ,_profile];
 
 playerData = [];
 
@@ -41,9 +41,6 @@ playerData set[32, playerMoney];
 playerData set[33, playerTemperature];
 playerData set[34, playerImmunity];
 playerData set[35, playerToxicity];
-
-
-diag_log format["%1", str playerData];
 
 
 //Set Player Position
@@ -93,7 +90,6 @@ _player SetVariable ["immunity", (playerData select 34), true];
 _player SetVariable ["toxicity", (playerData select 35), true];
 _player SetVariable ["cMoney", (playerData select 32), true];
 
-diag_log format["Setting data to player %1", name _player];
-_clientID publicVariableClient "PV_playerLoaded"; 
+diag_log format["[server\initPlayer\serverPlayerSetData.sqf]: Set data successfully for player (%1). ProfileID: %2", name _player ,_profile];
 
 

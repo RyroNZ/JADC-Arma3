@@ -2,7 +2,7 @@
 
 Author: Ryan Post
 Date: 2:52 AM 4/01/2015
-Description: Sets the current weather in the game, and sends this information to the local players.
+Description: Sets the current weather in the game, and updates this for all the players in the game
 */
 
 

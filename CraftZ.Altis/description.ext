@@ -15,7 +15,7 @@ respawnDialog = 0;
 disabledAI = 1;
 briefing = 0;
 
-disableChannels[]={0, 1,2,6};
+disableChannels[]={0,1,2};
 
 author = "Ryan Post";
 onLoadName ="JADC";

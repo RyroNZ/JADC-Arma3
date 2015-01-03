@@ -12,7 +12,7 @@ _clientID = _this select 0;
 _player = _this select 1;
 _profile = _this select 2;
 
-diag_log format["Loading player %1", name _player];
+diag_log format["[server\initPlayer\serverPlayerLoad.sqf]: Loading profile from database for (%1). ProfileID: %2", name _player ,_profile];
 	
 //============	Load Stats
 

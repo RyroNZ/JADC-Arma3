@@ -9,14 +9,14 @@ Description: Loads the information about the server from the DB and sets this fo
 _server = _this select 0;
 _profile = _this select 1;
 
-serverRain = [_profile, "serverWeather", "currentRain","SCALAR"] call iniDB_read;
-serverOvercast = [_profile, "serverWeather", "currentOvercast", "SCALAR"] call iniDB_read;
-serverFog = [_profile, "serverWeather", "currentFog", "SCALAR"] call iniDB_read;
-serverWind = [_profile, "serverWeather", "currentWind", "ARRAY"] call iniDB_read;
-serverDateTime = [_profile, "serverDateTime", "currentDate", "ARRAY"] call iniDB_read;
+_serverRain = [_profile, "serverWeather", "currentRain","SCALAR"] call iniDB_read;
+_serverOvercast = [_profile, "serverWeather", "currentOvercast", "SCALAR"] call iniDB_read;
+_serverFog = [_profile, "serverWeather", "currentFog", "SCALAR"] call iniDB_read;
+_serverWind = [_profile, "serverWeather", "currentWind", "ARRAY"] call iniDB_read;
+_serverDateTime = [_profile, "serverDateTime", "currentDate", "ARRAY"] call iniDB_read;
 
-PV_currentWeather = [serverRain, serverOverCast, serverFog, serverWind, serverDateTime];
+PV_currentWeather = [_serverRain, _serverFog, _serverOvercast, _serverWind, _serverDateTime];
 
-setDate serverDateTime;
+setDate _serverDateTime;
 
 

@@ -7,7 +7,7 @@ Description: This script is run locally on clients machine when they are respawn
 
 
 
-diag_log format["PlayerHasDied? %1", str playerHasDied];
+diag_log format["[onPlayerRespawn.sqf]: Player: %1 PlayerHasDied? %2", name player, str playerHasDied];
 if (playerHasDied) then {
 	playerHasDied = false;
 	[] execVM playerPath;
