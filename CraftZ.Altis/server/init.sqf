@@ -8,6 +8,8 @@ Description: Sets required variables, EventHandlers and scripts to run on the se
 call compile preProcessFile "\inidbi\init.sqf";
 
 //Static Variables
+
+SERVER_ID = "testServer_01";
 //Default Tick for Hunger/Food multiplied by runspeed, or idle
 DEFAULT_HUNGER_RATE_MULTI = 0.075;
 DEFAULT_HUNGER_RATE_IDLE = -0.2;
@@ -30,19 +32,23 @@ DEFAULT_START_CMONEY = 0;
 
 DEFAULT_START_WEATHER = "RAIN";
 DEFAULT_WEATHER_SYNC_DELAY = 60;
+DEFAULT_DELAY_BETWEEN_FORECAST_UPDATES = 90;
 
 SPAWN_POINTS = ["spawnPoint_1","spawnPoint_2","spawnPoint_3","spawnPoint_4","spawnPoint_5","spawnPoint_6","spawnPoint_7","spawnPoint_8","spawnPoint_9","spawnPoint_10","spawnPoint_11","spawnPoint_12","spawnPoint_13","spawnPoint_14","spawnPoint_15"];
 
 //init Variables
 readyUnits = [];
+serverReady = false;
 
 //EventHandlers
 [] execVM "server\eventHandlers\playerDied.sqf";
 
 //Core
-[] execVM "server\core\serverDynamicWeather.sqf";
+
 [] execVM "server\core\serverPlayerSave.sqf";
+[] execVM "server\core\serverDataSave.sqf";
 [] execVM "server\initPlayer\serverPlayerConnected.sqf";
+[] execVM "server\initServer\serverConnected.sqf";
 
 
 

@@ -13,6 +13,7 @@ _player = _this select 1;
 readyUnits set [count readyUnits, _player];
 
 [_player] execVM "server\player\statusMonitor.sqf";
+publicvariable "PV_currentWeather";
 
 PV_playerLoaded = true;
 _clientID publicVariableClient "PV_playerLoaded";

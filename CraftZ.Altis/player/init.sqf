@@ -22,6 +22,12 @@ sleep 10;
 
 [] execVM "player\core\clientDynamicWeather.sqf";
 
+_amPmTime = switch (true) do {
+	case ((date select 3) < 12): {"am"};
+	case ((date select 3) >= 12): {"pm"};
+};
+systemChat format["Time: %1:%2 %3", date select 3, date select 4, _amPmTime];
+
 10 fadeSound 0.3;
 10 fadeMusic 0.5;
 
