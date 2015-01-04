@@ -17,6 +17,7 @@ _timesync = _this select 0;
 		_currentWeather = PV_currentWeather;
 		diag_log format["[server\core\serverDynamicWeather.sqf]: Sending weather information to all players. Rain: %1, Fog: %2, Overcast: %3, Wind: %4, Time: %5:%6", 
 			str (_currentWeather select 0), str (_currentWeather select 1), str (_currentWeather select 2), str (_currentWeather select 3), ((_currentWeather select 4) select 3), ((_currentWeather select 4) select 4)];
+
 		sleep _timesync;
 	};
 };
@@ -28,6 +29,7 @@ _fog = 0;
 
 while {true} do {
 
+	[] execVM "server\core\dynamicWeather\serverDynamicTemperatures.sqf";
 	sleep DEFAULT_DELAY_BETWEEN_FORECAST_UPDATES + random RANDOM_ADDITIONAL_DELAY_FORECAST;
 
 	_overcast = random 1;

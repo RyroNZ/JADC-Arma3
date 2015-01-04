@@ -18,6 +18,8 @@ while {true} do {
 		[_profile, "serverWeather", "currentOvercast", (PV_currentWeather select 2)] call iniDB_write;
 		[_profile, "serverWeather", "currentWind", [((PV_currentWeather select 3) select 0), ((PV_currentWeather select 3) select 1), false]] call iniDb_write; // [x,y, forced direction]
 		[_profile, "serverDateTime", "currentDate", date] call iniDB_write;
+		[_profile, "serverTemperatures", "currentAirTemp", (PV_currentTemperatures select 0)] call iniDB_write;
+		[_profile, "serverTemperatures", "currentWaterTemp", (PV_currentTemperatures select 1)] call iniDB_write;
 	};
 	sleep 10;
 };

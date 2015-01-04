@@ -9,54 +9,90 @@ Description: Manage the players temperature
 
 _player = _this select 0;
 _runSpeed = _this select 1;
-_temperatureLevel = _player getVariable "temperatureLevel";
+_playerTemp = _player getVariable "temperatureLevel";
+
+//Default temperatures in degrees for death or hypothermina. Player can also overheat from infection
+_defaultFreeze = 25;
+_defaultHypothermia = 30;
+_defaultOverheatTemp = 40;
+_defaultTempEquillibrium = 37.5;
+
+//Damage taken from overheating or freezing
+_defaultDamageOverheating = 0.03;
+_defaultDamageFreezing= 0.02;
+
+//Temperature increase per 2 seconds from being in a vehicle
+_defaultCarTempGain = 0.025;
+//Temprature increase per each KPH in speed you are running
+_defaultRunTempGain = 0.00001;
+
+//Heat loss per second. Water Default: 0.138 (300 seconds in 1ºc water) Air Default: 0.0064 (7500 seconds (125 minutes) in 1ºc Air)
+_defaultWaterHeatLoss = 0.138;
+_defaultAirHeatLoss = 0.0064;
 
 _airTemp = PV_currentTemperatures select 0;
 _waterTemp = PV_currentTemperatures select 1;
 
+_waterHeatLoss = _defaultWaterHeatLoss;
+_airHeatLoss = _defaultAirHeatLoss;
+
 if (_waterTemp != 0) then {
-	_waterHeatLoss = (DEFAULT_WATER_HEAT_LOSS / _waterTemp);
-} else {
-	_waterHeatLoss = DEFAULT_WATER_HEAT_LOSS;
+	_waterHeatLoss = (_defaultWaterHeatLoss / _waterTemp);
 };
 
 if (_airTemp != 0) then {
-	_airHeatLoss = (DEFAULT_AIR_HEAT_LOSS / _airTemp);
-} else {
-	_airHeatLoss = DEFAULT_AIR_HEAT_LOSS;
+	_airHeatLoss = (_defaultAirHeatLoss / _airTemp);
 };
 
-if (_waterHeatLoss < 0) then { _waterHeatLoss = _waterHeatLoss * - 1 };
-if (_airHeatLoss < 0 ) then { _airHeatLoss = _airHeatLoss * -1 };
+if (_waterHeatLoss < 0) then { _waterHeatLoss = _defaultWaterHeatLoss};
+if (_airHeatLoss < 0 ) then { _airHeatLoss = _defaultAirHeatLoss };
 
 
-if (!isNil "_temperatureLevel" && (_temperatureLevel > 25)) then {
+if (!isNil "_playerTemp") then {
 
-		if (_temperatureLevel > DEFAULT_OVERHEAT_TEMPERATURE) then {
-			_player setDamage ((damage _player) + (DEFAULT_DAMAGE_OVERHEATING * (_temperatureLevel - DEFAULT_OVERHEAT_TEMPERATURE)));
+		if ((vehicle _player != _player) && (_playerTemp < _defaultTempEquillibrium) && (isEngineOn (VEHICLE _player))) then {
+			_playerTemp = _playerTemp + _defaultCarTempGain; // Check Cair is on and player is in vehicle, increase players temperature as player is freezing
 		};
 
-		if (vehicle _player != _player) then {
-			_temperatureLevel = _temperatureLevel + DEFAULT_CAR_TEMPERATURE_GAIN;
-		} else {
+		if ((vehicle _player != _player) && (_playerTemp > _defaultTempEquillibrium) && (isEngineOn (VEHICLE _player))) then {
+			_playerTemp = _playerTemp - _defaultCarTempGain; // Check Cair is on and player is in vehicle, decrease players temperature as player is overheating
+		};
 
-			if (_temperatureLevel < 37.8) then {
-				_temperatureLevel = _temperatureLevel + ((DEFAULT_RUN_TEMPERATURE_GAIN * _runSpeed));
+		if (_playerTemp < _defaultTempEquillibrium) then {
+				_playerTemp = _playerTemp + ((_defaultRunTempGain * _runSpeed));
 			};
 
-			if (surfaceIsWater position _player) then {
-				_temperatureLevel = _temperatureLevel - _waterHeatLoss;
+		if (surfaceIsWater position _player) then {
 
-			} else {
-				_temperatureLevel = _temperatureLevel - _airHeatLoss;
+				if (_waterTemp < _playerTemp) then {
+
+					_playerTemp = _playerTemp - _waterHeatLoss; //Decrease Player Temperature in water
+
+				} else {
+					_playerTemp = _playerTemp + _waterHeatLoss; //Increase Player Temperature in water
+			};
+
+				} else {
+
+				if (_airTemp < _playerTemp) then {
+
+						_playerTemp = _playerTemp - _airHeatLoss; //Decrease Player Temperature in air
+
+				} else {
+
+						_playerTemp = _playerTemp + _airHeatLoss; //Increase Player Temperature in air
+			};
 		};	
+
+	if (_playerTemp >= _defaultOverheatTemp) then {
+			_player setDamage ((damage _player) + (_defaultDamageOverheating * (_playerTemp - _defaultOverheatTemp)));
+		};
+	if (_playerTemp <= _defaultFreeze) then {
+		_player setDamage ((damage _player) + (_defaultDamageFreezing * ((_playerTemp - _defaultFreeze) * - 1 )));
 	};
 
 };
 
-if (_temperatureLevel <= DEFAULT_FREEZE_TEMPERATURE) then {
-		_player setDamage ((damage _player) + (DEFAULT_DAMAGE_FREEZING / _temperatureLevel));
-	};
 
 
-_player setVariable["temperatureLevel", _temperatureLevel, true];
+_player setVariable["temperatureLevel", _playerTemp, true];

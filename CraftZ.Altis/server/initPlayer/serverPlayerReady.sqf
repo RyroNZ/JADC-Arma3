@@ -14,11 +14,10 @@ diag_log format["[server\initServer\serverDataReady.sqf]: Player (%1) is now rea
 readyUnits set [count readyUnits, _player];
 
 [_player] execVM "server\player\statusMonitor.sqf";
-publicvariable "PV_currentWeather";
-
 PV_playerLoaded = true;
 
 
-_clientID publicVariableClient "PV_playerLoaded";
 _clientID publicVariableClient "PV_currentWeather";
+_clientID publicVariableClient "PV_playerLoaded";
+
 

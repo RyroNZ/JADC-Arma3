@@ -1,20 +1,29 @@
 
 _currentWeather = PV_currentWeather;
+
 _rain = _currentWeather select 0;
+_overCast = _currentWeather select 2;
 
-_airTemp = DEFAULT_AIR_TEMPERATURE;
-_waterTemp = DEFAULT_WATER_TEMPERATURE;
-_waterVariation = DEFAULT_WATER_DIFFERENTIAL_TEMP;
+_defaultAirTemp = 31;
+_defaultWaterTempVariation = random 15;
 
-while {true} do {
+_airTemp = _defaultAirTemp;
+_waterTemp = _airTemp - _defaultWaterTempVariation;
+
 //check we don't divide by zero if no rain
-	if (_rain != 0) then {
-		_airTemp = floor (_airTemp - ((_airTemp * (_currentWeather select 0)) - (random 5) ));
-		_waterTemp = floor (_airTemp - _waterVariation);
+if ((_rain != 0) && (_overCast != 0)) then {
+	_airTemp = floor (_defaultAirTemp - (_overCast * random 10) - (_rain * random 10));
+	_waterTemp = floor (_airTemp - _defaultWaterTempVariation);
 
-		PV_currentTemperatures = [_airTemp, _waterTemp];
-		publicVariable "PV_currentTemperatures";
-
+	if (_airTemp < 1) then {
+		_airTemp = 1;
 	};
-	sleep 30 + random 60;
+
+	if (_waterTemp < 1) then {
+		_waterTemp = 1;
+	};
+
+	PV_currentTemperatures = [_airTemp, _waterTemp];
+	publicVariable "PV_currentTemperatures";
+
 };

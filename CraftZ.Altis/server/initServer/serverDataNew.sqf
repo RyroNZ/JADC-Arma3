@@ -16,3 +16,5 @@ switch(toUpper(DEFAULT_START_WEATHER)) do {
 			PV_currentWeather = [0, 0, 0, [random 3, random 3, true], date];
 		};
 	};
+
+	[] execVM "server\core\dynamicWeather\serverDynamicTemperatures.sqf";

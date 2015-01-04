@@ -14,8 +14,12 @@ _serverOvercast = [_profile, "serverWeather", "currentOvercast", "SCALAR"] call 
 _serverFog = [_profile, "serverWeather", "currentFog", "SCALAR"] call iniDB_read;
 _serverWind = [_profile, "serverWeather", "currentWind", "ARRAY"] call iniDB_read;
 _serverDateTime = [_profile, "serverDateTime", "currentDate", "ARRAY"] call iniDB_read;
+_serverAirTemp = [_profile, "serverTemperatures", "currentAirTemp", "SCALAR"] call iniDB_read;
+_serverWaterTemp = [_profile, "serverTemperatures", "currentWaterTemp", "SCALAR"] call iniDB_read;
 
 PV_currentWeather = [_serverRain, _serverFog, _serverOvercast, _serverWind, _serverDateTime];
+PV_currentTemperatures = [_serverAirTemp, _serverWaterTemp];
+
 
 setDate _serverDateTime;
 
