@@ -9,7 +9,6 @@ if (!isServer) exitWith {};
 	
 while {true} do {
 		{
-			if (isPlayer _x  && alive _x && ((damage _x) != 1) && _x in readyUnits) then {
 				_profile		= format["PlayerID_%1", getPlayerUID _x];
 				_player = _x;
 				if (getPlayerUID _x != "") then {
@@ -20,26 +19,20 @@ while {true} do {
 					[_profile, "playerData", "location", position _x] call iniDB_write;
 					[_profile, "playerData", "oxygen", getOxygenRemaining _x] call iniDB_write;
 					[_profile, "playerData", "health", damage _x] call iniDB_write;
-
 					//INVENTORY
 					[_profile, "playerData", "weapons", weapons _x] call iniDB_write;
 					[_profile, "playerData", "primWeaponAttachments", primaryWeaponItems _x] call iniDB_write;
 					[_profile, "playerData", "secWeaponAttachments", secondaryWeaponItems _x] call iniDB_write;
-
+					[_profile, "playerData", "magazines", magazinesAmmoFull _x] call iniDB_write;
 					[_profile, "playerData", "backpack", backpack _x] call iniDB_write;
 					[_profile, "playerData", "backpackGear", backpackItems _x] call iniDB_write;	
-
 					[_profile, "playerData", "vest", vest _x] call iniDB_write;		
 					[_profile, "playerData", "vestGear", vestItems _x] call iniDB_write;
-
 					[_profile, "playerData", "uniform", uniform _x] call iniDB_write;
 					[_profile, "playerData", "uniformGear", uniformItems _x] call iniDB_write;
-
-
 					[_profile, "playerData", "gadgets", assignedItems _x] call iniDB_write;
 					[_profile, "playerData", "headgear", headgear _x] call iniDB_write;
 					[_profile, "playerData", "goggles", goggles _x] call iniDB_write;
-					
 					
 					//EXTRA
 
@@ -59,11 +52,12 @@ while {true} do {
 					//[_profile, "customPlayerData", "emptyfuel", _x getVariable "fuelEmpty"] call iniDB_write;
 					//[_profile, "customPlayerData", "spawnbeacons", _x getVariable "spawnBeacon"] call iniDB_write;
 					//[_profile, "customPlayerData", "camonets", _x getVariable "camonet"] call iniDB_write;
-				};
 
 				
 				diag_log format["[server\core\serverPlayerSave.sqf]: Saving profile for player (%1)", name _x];
 			};
 			sleep 2.5;
+			
 		} forEach readyUnits;
-};
+
+	};

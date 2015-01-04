@@ -7,17 +7,12 @@ Description: Loads the required scripts for loading/generating new character
 */
 
 
-fnc_load_player = compile preprocessFileLineNumbers "server\initPlayer\serverPlayerLoad.sqf";
-fnc_set_player_data = compile preprocessFileLineNumbers "server\initPlayer\serverPlayerSetData.sqf";
-fnc_setup_new_player = compile preprocessFileLineNumbers "server\initPlayer\serverPlayerNew.sqf";
-fnc_player_ready = compile preprocessFileLineNumbers "server\initPlayer\serverPlayerReady.sqf";
-
-
 "PV_ClientID" addPublicVariableEventHandler {
 
 	_clientID = owner (_this select 1);
-	_player = PV_clientID;
+	_player = _this select 1;
 	_profile = format["PlayerID_%1", getPlayerUID _player];
+
 
 	if (_profile call iniDB_exists) then {
 

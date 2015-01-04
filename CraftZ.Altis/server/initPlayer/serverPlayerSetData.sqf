@@ -11,85 +11,82 @@ _player = _this select 1;
 
 diag_log format["[server\initPlayer\serverPlayerSetData.sqf]: Setting data from database to player (%1). ProfileID: %2", name _player ,_profile];
 
-playerData = [];
+_playerData = [];
 
-playerData set [0, getPlayerUID _player];
-playerData set [1, playerPos]; 
-playerData set [2, playerHealth];
-playerData set [3, playerOxygen];
+_playerData set [0, getPlayerUID _player];
+_playerData set [1, playerPos]; 
+_playerData set [2, playerHealth];
+_playerData set [3, playerOxygen];
 
-playerData set[10, playerBackpack];
-playerData set[11, playerBackpackGear];
+_playerData set[10, playerBackpack];
+_playerData set[11, playerBackpackGear];
 
-playerData set[12, playerVest];
-playerData set[13, playerVestGear];
+_playerData set[12, playerVest];
+_playerData set[13, playerVestGear];
 
-playerData set[14, playerUniform];
-playerData set[15, playerUniformGear];
+_playerData set[14, playerUniform];
+_playerData set[15, playerUniformGear];
 
-playerData set[16, playerGadgets];
-playerData set[17, playerHeadgear];
-playerData set[18, playerGoggles];
+_playerData set[16, playerGadgets];
+_playerData set[17, playerHeadgear];
+_playerData set[18, playerGoggles];
 
-playerData set[20, playerWep];
-playerData set[21, playerPrimWepAttach];
-playerData set[22, playerSecWepAttach];
+_playerData set[20, playerWep];
+_playerData set[21, playerPrimWepAttach];
+_playerData set[22, playerSecWepAttach];
+_playerData set[23, playerMagazines];
 
-playerData set[30, playerHungerLevel];
-playerData set[31, playerThirstLevel];
-playerData set[32, playerMoney];
-playerData set[33, playerTemperature];
-playerData set[34, playerImmunity];
-playerData set[35, playerToxicity];
+_playerData set[30, playerHungerLevel];
+_playerData set[31, playerThirstLevel];
+_playerData set[32, playerMoney];
+_playerData set[33, playerTemperature];
+_playerData set[34, playerImmunity];
+_playerData set[35, playerToxicity];
 
 
 //Set Player Position
-_player setPos (playerData select 1);
-
+_player setPos (_playerData select 1);
 //Set Player Health/Oxygen
-_player setDamage (playerData select 2);
-_player setOxygenRemaining (playerData select 4);
-
+_player setDamage (_playerData select 2);
+_player setOxygenRemaining (_playerData select 4);
 //Set players complete inventory	
-_player addBackpack (playerData select 10);
-{_player addItemToBackpack _x;} forEach (playerData select 11);
+_player addBackpackGlobal (_playerData select 10);
+{if ( !isClass (configFile >> "CFGMagazines" >> _)) then {_player addItemToBackpack _x;};} forEach (_playerData select 11);
+_player addVest (_playerData select 12);
+{if ( !isClass (configFile >> "CFGMagazines" >> _x)) then {_player addItemToVest _x;};} forEach (_playerData select 13);
+_player addUniform (_playerData select 14);
+{if ( !isClass (configFile >> "CFGMagazines" >> _x)) then {_player addItemToUniform _x;};} forEach (_playerData select 15);
+{_player linkItem _x;} forEach (_playerData select 16);
+_player addHeadgear (_playerData select 17);
+_player addGoggles (_playerData select 18);
+{_player addMagazine [(_x select 0), (_x select 1)];} forEach (_playerData select 23);
 
-_player addVest (playerData select 12);
-{_player addItemToVest _x;} forEach (playerData select 13);
-
-_player addUniform (playerData select 14);
-{_player addItemToUniform _x;} forEach (playerData select 15);
-
-{_player linkItem _x;} forEach (playerData select 16);
-_player addHeadgear (playerData select 17);
-_player addGoggles (playerData select 18);
-
-{ _player addWeaponGlobal _x;} forEach (playerData select 20);
+{ 
+	_player addWeaponGlobal _x;
+} forEach (_playerData select 20);
 removeAllPrimaryWeaponItems _player;
 removeAllHandgunItems _player;
-
 { 
 		if (_x != "") then {
 
 			[[[_x],{_primaryWeaponItem=_this select 0;player addPrimaryWeaponItem _primaryWeaponItem;}],"BIS_fnc_spawn",_player,false,true] call BIS_fnc_MP;
 	};
-} forEach (playerData select 21);
 
+} forEach (_playerData select 22);
 { 
 		if (_x != "") then {
 
 		[[[_x],{_primaryWeaponItem=_this select 0;player addPrimaryWeaponItem _primaryWeaponItem;}],"BIS_fnc_spawn",_player,false,true] call BIS_fnc_MP;
 	};
-} forEach (playerData select 22);
+} forEach (_playerData select 21);
 
+
+diag_log format["[server\initPlayer\serverPlayerSetData.sqf]: Profile: %1 (%2). Setting secondary weapon attachments: %3", _profile, name _player, str (_playerData select 1)];
 //Set players custom variables (hunger etc)
-_player SetVariable ["hungerLevel", (playerData select 30), true];
-_player SetVariable ["thirstLevel", (playerData select 31), true];
-_player SetVariable ["temperatureLevel", (playerData select 33), true];
-_player SetVariable ["immunity", (playerData select 34), true];
-_player SetVariable ["toxicity", (playerData select 35), true];
-_player SetVariable ["cMoney", (playerData select 32), true];
-
+_player SetVariable ["hungerLevel", (_playerData select 30), true];
+_player SetVariable ["thirstLevel", (_playerData select 31), true];
+_player SetVariable ["temperatureLevel", (_playerData select 33), true];
+_player SetVariable ["immunity", (_playerData select 34), true];
+_player SetVariable ["toxicity", (_playerData select 35), true];
+_player SetVariable ["cMoney", (_playerData select 32), true];
 diag_log format["[server\initPlayer\serverPlayerSetData.sqf]: Set data successfully for player (%1). ProfileID: %2", name _player ,_profile];
-
-

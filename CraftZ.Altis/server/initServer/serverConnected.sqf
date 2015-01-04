@@ -7,12 +7,11 @@ Description: Loads the required scripts etc for the server
 */
 
 
-fnc_load_data = compile preprocessFileLineNumbers "server\initServer\serverDataLoad.sqf";
-fnc_new_data = compile preprocessFileLineNumbers "server\initServer\serverDataNew.sqf";
-fnc_ready_data = compile preprocessFileLineNumbers "server\initServer\serverDataReady.sqf";
+
 
 _server = SERVER_ID;
 _profile = format["%1", _server];
+
 
 if (_profile call iniDB_exists) then {
 

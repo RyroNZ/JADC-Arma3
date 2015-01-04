@@ -6,6 +6,7 @@ Description: Sets required variables, EventHandlers and scripts to run on the se
 */
 
 call compile preProcessFile "\inidbi\init.sqf";
+[] call compile preprocessFileLineNumbers "server\compile.sqf";
 
 //Static Variables
 
@@ -41,6 +42,7 @@ SPAWN_POINTS = ["spawnPoint_1","spawnPoint_2","spawnPoint_3","spawnPoint_4","spa
 //init Variables
 readyUnits = [];
 serverReady = false;
+onPlayerDisconnected "[_id, _name, _uid] execVM ""onPlayerDisconnected.sqf"";";
 
 //EventHandlers
 [] execVM "server\eventHandlers\playerDied.sqf";

@@ -16,7 +16,6 @@ readyUnits set [count readyUnits, _player];
 [_player] execVM "server\player\statusMonitor.sqf";
 PV_playerLoaded = true;
 
-
 _clientID publicVariableClient "PV_currentWeather";
 _clientID publicVariableClient "PV_playerLoaded";
 

@@ -6,10 +6,6 @@ Description: Monitor the players health information (ie. hunger, thirst, tempera
 
 */
 
-fnc_status_hunger = compile preprocessFileLineNumbers "server\player\updateHunger.sqf";
-fnc_status_thirst = compile preprocessFileLineNumbers "server\player\updateThirst.sqf";
-fnc_status_run_speed = compile preprocessFileLineNumbers "server\player\runSpeed.sqf";
-fnc_status_temperature = compile preprocessFileLineNumbers "server\player\updateTemperature.sqf";
 _player = _this select 0;
 
 while {true} do {

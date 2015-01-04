@@ -19,8 +19,8 @@ Description: Perform any cleanup required after a player has died
 	_profile = format["PlayerID_%1", getPlayerUID _player];
 	while {!_playerDeleted} do {
 
-		_playerDeleted = _profile call iniDB_delete;
-		diag_log format["[server\eventHandlers\playerDied.sqf]: Player: %1 PlayerDeleted? %2 Profile? %3", name _player , _playerDeleted, _profile];
+	_playerDeleted = _profile call iniDB_delete;
+	diag_log format["[server\eventHandlers\playerDied.sqf]: Player: %1 PlayerDeleted? %2 Profile? %3", name _player , _playerDeleted, _profile];
 		
 	};
 
