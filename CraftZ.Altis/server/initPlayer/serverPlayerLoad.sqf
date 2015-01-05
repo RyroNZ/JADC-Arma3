@@ -55,6 +55,12 @@ playerToxicity = [_profile, "customPlayerData", "toxicity", "SCALAR"] call iniDB
 //playerSpawnBeacons =	[_profile, "playerData", "spawnbeacons", "ARRAY"] call iniDB_read;
 //playerCamoNets =		[_profile, "playerData", "camonets", "ARRAY"] call iniDB_read;
 
+_playerDataArray = [playerPos, playerHealth, playerOxygen, playerBackpack, playerBackpackGear, playerVest, 
+playerVestGear, playerUniform, playerUniformGear, playerGadgets, playerHeadgear, playerGoggles, playerWep, playerPrimWepAttach, playerSecWepAttach, playerMagazines, 
+playerHungerLevel, playerThirstLevel, playerMoney, playerTemperature, playerImmunity, playerToxicity];
+
+_playerDataArray
+
 
 
 		

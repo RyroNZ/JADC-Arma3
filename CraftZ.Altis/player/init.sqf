@@ -15,21 +15,4 @@ if (!isServer && (player != player)) then { waitUntil {player == player}; waitUn
 
 };
 
-PV_playerLoaded = false;
-[] execVM "player\core\dynamicWeather\clientDynamicWeather.sqf";
-
-diag_log format["REMOVING GEAR FOR %1", name player];
-
-cutText ["LOADING CHARACTER", "BLACK FADED"];
-sleep 10;
-
-
-10 fadeSound 0.3;
-10 fadeMusic 0.5;
-
-PV_clientID = player;
-publicVariableServer "PV_clientID";
-
-{waitUntil sleep 5; PV_playerLoaded == true};
-
-titleCut ["CHARACTER LOADED", "BLACK IN", 5];
+[] call fnc_receive_character;

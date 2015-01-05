@@ -6,7 +6,6 @@ Description: This script is run locally on clients machine when they are respawn
 */
 
 removeAllAssignedItems player;
-removeBackpackGlobal player;  
 removeVest player;  
 removeUniform player;  
 removeHeadgear player;  
