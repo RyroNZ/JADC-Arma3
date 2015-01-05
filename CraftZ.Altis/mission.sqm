@@ -183,7 +183,7 @@ class Mission
 		class Item0
 		{
 			position[]={14383.786,2.4683838,15361.786};
-			name="spawnPoint";
+			name="spawnPoint_16";
 			type="mil_start";
 		};
 		class Item1

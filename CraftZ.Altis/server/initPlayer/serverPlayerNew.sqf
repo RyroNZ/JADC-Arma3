@@ -16,12 +16,12 @@ _player setPos ( getMarkerPos (_selectRandSpawn)); // set the player to this spa
 
 diag_log format["[server\initPlayer\serverPlayerNew.sqf]: Using spawn point %1 for (%2). ProfileID: %3", _randSpawnNum, name _player ,_profile];
 
-_player SetVariable ["hungerLevel", DEFAULT_START_HUNGER, true];
-_player SetVariable ["thirstLevel", DEFAULT_START_THIRST, true];
-_player SetVariable ["temperatureLevel", DEFAULT_START_TEMPERATURE, true];
-_player SetVariable ["Immunity", DEFAULT_START_IMMUNITY, true];
-_player SetVariable ["Toxicity", DEFAULT_START_TOXICITY, true];
-_player SetVariable ["cMoney", DEFAULT_START_CMONEY, true];
+_player SetVariable ["hungerLevel", 4500, true];
+_player SetVariable ["thirstLevel", 2000, true];
+_player SetVariable ["temperatureLevel", 36.5 + random 1, true];
+_player SetVariable ["Immunity", 0, true];
+_player SetVariable ["Toxicity", 0, true];
+_player SetVariable ["cMoney", 0, true];
 
 [_clientID, _player, _profile] call fnc_player_ready;
 

@@ -21,3 +21,137 @@ author = "Ryan Post";
 onLoadName ="JADC";
 OnLoadMission="Just another DayZ Clone";
 saving = 0;
+
+class RscTitles
+{
+	class playerHUD
+	{    
+		idd = 4999;
+		duration = 1000;
+		onLoad="uiNamespace setVariable ['playerHUD',_this select 0]";
+		class controls
+		{
+			class thirstBorder
+			{    
+				idc = -1;
+				type = 0;
+				style = 2096;
+				x = safeZoneX + safeZoneW - 0.20 * 3 / 4; 
+				y = safeZoneY + safeZoneH - 0.14;
+				w = 0.12;
+				h = 0.12;
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {0,0,0,1};
+				colorText[] = {1,1,1,1};
+				text = "gui\status\thirst\status_thirst_border_CA.paa";
+			};  
+			class foodBorder
+			{    
+				idc = -1;
+				type = 0;
+				style = 2096;
+				x = safeZoneX + safeZoneW - 0.32 * 3 / 4; 
+				y = safeZoneY + safeZoneH - 0.14;
+				w = 0.12;
+				h = 0.12;
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {0,0,0,1};
+				colorText[] = {1,1,1,1};
+				text = "gui\status\hunger\status_food_border_CA.paa";
+			};  
+			class tempBorder
+			{    
+				idc = -1;
+				type = 0;
+				style = 2096;
+				x = safeZoneX + safeZoneW - 0.44 * 3 / 4; 
+				y = safeZoneY + safeZoneH - 0.14;
+				w = 0.12;
+				h = 0.12;
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {0,0,0,1};
+				colorText[] = {1,1,1,1};
+				text = "gui\status\temp\status_temp_border_CA.paa";
+			};  
+			class bloodBorder
+			{    
+				idc = 5004;
+				type = 0;
+				style = 2096;
+				x = safeZoneX + safeZoneW - 0.54 * 3 / 4; 
+				y = safeZoneY + safeZoneH - 0.14;
+				w = 0.12;
+				h = 0.12;
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {0,0,0,1};
+				colorText[] = {1,1,1,1};
+				text = "gui\status\blood\status_blood_border_CA.paa";
+			};
+
+			class thirstInside
+			{    
+				idc = 5000;
+				type = 0;
+				style = 2096;
+				x = safeZoneX + safeZoneW - 0.20 * 3 / 4; 
+				y = safeZoneY + safeZoneH - 0.14;
+				w = 0.12;
+				h = 0.12;
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {0,0,0,1};
+				colorText[] = {0.08,0.61,0.94,1};
+				text = "gui\status\thirst\status_thirst_inside_4_ca.paa";
+			};
+			class foodInside
+			{    
+				idc = 5001;
+				type = 0;
+				style = 2096;
+				x = safeZoneX + safeZoneW - 0.32 * 3 / 4; 
+				y = safeZoneY + safeZoneH - 0.14;
+				w = 0.12;
+				h = 0.12;
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {0,0,0,1};
+				colorText[] = {0,0.57,0.06,1};
+				text = "gui\status\hunger\status_food_inside_4_ca.paa";
+			};
+			class tempInside
+			{    
+				idc = 5002;
+				type = 0;
+				style = 2096;
+				x = safeZoneX + safeZoneW - 0.44 * 3 / 4; 
+				y = safeZoneY + safeZoneH - 0.14;
+				w = 0.12;
+				h = 0.12;
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {0,0,0,1};
+				colorText[] = {0.79,0.07,0,1};
+				text = "gui\status\temp\status_temp_4_ca.paa";
+			};
+			class bloodInside
+			{    
+				idc = 5003;
+				type = 0;
+				style = 2096;
+				x = safeZoneX + safeZoneW - 0.54 * 3 / 4; 
+				y = safeZoneY + safeZoneH - 0.14;
+				w = 0.12;
+				h = 0.12;
+				font = "EtelkaNarrowMediumPro";
+				sizeEx = 0.1;
+				colorBackground[] = {0,0,0,1};
+				colorText[] = {0.54,0.03,0.16,1};
+				text = "gui\status\blood\status_blood_inside_6_ca.paa";
+			};
+		};	
+	};
+};

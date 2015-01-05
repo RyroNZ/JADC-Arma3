@@ -1,7 +1,4 @@
-
-
-verboseDebug = true;
-publicVariable "verboseDebug";
+disableSerialization;
 
 playerHasDied = false;
 playerPath = "player\init.sqf";

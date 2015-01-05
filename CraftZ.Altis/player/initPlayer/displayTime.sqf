@@ -5,7 +5,7 @@
 
 	_amPmTime = switch (true) do {
 		case (_hour < 12): {"am"}; // add am if before 12
-		case (_minute >= 12): {"pm"}; // add pm if after 12
+		case (_hour >= 12): {"pm"}; // add pm if after 12
 	};
 	_minuteFormat = switch (true) do {
 		case (_minute < 10): {"0" + (str _minute)}; //ie. 12:4 PM goes to 12:04 PM

@@ -18,17 +18,17 @@ _defaultOverheatTemp = 40;
 _defaultTempEquillibrium = 37.5;
 
 //Damage taken from overheating or freezing
-_defaultDamageOverheating = 0.03;
-_defaultDamageFreezing= 0.02;
+_defaultDamageOverheating = 0.03* STATUS_MONITOR_REFRESH;
+_defaultDamageFreezing= 0.02 * STATUS_MONITOR_REFRESH;
 
 //Temperature increase per 2 seconds from being in a vehicle
-_defaultCarTempGain = 0.025;
+_defaultCarTempGain = 0.025 * STATUS_MONITOR_REFRESH;
 //Temprature increase per each KPH in speed you are running
-_defaultRunTempGain = 0.00001;
+_defaultRunTempGain = 0.00001 * STATUS_MONITOR_REFRESH;
 
 //Heat loss per second. Water Default: 0.138 (300 seconds in 1ºc water) Air Default: 0.0064 (7500 seconds (125 minutes) in 1ºc Air)
-_defaultWaterHeatLoss = 0.138;
-_defaultAirHeatLoss = 0.0064;
+_defaultWaterHeatLoss = 0.138 * STATUS_MONITOR_REFRESH;
+_defaultAirHeatLoss = 0.0064 * STATUS_MONITOR_REFRESH;
 
 _airTemp = PV_currentTemperatures select 0;
 _waterTemp = PV_currentTemperatures select 1;

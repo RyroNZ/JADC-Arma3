@@ -7,6 +7,19 @@ Description: Monitor the players health information (ie. hunger, thirst, tempera
 */
 
 _player = _this select 0;
+_clientID = _this select 1;
+STATUS_MONITOR_REFRESH = 10;
+DEFAULT_HUNGER_RATE_MULTI = 0.075 * STATUS_MONITOR_REFRESH;
+DEFAULT_HUNGER_RATE_IDLE = -0.2 * STATUS_MONITOR_REFRESH;
+
+DEFAULT_THIRST_RATE_MULTI = 0.1* STATUS_MONITOR_REFRESH;
+DEFAULT_THIRST_RATE_IDLE = -0.3* STATUS_MONITOR_REFRESH;
+
+DEFAULT_DAMAGE_HUNGER = 0.01* STATUS_MONITOR_REFRESH;
+DEFAULT_DAMAGE_THIRST = 0.02* STATUS_MONITOR_REFRESH;
+
+DEFAULT_MAX_HUNGER = 4500;
+DEFAULT_MAX_THIRST = 2000;
 
 while {true} do {
 
@@ -16,9 +29,8 @@ while {true} do {
 	[_player, _runSpeed] call fnc_status_hunger;
 	[_player, _runSpeed] call fnc_status_thirst;
 	[_player, _runSpeed] call fnc_status_temperature;
-	
 
-	
+
 
 	diag_log format["[server/player/statusMonitor.sqf]: Current statistics for (%1) : playerTemp: %2, playerHunger: %3, playerThirst: %4, PlayerInWater: %5, playerDamage: %6, airTemp: %7, waterTemp: %8, Rain: %9", 
 	(name _player), (_player getVariable "temperatureLevel"), (_player getVariable "hungerLevel"), (_player getVariable "thirstLevel"), (surfaceIsWater position _player), (damage _player), (PV_currentTemperatures select 0), (PV_currentTemperatures select 1), (PV_currentWeather select 0)];
@@ -27,7 +39,7 @@ while {true} do {
 	//_player getVariable "thirstLevel", _player getVariable "temperatureLevel", _player getVariable "immunity", _player getVariable "toxicity"];
 	
 	};
-	sleep 2;
+	sleep STATUS_MONITOR_REFRESH;
 	
 
 };
