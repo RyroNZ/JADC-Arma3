@@ -10,7 +10,6 @@ _clientID = _this select 0;
 _player = _this select 1;
 _profile = format["PlayerID_%1", getPlayerUID _player];
 
-
 _randSpawnNum = (floor (random (count SPAWN_POINTS - 1))); //a number between 0 and maximum spawn points
 _selectRandSpawn = SPAWN_POINTS select _randSpawnNum; //choose the spawn from the array
 _player setPos ( getMarkerPos (_selectRandSpawn)); // set the player to this spawn point

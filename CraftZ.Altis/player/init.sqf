@@ -4,9 +4,10 @@ Author: Ryan Post
 Date: 2:52 AM 4/01/2015
 Description: initalizes the player locally and loads the required gear etc from the server.
 */
-[] call compile preprocessFileLineNumbers "player\compile.sqf";
+if (!isServer && (player != player)) then { waitUntil {player == player}; waitUntil {time > 30};}; //Check to make sure player is valid
 
-if (!isServer && (player != player)) then { waitUntil {player == player}; waitUntil {time > 10}; }; //Check to make sure player is valid
+[] call compile preprocessFileLineNumbers "player\compile.sqf";
+[] execVM "player\core\dynamicWeather\clientDynamicWeather.sqf";
 
 
 "PV_playerLoaded" addPublicVariableEventHandler {
@@ -15,4 +16,5 @@ if (!isServer && (player != player)) then { waitUntil {player == player}; waitUn
 
 };
 
+player allowDamage false;
 [] call fnc_receive_character;

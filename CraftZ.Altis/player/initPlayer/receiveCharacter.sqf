@@ -1,24 +1,22 @@
 PV_playerLoaded = false;
 _startLoadTime = time;
-[] execVM "player\core\dynamicWeather\clientDynamicWeather.sqf";
-
-diag_log format["REMOVING GEAR FOR %1", name player];
-
-
 cutText ["LOADING CHARACTER", "BLACK FADED", 100];
+sleep 5;
 PV_clientID = player;
 publicVariableServer "PV_clientID";
 
-1000 fadeSound 0;
-1000 fadeMusic 0;
+0 fadeSound 0;
+0 fadeMusic 0;
+0 fadeRadio 0;
+0 fadeSpeech 0;
 
-waitUntil{ PV_playerLoaded || time - _startLoadTime > 60} ;
-hint "player loaded";
+waitUntil{ PV_playerLoaded || time - _startLoadTime > 60};
 
 if (PV_playerLoaded) then {
 titleCut ["CHARACTER LOADED", "BLACK IN", 5];
 10 fadeSound 1;
 10 fadeMusic 1;
+player allowDamage true;
 } else {
 	titleCut ["CHARACTER FAILED TO LOAD.", "BLACK FADED", 100];
 	sleep 5;

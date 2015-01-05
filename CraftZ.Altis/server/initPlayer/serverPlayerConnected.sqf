@@ -24,7 +24,7 @@ Description: Loads the required scripts for loading/generating new character
 
 	} else {
 		diag_log format["[server\initPlayer\serverPlayerConnected.sqf]: Setting up new profile for (%1). ProfileID: %2", name _player ,_profile];
-		[_clientID, _player] execVM "sever\initPlayer\serverPlayerNew.sqf";
+		[_clientID, _player] execVM "server\initPlayer\serverPlayerNew.sqf";
 
 	};
 

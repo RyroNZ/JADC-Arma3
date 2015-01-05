@@ -12,7 +12,7 @@ _waterTemp = _airTemp - _defaultWaterTempVariation;
 
 //check we don't divide by zero if no rain
 if ((_rain != 0) && (_overCast != 0)) then {
-	_airTemp = floor (_defaultAirTemp - (_overCast * random 10) - (_rain * random 10));
+	_airTemp = floor (_defaultAirTemp - (_overCast * random 12) - (_rain * random 20));
 	_waterTemp = floor (_airTemp - _defaultWaterTempVariation);
 
 	if (_airTemp < 1) then {
