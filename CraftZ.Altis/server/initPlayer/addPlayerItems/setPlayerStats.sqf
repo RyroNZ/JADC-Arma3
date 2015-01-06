@@ -22,8 +22,8 @@ _player setOxygenRemaining playerOxygen;
 _player SetVariable ["hungerLevel", _playerHungerLevel, true];
 _player SetVariable ["thirstLevel", _playerThirstLevel, true];
 _player SetVariable ["temperatureLevel", _playerTemperature, true];
-_player SetVariable ["immunity", _playerImmunity, true];
-_player SetVariable ["toxicity", _playerToxicity, true];
+_player SetVariable ["immunityLevel", _playerImmunity, true];
+_player SetVariable ["toxicityLevel", _playerToxicity, true];
 _player SetVariable ["cMoney", _playerMoney, true];
 
 sleep 1;

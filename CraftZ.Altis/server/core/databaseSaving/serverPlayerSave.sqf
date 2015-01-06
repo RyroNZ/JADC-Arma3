@@ -40,8 +40,8 @@ while {true} do {
 					[_profile, "customPlayerData", "thirst", _x getVariable "thirstLevel"] call iniDB_write;
 					[_profile, "customPlayerData", "money", _x getVariable "cMoney"] call iniDB_write;
 					[_profile, "customPlayerData", "temperature", _x getVariable "temperatureLevel"] call iniDB_write;
-					[_profile, "customPlayerData", "immunity", _x getVariable "immunity"] call iniDB_write;
-					[_profile, "customPlayerData", "toxicity", _x getVariable "toxicity"] call iniDB_write;
+					[_profile, "customPlayerData", "immunity", _x getVariable "immunityLevel"] call iniDB_write;
+					[_profile, "customPlayerData", "toxicity", _x getVariable "toxicityLevel"] call iniDB_write;
 
 					//[_profile, "customPlayerData", "food", _x getVariable "canfood"] call iniDB_write;
 					//[_profile, "customPlayerData", "water", _x getVariable "water"] call iniDB_write;

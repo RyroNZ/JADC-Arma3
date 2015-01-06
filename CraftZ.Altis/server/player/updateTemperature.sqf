@@ -14,7 +14,7 @@ _playerTemp = _player getVariable "temperatureLevel";
 //Default temperatures in degrees for death or hypothermina. Player can also overheat from infection
 _defaultFreeze = 25;
 _defaultHypothermia = 30;
-_defaultOverheatTemp = 40;
+_defaultOverheatTemp = 41;
 _defaultTempEquillibrium = 37.5;
 
 //Damage taken from overheating or freezing

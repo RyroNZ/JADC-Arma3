@@ -19,8 +19,8 @@ diag_log format["[server\initPlayer\serverPlayerNew.sqf]: Using spawn point %1 f
 _player SetVariable ["hungerLevel", 4500, true];
 _player SetVariable ["thirstLevel", 2000, true];
 _player SetVariable ["temperatureLevel", 36.5 + random 1, true];
-_player SetVariable ["Immunity", 0, true];
-_player SetVariable ["Toxicity", 0, true];
+_player SetVariable ["immunityLevel", 0, true];
+_player SetVariable ["toxicityLevel", 0, true];
 _player SetVariable ["cMoney", 0, true];
 
 [_clientID, _player, _profile] call fnc_player_ready;

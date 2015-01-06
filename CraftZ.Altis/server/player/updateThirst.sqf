@@ -6,29 +6,34 @@ Description: Manage the players thirst
 
 */
 
+_defaultMaxThirst = 2000;
+_defaulThirstMul = 0.1 * STATUS_MONITOR_REFRESH;
+_defaulThirstIdle = -0.05 * STATUS_MONITOR_REFRESH;
+_defaulDamageThirst = 0.02 * STATUS_MONITOR_REFRESH;
+
 _player = _this select 0;
 _runSpeed = _this select 1;
 _thirstLevel = _player getVariable "thirstLevel";
 
 if (!isNil "_thirstLevel" && (_thirstLevel > 0)) then {
 
-	if (_thirstLevel > DEFAULT_MAX_THIRST) then {
-		_thirstLevel = DEFAULT_MAX_THIRST;
+	if (_thirstLevel > _defaultMaxThirst) then {
+		_thirstLevel = _defaultMaxThirst;
 	};
 
 	if (vehicle _player != _player) then {
 
-		_thirstLevel = _thirstLevel - (DEFAULT_HUNGER_RATE_IDLE * -1);
+		_thirstLevel = _thirstLevel - (_defaultThirstIdle * -1);
 
 	} else {
-		_thirstLevel = _thirstLevel - ((DEFAULT_THIRST_RATE_MULTI * _runSpeed) - DEFAULT_THIRST_RATE_IDLE);
+		_thirstLevel = _thirstLevel - ((_defaulThirstMul * _runSpeed) - _defaulThirstIdle);
 };
 	
 };
 
 if (_thirstLevel <= 0) then {
 	_thirstLevel = 0;
-	_player setDamage ((damage _player) + DEFAULT_DAMAGE_THIRST);
+	_player setDamage ((damage _player) + _defaulDamageThirst);
 
 };
 
