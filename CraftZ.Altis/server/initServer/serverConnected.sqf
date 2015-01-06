@@ -6,9 +6,6 @@ Description: Loads the required scripts etc for the server
 
 */
 
-
-
-
 _server = SERVER_ID;
 _profile = format["%1", _server];
 

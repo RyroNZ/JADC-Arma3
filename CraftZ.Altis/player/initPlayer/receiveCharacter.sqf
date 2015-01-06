@@ -1,27 +1,31 @@
+player allowDamage false;
 PV_playerLoaded = false;
-cutText ["LOADING CHARACTER", "BLACK FADED", 100];
-sleep 5;
+isPlayerInitialized = false;
 _startLoadTime = time;
 PV_clientID = player;
-publicVariableServer "PV_clientID";
 
 0 fadeSound 0;
 0 fadeMusic 0;
 0 fadeRadio 0;
 0 fadeSpeech 0;
+cutText [CLIENT_INIT_LOADING_TEXT, "BLACK FADED", 100];
+sleep 5;
 
-waitUntil{ PV_playerLoaded || time - _startLoadTime > 300};
+publicVariableServer "PV_clientID";
 
+waitUntil{ PV_playerLoaded || time - _startLoadTime > CLIENT_INIT_MAX_RECIEVE_PLAYER_TIME};
 if (PV_playerLoaded) then {
-	titleCut ["CHARACTER LOADED", "BLACK IN", 5];
+	titleCut [CLIENT_INIT_FINISH_LOAD_TEXT, "BLACK IN", 5];
+	isPlayerInitialized = true;
 	10 fadeSound 1;
 	10 fadeMusic 1;
 	player allowDamage true;
-	[] execVM "player\initPlayer\setupGUI.sqf";
-	} else {
-	titleCut ["CHARACTER FAILED TO LOAD.", "BLACK FADED", 100];
+	[] execVM CLIENT_EXEC_SETUP_GUI;
+}	
+else {
+	titleCut [CLIENT_INIT_FAIL_LOAD_TEXT, "BLACK FADED", 100];
 	sleep 5;
-	["Load Failed", false, false] call BIS_fnc_endMission;
+	[CLIENT_INIT_FAIL_LOAD_TEXT, false, false] call BIS_fnc_endMission;
 
 };
 

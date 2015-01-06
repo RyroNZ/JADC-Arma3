@@ -17,4 +17,4 @@ playerKilled_array = [_player, _killer, _respawn, _respawnDelay];
 playerHasDied = true;
 publicVariableServer "playerKilled_array";
 
-if (hasInterface) then {[] execVM "player\eventHandlers\playerDead.sqf"};
+if (hasInterface) then {[] execVM CLIENT_EXEC_PLAYER_DEAD};

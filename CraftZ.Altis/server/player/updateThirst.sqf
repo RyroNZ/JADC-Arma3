@@ -5,37 +5,36 @@ Date: 10:14 pm 2/01/2015
 Description: Manage the players thirst
 
 */
-
-_defaultMaxThirst = 2000;
-_defaulThirstMul = 0.1 * STATUS_MONITOR_REFRESH;
-_defaulThirstIdle = -0.05 * STATUS_MONITOR_REFRESH;
-_defaulDamageThirst = 0.02 * STATUS_MONITOR_REFRESH;
-
 _player = _this select 0;
 _runSpeed = _this select 1;
 _thirstLevel = _player getVariable "thirstLevel";
+_airTemp = PV_currentTemperatures select 0;
 
 if (!isNil "_thirstLevel" && (_thirstLevel > 0)) then {
 
-	if (_thirstLevel > _defaultMaxThirst) then {
-		_thirstLevel = _defaultMaxThirst;
+	if (_thirstLevel > PLAYER_MAX_THIRST) then {
+		_thirstLevel = PLAYER_MAX_THIRST;
 	};
 
 	if (vehicle _player != _player) then {
 
-		_thirstLevel = _thirstLevel - (_defaultThirstIdle * -1);
+		_thirstLevel = _thirstLevel - (PLAYER_IDLE_THIRST_TICK);
 
 	} else {
-		_thirstLevel = _thirstLevel - ((_defaulThirstMul * _runSpeed) - _defaulThirstIdle);
+		_thirstLevel = _thirstLevel - ((PLAYER_RUN_THIRST_TICK * _runSpeed) + PLAYER_IDLE_THIRST_TICK);
 };
 	
 };
 
-if (_thirstLevel <= 0) then {
-	_thirstLevel = 0;
-	_player setDamage ((damage _player) + _defaulDamageThirst);
+if (_thirstLevel <= PLAYER_THIRST_STARVATION) then {
+	_thirstLevel = PLAYER_THIRST_STARVATION;
+	_player setDamage ((damage _player) + PLAYER_DAMAGE_THIRST);
 
 };
 
-_player setVariable["thirstLevel", _thirstLevel, true];
+if (_thirstLevel > PLAYER_THIRST_REQUIRED_HEAL) then {
+	_player setDamage ((damage _player) - (PLAYER_DAMAGE_THIRST / 3));
+};
+
+ _player setVariable[PLAYER_THIRST_LEVEL_IDC, _thirstLevel, true];
 

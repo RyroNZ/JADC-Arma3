@@ -9,7 +9,7 @@ private ["_clientID", "_player", "_playerDataArray"];
 
 _clientID = _this select 0;
 _player = _this select 1;
-_profile = format["PlayerID_%1", getPlayerUID _player];
+_profile = format[PLAYER_ID_PREFIX, getPlayerUID _player];
 _playerDataArray = _this select 2;
 
 _playerDataStats_array = [(_playerDataArray select 0), (_playerDataArray select 1), (_playerDataArray select 2), 

@@ -8,34 +8,32 @@ Description: Manage the players hunger
 
 _player = _this select 0;
 _runSpeed = _this select 1;
-_hungerLevel = _player getVariable "hungerLevel";
-
-_defaultMaxHunger = 4500;
-_defaultHungerRateMul = 0.075 * STATUS_MONITOR_REFRESH;
-_defaultHungerRateIdle = -0.2 * STATUS_MONITOR_REFRESH;
-_defaultDamageHunger= 0.01 * STATUS_MONITOR_REFRESH;
-
-
+_hungerLevel = _player getVariable PLAYER_HUNGER_LEVEL_IDC;
+_airTemp = PV_currentTemperatures select 0;
 
 if (!isNil "_hungerLevel" && (_hungerLevel > 0)) then {
 
-	if (_hungerLevel > _defaultMaxHunger) then {
-		_hungerLevel = _defaultMaxHunger;
+	if (_hungerLevel > PLAYER_MAX_HUNGER) then {
+		_hungerLevel = PLAYER_MAX_HUNGER;
 	};
 
 	if (vehicle _player != _player) then {
-		_hungerLevel = _hungerLevel - (_defaultHungerRateIdle * -1);
+		_hungerLevel = _hungerLevel - (PLAYER_IDLE_HUNGER_TICK);
 	} else {
-		_hungerLevel = _hungerLevel - ((_defaultHungerRateMul * _runSpeed) - _defaultHungerRateIdle);
+		_hungerLevel = _hungerLevel - ((PLAYER_RUN_HUNGER_TICK * _runSpeed) + PLAYER_IDLE_HUNGER_TICK);
 	};
 
 	
 
 };
 
-if (_hungerLevel <= 0) then {
-	_hungerLevel = 0;
-	_player setDamage ((damage _player) + DEFAULT_DAMAGE_HUNGER);
+if (_hungerLevel <= PLAYER_HUNGER_STARVATION) then {
+	_hungerLevel = PLAYER_HUNGER_STARVATION;
+	_player setDamage ((damage _player) + PLAYER_DAMAGE_HUNGER);
 };
 
-_player setVariable["hungerLevel", _hungerLevel, true];
+if (_hungerLevel > PLAYER_HUNGER_REQUIRED_HEAL) then {
+	_player setDamage ((damage _player) - (PLAYER_DAMAGE_HUNGER / 3));
+};
+
+_player setVariable[PLAYER_HUNGER_LEVEL_IDC, _hungerLevel, true];

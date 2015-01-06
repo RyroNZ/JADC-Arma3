@@ -21,7 +21,7 @@ currentWeatherStart = true;
 
 	//If overcast varies to much by server desync, reset it when updating other variables. DUE TO THE REQUIRED USE OF SIMULWEATHERSYNC THIS CAUSES LAG..
 	if (((overCast - _newOverCast) > 0.03) || ((overCast - _newOverCast) < - 0.03)) then {
-		[_newOverCast] execVM "player\core\dynamicWeather\updateOverCast.sqf";
+		[_newOverCast] execVM CLIENT_EXEC_UPDATE_OVERCAST;
 	};
 	
 	diag_log format["[player\core\dynamicWeather\clientDynamicWeather.sqf]: Received weather information from server. Rain: %1, Fog: %2, Overcast: %3, Wind: %4, Time: %5:%6", 

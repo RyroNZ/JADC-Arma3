@@ -1,3 +1,9 @@
-fnc_display_time = compile preprocessFileLineNumbers "player\initPlayer\displayTime.sqf";
+fnc_display_time = compile preprocessFileLineNumbers "player\core\displayCurrentTime.sqf";
 fnc_reset_gun = compile preprocessFileLineNumbers "player\initPlayer\resetPrimaryWeapon.sqf";
 fnc_receive_character = compile preprocessFileLineNumbers "player\initPlayer\receiveCharacter.sqf";
+
+fnc_gui_update_blood_border = compile preprocessFileLineNumbers "player\core\gui\updateBloodBorderGUI.sqf";
+fnc_gui_update_blood_inside = compile preprocessFileLineNumbers "player\core\gui\updateBloodGUI.sqf";
+fnc_gui_update_hunger_inside = compile preprocessFileLineNumbers "player\core\gui\updateHungerGUI.sqf";
+fnc_gui_update_thirst_inside = compile preprocessFileLineNumbers "player\core\gui\updateThirstGUI.sqf";
+fnc_gui_update_temp_inside = compile preprocessFileLineNumbers "player\core\gui\updateTempGUI.sqf";

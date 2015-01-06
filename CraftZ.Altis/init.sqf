@@ -1,11 +1,19 @@
-disableSerialization;
+[] call compile preprocessFileLineNumbers "constants.sqf";
+
+
 
 playerHasDied = false;
-playerPath = "player\init.sqf";
-serverPath = "server\init.sqf";
+
 _path = switch (true) do {
-	case isServer: {serverPath};
-	case !isDedicated: {playerPath};
+	case isServer: {SERVER_PATH};
+	case !isDedicated: {PLAYER_PATH};
+};
+
+if (isServer) then {
+	[] call compile preprocessFileLineNumbers "server\compile.sqf";
+} 
+else {
+	[] call compile preprocessFileLineNumbers "player\compile.sqf";
 };
 
 [] execVM _path;

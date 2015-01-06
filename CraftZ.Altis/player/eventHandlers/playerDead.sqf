@@ -8,7 +8,7 @@ while {true} do
 			0 fadeRadio 0;
 			0 fadeMusic 0;
 			0 fadeSpeech 0;
-			cutText ["You are dead.","BLACK FADED",0];
+			cutText [CLIENT_DEAD_TEXT ,"BLACK FADED",0];
 			sleep 0.01;
 		};
 
@@ -16,5 +16,5 @@ while {true} do
 		1.5 fadeRadio 1;
 		1.5 fadeMusic 1;
 		1.5 fadeSpeech 1;
-		cutText ["You are dead.","BLACK IN",1.5];
+		cutText [CLIENT_DEAD_TEXT ,"BLACK IN",1.5];
 	};

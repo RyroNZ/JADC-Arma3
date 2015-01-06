@@ -19,11 +19,10 @@ _player setPos playerPos;
 _player setDamage playerHealth;
 _player setOxygenRemaining playerOxygen;
 
-_player SetVariable ["hungerLevel", _playerHungerLevel, true];
-_player SetVariable ["thirstLevel", _playerThirstLevel, true];
-_player SetVariable ["temperatureLevel", _playerTemperature, true];
-_player SetVariable ["immunityLevel", _playerImmunity, true];
-_player SetVariable ["toxicityLevel", _playerToxicity, true];
-_player SetVariable ["cMoney", _playerMoney, true];
+_player setVariable [PLAYER_HUNGER_LEVEL_IDC, _playerHungerLevel, true];
+_player SetVariable [PLAYER_THIRST_LEVEL_IDC, _playerThirstLevel, true];
+_player SetVariable [PLAYER_TEMP_LEVEL_IDC, _playerTemperature, true];
+_player SetVariable [PLAYER_IMMUNITY_LEVEL_IDC, _playerImmunity, true];
+_player SetVariable [PLAYER_TOXICITY_LEVEL_IDC, _playerToxicity, true];
 
 sleep 1;

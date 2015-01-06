@@ -7,7 +7,7 @@ Description: Sets the current weather in the game, and updates this for all the 
 
 
 
-[DEFAULT_WEATHER_SYNC_DELAY] spawn {
+[WEATHER_FORECAST_DELAY_MAX] spawn {
 private["_timesync"];
 _timesync = _this select 0;
 
@@ -29,8 +29,8 @@ _fog = 0;
 
 while {true} do {
 
-	[] execVM "server\core\dynamicWeather\serverDynamicTemperatures.sqf";
-	sleep DEFAULT_DELAY_BETWEEN_FORECAST_UPDATES + random RANDOM_ADDITIONAL_DELAY_FORECAST;
+	[] execVM SERVER_EXEC_DYNAMIC_WEATHER;
+	sleep random WEATHER_FORECAST_DELAY_MAX;
 
 	_overcast = random 1;
 	if (_overcast >= 0.7) then {

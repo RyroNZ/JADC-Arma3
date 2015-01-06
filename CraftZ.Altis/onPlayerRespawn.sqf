@@ -18,3 +18,4 @@ if (playerHasDied) then {
  
 	[] execVM "init.sqf";
 };
+

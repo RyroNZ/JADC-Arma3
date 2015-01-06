@@ -11,10 +11,6 @@ _clientID = _this select 1;
 
 STATUS_MONITOR_REFRESH = 10;
 
-
-
-
-
 while {true} do {
 
 	if (_player in readyUnits) then {
@@ -27,7 +23,7 @@ while {true} do {
 
 
 	diag_log format["[server/player/statusMonitor.sqf]: Current statistics for (%1) : playerTemp: %2, playerHunger: %3, playerThirst: %4, PlayerInWater: %5, playerDamage: %6, airTemp: %7, waterTemp: %8, Rain: %9", 
-	(name _player), (_player getVariable "temperatureLevel"), (_player getVariable "hungerLevel"), (_player getVariable "thirstLevel"), (surfaceIsWater position _player), (damage _player), (PV_currentTemperatures select 0), (PV_currentTemperatures select 1), (PV_currentWeather select 0)];
+	(name _player), (_player getVariable PLAYER_TEMP_LEVEL_IDC), (_player getVariable PLAYER_HUNGER_LEVEL_IDC), (_player getVariable PLAYER_THIRST_LEVEL_IDC), (surfaceIsWater position _player), (damage _player), (PV_currentTemperatures select 0), (PV_currentTemperatures select 1), (PV_currentWeather select 0)];
 	
 	};
 	sleep STATUS_MONITOR_REFRESH;
