@@ -16,4 +16,6 @@
 		case (_hour <= 12): {str _hour}; //ie. 7:00 stays 7:00
 	};
 
-	systemChat format["Time: %1:%2 %3", _hourFormat, _minuteFormat, _amPmTime];
+	systemChat format["Current Time: %1:%2 %3", _hourFormat, _minuteFormat, _amPmTime];
+	systemChat format["Air Temperature: %1ºc", (PV_currentTemperatures select 0)];
+	systemChat format["Water Temperature: %1ºc", (PV_currentTemperatures select 1)];

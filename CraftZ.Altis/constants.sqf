@@ -46,7 +46,7 @@ PLAYER_TEMP_CAR_HEAT_GAIN = 0.025 * SERVER_STATUS_MONITOR_REFRESH;
 PLAYER_TEMP_RUN_HEAT_GAIN = 0.0001 * SERVER_STATUS_MONITOR_REFRESH;
 
 PLAYER_CAN_HEAL_WHILE_SICK = true;
-PLAYER_THIRST_REQUIRED_HEAL = 1500;
+PLAYER_THIRST_REQUIRED_HEAL = 1750;
 PLAYER_HUNGER_REQUIRED_HEAL = 4000;
 PLAYER_HUNGER_STARVATION = 0;
 PLAYER_THIRST_STARVATION = 0;
@@ -72,9 +72,7 @@ GUI_TEMP_COLOR_1 = [0.04,0.74,0.93,1];
 GUI_TEMP_ICON_4 = "gui\status\temp\status_temp_4_ca.paa";
 GUI_TEMP_ICON_3 = "gui\status\temp\status_temp_3_ca.paa";
 GUI_TEMP_ICON_2 = "gui\status\temp\status_temp_2_ca.paa";
-GUI_TEMP_ICON_3 = "gui\status\temp\status_temp_1_ca.paa";
-GUI_TEMP_ICON_4 = "gui\status\temp\status_temp_0_ca.paa";
-
+GUI_TEMP_ICON_1 = "gui\status\temp\status_temp_1_ca.paa";
 GUI_TEMP_STEP_4 = 41;
 GUI_TEMP_STEP_3 = 38;
 GUI_TEMP_STEP_2 = 31;
@@ -140,7 +138,7 @@ GUI_THIRST_STEP_1 = 40;
 GUI_BLOOD_BORDER_HEALTHY_COLOR = [0,0.38,0.5,1];
 GUI_BLOOD_BORDER_SICK_COLOR = [0,0.27,0,1];
 
-GUI_BLOOD_BORRDER = "gui\status\blood\status_blood_border_CA.paa";
+GUI_BLOOD_BORDER = "gui\status\blood\status_blood_border_CA.paa";
 GUI_BLOOD_BORDER_DOWN_1 = "gui\status\blood\status_blood_border_down1_ca.paa";
 GUI_BLOOD_BORDER_DOWN_2 = "gui\status\blood\status_blood_border_down2_ca.paa";
 GUI_BLOOD_BORDER_DOWN_3 = "gui\status\blood\status_blood_border_down3_ca.paa";
@@ -162,8 +160,8 @@ WEATHER_SYNC_DELAY = 60;
 
 TEMPERATURE_DEFAULT_AIR_TEMP = 31;
 TEMPERATURE_MAX_WATER_TEMP_VARIATION = 15;
-TEMPERATURE_OVERCAST_EFFECT_ON_TEMP = 12;
-TEMPERATURE_RAIN_EFFECT_ON_TEMP = 20;
+TEMPERATURE_OVERCAST_EFFECT_ON_TEMP = 15;
+TEMPERATURE_RAIN_EFFECT_ON_TEMP = 25;
 
 SERVER_EXEC_EVENT_PLAYER_DIED = "server\eventHandlers\playerDied.sqf";
 SERVER_EVENT_ON_PLAYER_DISCONNECTED = "[_id, _name, _uid] execVM ""onPlayerDisconnected.sqf"";";
