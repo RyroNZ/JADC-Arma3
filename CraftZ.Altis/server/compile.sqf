@@ -18,5 +18,3 @@ fnc_status_thirst = compile preprocessFileLineNumbers "server\core\playerStatusM
 fnc_status_run_speed = compile preprocessFileLineNumbers "server\core\playerStatusMonitor\runSpeed.sqf";
 fnc_status_temperature = compile preprocessFileLineNumbers "server\core\playerStatusMonitor\updateTemperature.sqf";
 
-
-

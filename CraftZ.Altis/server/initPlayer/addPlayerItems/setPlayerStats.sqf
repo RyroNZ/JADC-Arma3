@@ -14,10 +14,10 @@ _playerToxicity = _playerDataStats_array  select 8;
 
 
 //Set Player Position
-_player setPos playerPos;
+_player setPos _playerPos;
 //Set Player Health/Oxygen
-_player setDamage playerHealth;
-_player setOxygenRemaining playerOxygen;
+_player setDamage _playerHealth;
+_player setOxygenRemaining _playerOxygen;
 
 _player setVariable [PLAYER_HUNGER_LEVEL_IDC, _playerHungerLevel, true];
 _player SetVariable [PLAYER_THIRST_LEVEL_IDC, _playerThirstLevel, true];

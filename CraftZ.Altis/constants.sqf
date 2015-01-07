@@ -236,15 +236,20 @@ DB_SUB_CATAGORY_TEMP = "temperature";
 DB_SUB_CATAGORY_IMMUNITY = "immunity";
 DB_SUB_CATAGORY_TOXICITY = "toxicity";
 
-LOOT_SPAWN_DISTANCE = 20;
-LOOT_DESPAWN_DISTANCE = 12;
-LOOT_SPAWN_RESET = 900;
+
+LOOT_RESPAWN_TIME = 60; //Check for new loot to spawn every 30 seconds.
+LOOT_SPAWN_DISTANCE =  1250; //spawn loot within 1000m of any player
+LOOT_SPAWN_RESET = 120; //have option to despawn loot after this amount of time
+LOOT_DESPAWN_DISTANCE = 1600; //despawn loot after reset and player is = distance away
+LOOT_MUST_SPAWN_M_APART = 10; //loot must spawn at least this far away. DO NOT SET TO 0
+
 LOOT_SPAWN_CHANCE = [0.5, 0.5, 0.1, 0.3, 0.2, 0.8];	// Food, Water, Weapons, Uniforms, Building Supplies, Junk
 
 LOOT_FOOD_ARRAY = ["Item_U_B_CombatUniform_mcam", "Item_FirstAidKit"];
 LOOT_WATER_ARRAY = [];
 LOOT_HEALTH_ARRAY = [];
-LOOT_WEAPONS_ARRAY = [];
+LOOT_WEAPONS_ARRAY = ["srifle_EBR_MRCO_pointer_F", "20Rnd_762x51_Mag", "groundWeaponHolder"];
 LOOT_UNIFORMS_ARRAY = [];
 LOOT_BUILDING_SUPPLIES_ARRAY = [];
 LOOT_JUNK_ARRAY = [];
+LOOT_COMPLETE_ARRAY = LOOT_FOOD_ARRAY + LOOT_WATER_ARRAY + LOOT_HEALTH_ARRAY + LOOT_WEAPONS_ARRAY + LOOT_UNIFORMS_ARRAY +LOOT_BUILDING_SUPPLIES_ARRAY + LOOT_JUNK_ARRAY;
