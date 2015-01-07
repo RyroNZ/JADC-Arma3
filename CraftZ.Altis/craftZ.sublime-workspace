@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"OBJ",
+				"objNull"
+			],
+			[
+				"DB_SUB",
+				"DB_SUB_CATAGORY_GADGETS"
+			],
+			[
+				"DB_SUB_CATAG",
+				"DB_SUB_CATAGORY_UNIFORM_GEAR"
+			],
+			[
+				"DB_USB_CATAGORY_VEST",
+				"DB_SUB_CATAGORY_VEST_GEAR"
+			],
+			[
+				"DB_SUB_CATAGORY",
+				"DB_SUB_CATAGORY_HEALTH"
+			],
+			[
+				"_pl",
+				"_playerData_array"
+			],
+			[
 				"PLAYER_TEMP",
 				"PLAYER_TEMP_OVERHEAT"
 			],
@@ -260,58 +284,42 @@
 	"buffers":
 	[
 		{
-			"file": "player/core/gui/updateBloodBorderGUI.sqf",
+			"file": "server/core/lootSpawner/lootUpdate.sqf",
 			"settings":
 			{
-				"buffer_size": 3448,
+				"buffer_size": 120,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "player/core/printEnvironmentToChat.sqf",
+			"file": "server/core/lootSpawner/lootSpawn.sqf",
 			"settings":
 			{
-				"buffer_size": 802,
+				"buffer_size": 779,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "server/initPlayer/playerConnected.sqf",
+			"file": "server/core/lootSpawner/lootDespawn.sqf",
 			"settings":
 			{
-				"buffer_size": 358,
+				"buffer_size": 398,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "server/initServer/serverConnected.sqf",
+			"file": "server/initPlayer/addPlayerItems/addMagazines.sqf",
 			"settings":
 			{
-				"buffer_size": 497,
+				"buffer_size": 432,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "server/initServer/serverGetData.sqf",
+			"file": "init.sqf",
 			"settings":
 			{
-				"buffer_size": 1570,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "server/initPlayer/playerGetData.sqf",
-			"settings":
-			{
-				"buffer_size": 6822,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "server/initServer/serverDataReady.sqf",
-			"settings":
-			{
-				"buffer_size": 415,
+				"buffer_size": 365,
 				"line_ending": "Windows"
 			}
 		},
@@ -319,23 +327,7 @@
 			"file": "server/init.sqf",
 			"settings":
 			{
-				"buffer_size": 529,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "server/initPlayer/playerSetDefaults.sqf",
-			"settings":
-			{
-				"buffer_size": 1120,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "server/initServer/serverDataDefaults.sqf",
-			"settings":
-			{
-				"buffer_size": 138,
+				"buffer_size": 581,
 				"line_ending": "Windows"
 			}
 		},
@@ -343,49 +335,7 @@
 			"file": "constants.sqf",
 			"settings":
 			{
-				"buffer_size": 9637,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "server/initPlayer/playerReady.sqf",
-			"settings":
-			{
-				"buffer_size": 572,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "server/compile.sqf",
-			"settings":
-			{
-				"buffer_size": 1586,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Searching 87 files for \"\"player\\initPlayer\\receiveCharacter.sqf\"\" (case sensitive)\n\nC:\\Users\\RyroNZ\\Documents\\Arma 3\\missions\\CraftZ.Altis\\player\\compile.sqf:\n    1  fnc_display_time = compile preprocessFileLineNumbers \"player\\core\\displayCurrentTime.sqf\";\n    2  fnc_reset_gun = compile preprocessFileLineNumbers \"player\\initPlayer\\resetPrimaryWeapon.sqf\";\n    3: fnc_receive_character = compile preprocessFileLineNumbers \"player\\initPlayer\\receiveCharacter.sqf\";\n    4  \n    5  fnc_gui_update_blood_border = compile preprocessFileLineNumbers \"player\\core\\gui\\updateBloodBorderGUI.sqf\";\n\n1 match in 1 file\n",
-			"settings":
-			{
-				"buffer_size": 607,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "player/compile.sqf",
-			"settings":
-			{
-				"buffer_size": 814,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "player/init.sqf",
-			"settings":
-			{
-				"buffer_size": 463,
+				"buffer_size": 9980,
 				"line_ending": "Windows"
 			}
 		}
@@ -444,7 +394,7 @@
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/databaseSaving",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/playerStatusMonitor",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/lootSpawner",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/eventHandlers",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems",
@@ -452,30 +402,37 @@
 	],
 	"file_history":
 	[
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerSetData.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateThirst.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateHunger.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/constants.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateTempGUI.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerSetDefaults.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerGetData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/init.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/compile.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/setupGUI.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/setPlayerStats.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerSetData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerSetDefaults.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/constants.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/description.ext",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerReady.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/compile.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/init.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/getCharacterFromServer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/player/updateHunger.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateBloodBorderGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/printEnvironmentToChat.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerConnected.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverConnected.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverGetData.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerConnected.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateTemperature.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather/serverDynamicWeather.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/init.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerRespawn.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/init.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/receiveCharacter.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/compile.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataReady.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/init.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataDefaults.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateThirst.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateHunger.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateTempGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateTemperature.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather/serverDynamicWeather.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerRespawn.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/receiveCharacter.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/statusMonitor.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataReady.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather/serverDynamicTemperatures.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/compile.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/dynamicWeather/clientDynamicWeather.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateBloodGUI.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateHungerGUI.sqf",
@@ -484,17 +441,14 @@
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/eventHandlers/playerDead.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/databaseSaving/serverDataSave.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/databaseSaving/serverPlayerSave.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerGetData.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerDisconnected.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerKilled.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataLoad.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/eventHandlers/playerDied.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateBloodBorderGUI.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/displayTime.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/setupGUI.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerNew.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerReady.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/description.ext",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/addWeapons.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/addMagazines.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/addInventory.sqf",
@@ -563,6 +517,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"_playerDataArray",
 			"_playerReadFailed",
 			"serverReadFailed",
 			"\"player\\initPlayer\\receiveCharacter.sqf\"",
@@ -695,6 +650,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"_playerData_array",
 			"playerReadFailed",
 			"_serverReadFailed",
 			"PLAYER_TEMP_AIR_HEAT_LOSS",
@@ -781,24 +737,24 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "player/core/gui/updateBloodBorderGUI.sqf",
+					"file": "server/core/lootSpawner/lootUpdate.sqf",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3448,
+						"buffer_size": 120,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2947,
-								2941
+								99,
+								99
 							]
 						],
 						"settings":
@@ -806,56 +762,27 @@
 							"syntax": "Packages/SQF Language/SQF.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 240.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "player/core/printEnvironmentToChat.sqf",
+					"file": "server/core/lootSpawner/lootSpawn.sqf",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 802,
+						"buffer_size": 779,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								802,
-								802
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQF Language/SQF.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "server/initPlayer/playerConnected.sqf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 358,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								301,
-								301
+								779,
+								779
 							]
 						],
 						"settings":
@@ -871,188 +798,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "server/initServer/serverConnected.sqf",
+					"buffer": 2,
+					"file": "server/core/lootSpawner/lootDespawn.sqf",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 497,
+						"buffer_size": 398,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								497,
-								497
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQF Language/SQF.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "server/initServer/serverGetData.sqf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1570,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								376,
-								326
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQF Language/SQF.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "server/initPlayer/playerGetData.sqf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6822,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5295,
-								5295
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQF Language/SQF.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 420.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "server/initServer/serverDataReady.sqf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 415,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								413,
-								413
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQF Language/SQF.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "server/init.sqf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 529,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								144,
-								144
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQF Language/SQF.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "server/initPlayer/playerSetDefaults.sqf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1120,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								241,
-								241
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQF Language/SQF.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "server/initServer/serverDataDefaults.sqf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 138,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								138,
-								138
+								166,
+								166
 							]
 						],
 						"settings":
@@ -1064,58 +823,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 10,
-					"file": "constants.sqf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9637,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6603,
-								6603
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQF Language/SQF.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2160.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "server/initPlayer/playerReady.sqf",
-					"semi_transient": false,
+					"buffer": 3,
+					"file": "server/initPlayer/addPlayerItems/addMagazines.sqf",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 572,
+						"buffer_size": 432,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								572,
-								572
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1130,20 +855,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "server/compile.sqf",
+					"buffer": 4,
+					"file": "init.sqf",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1586,
+						"buffer_size": 365,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								56,
-								56
+								365,
+								365
 							]
 						],
 						"settings":
@@ -1154,70 +879,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 5,
+					"file": "server/init.sqf",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 607,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										423,
-										463
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								442,
-								442
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "player/compile.sqf",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 814,
+						"buffer_size": 581,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								814,
-								814
+								145,
+								145
 							]
 						],
 						"settings":
@@ -1228,24 +907,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
-					"file": "player/init.sqf",
+					"buffer": 6,
+					"file": "constants.sqf",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 463,
+						"buffer_size": 9980,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								324,
-								324
+								9980,
+								9980
 							]
 						],
 						"settings":
@@ -1253,10 +932,10 @@
 							"syntax": "Packages/SQF Language/SQF.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3600.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1279,18 +958,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.57288480919,
 			1.0
 		],
 		"rows":
@@ -1334,7 +1006,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
