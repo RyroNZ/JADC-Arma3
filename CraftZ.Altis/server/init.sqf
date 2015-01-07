@@ -6,7 +6,6 @@ Description: Sets required variables, EventHandlers and scripts to run on the se
 */
 
 
-
 {
 	_x setMarkerAlpha 0;
 } forEach PLAYER_SPAWN_POINTS;

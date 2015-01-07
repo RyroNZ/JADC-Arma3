@@ -17,5 +17,5 @@
 	};
 
 	systemChat format["Current Time: %1:%2 %3", _hourFormat, _minuteFormat, _amPmTime];
-	systemChat format["Air Temperature: %1ºc", (PV_currentTemperatures select 0)];
-	systemChat format["Water Temperature: %1ºc", (PV_currentTemperatures select 1)];
+	systemChat format["Current Air Temperature: %1ºc", (PV_currentTemperatures select 0)];
+	systemChat format["Current Water Temperature: %1ºc", (PV_currentTemperatures select 1)];

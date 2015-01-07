@@ -43,7 +43,7 @@ class RscTitles
 				font = "EtelkaNarrowMediumPro";
 				sizeEx = 0.1;
 				colorBackground[] = {1,1,1,1};
-				colorText[] = {0,0.38,0.5,1};
+				colorText[] = {0.5,1,0.92,1};
 				text = "gui\status\thirst\status_thirst_border_CA.paa";
 			};  
 			class foodBorder
@@ -58,7 +58,7 @@ class RscTitles
 				font = "EtelkaNarrowMediumPro";
 				sizeEx = 0.1;
 				colorBackground[] = {0,0,0,1};
-				colorText[] = {0,0.38,0.5,1};
+				colorText[] = {0.5,1,0.92,1};
 				text = "gui\status\hunger\status_food_border_CA.paa";
 			};  
 			class tempBorder
@@ -73,7 +73,7 @@ class RscTitles
 				font = "EtelkaNarrowMediumPro";
 				sizeEx = 0.1;
 				colorBackground[] = {0,0,0,1};
-				colorText[] = {0,0.38,0.5,1};
+				colorText[] = {0.5,1,0.92,1};
 				text = "gui\status\temp\status_temp_border_CA.paa";
 			};  
 			class bloodBorder
@@ -88,7 +88,7 @@ class RscTitles
 				font = "EtelkaNarrowMediumPro";
 				sizeEx = 0.1;
 				colorBackground[] = {0,0,0,1};
-				colorText[] = {0,0.38,0.5,1};
+				colorText[] = {0.5,1,0.92,1};
 				text = "gui\status\blood\status_blood_border_CA.paa";
 			};
 

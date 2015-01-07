@@ -11,3 +11,4 @@ Description: Sets server ready for saving/additonal scripts after loading data/n
 
 diag_log format["[server\initServer\serverDataReady.sqf]: Server is now ready."];
 serverReady = true;
+setDate (PV_currentWeather select 4);

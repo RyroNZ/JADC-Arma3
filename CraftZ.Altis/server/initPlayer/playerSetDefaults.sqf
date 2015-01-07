@@ -22,5 +22,3 @@ _player SetVariable [PLAYER_TEMP_LEVEL_IDC, PLAYER_START_TEMP, true];
 _player SetVariable [PLAYER_IMMUNITY_LEVEL_IDC, PLAYER_START_IMMUNITY, true];
 _player SetVariable [PLAYER_TOXICITY_LEVEL_IDC, PLAYER_START_TOXICITY, true];
 
-[_clientID, _player, _profile] call fnc_player_ready;
-

@@ -154,7 +154,11 @@ GUI_BLOOD_BORDER_UP_1_SICK = "gui\status\blood\status_blood_border_up1_sick_ca.p
 GUI_BLOOD_BORDER_UP_2_SICK = "gui\status\blood\status_blood_border_up2_sick_ca.paa";
 GUI_BLOOD_BORDER_UP_3_SICK = "gui\status\blood\status_blood_border_up3_sick_ca.paa";
 
-WEATHER_DEFAULT_START = "RAIN";
+WEATHER_DEFAULT_RAIN = 0.5;
+WEATHER_DEFAULT_FOG = 0.2;
+WEATHER_DEFAULT_OVERCAST = 0.5;
+WEATHER_DEFAULT_WIND = [random 3, random 3, true];
+WEATHER_DEFAULT_DATETIME = [2015,1,1,7,30];
 WEATHER_FORECAST_DELAY_MAX = 4000;
 WEATHER_SYNC_DELAY = 60;
 
@@ -163,20 +167,24 @@ TEMPERATURE_MAX_WATER_TEMP_VARIATION = 15;
 TEMPERATURE_OVERCAST_EFFECT_ON_TEMP = 15;
 TEMPERATURE_RAIN_EFFECT_ON_TEMP = 25;
 
-SERVER_EXEC_EVENT_PLAYER_DIED = "server\eventHandlers\playerDied.sqf";
 SERVER_EVENT_ON_PLAYER_DISCONNECTED = "[_id, _name, _uid] execVM ""onPlayerDisconnected.sqf"";";
-SERVER_EXEC_PLAYER_SET_DATA = "server\initPlayer\PlayerSetData.sqf";
-SERVER_EXEC_PLAYER_NEW_DATA = "server\initPlayer\PlayerSetDefaults.sqf";
+
+
+SERVER_EXEC_DYNAMIC_WEATHER = "server\core\dynamicWeather\serverDynamicTemperatures.sqf";
+SERVER_EXEC_STATUS_MONITOR = "server\core\playerStatusMonitor\statusUpdate.sqf";
+
+SERVER_EXEC_EVENT_PLAYER_DIED = "server\eventHandlers\playerDied.sqf";
+
+SERVER_EXEC_PLAYER_GET_DATA = "server\initPlayer\playerGetData.sqf";
+SERVER_EXEC_PLAYER_CONNECTED = "server\initPlayer\PlayerConnected.sqf";
 SERVER_EXEC_PLAYER_SAVE = "server\core\databaseSaving\serverPlayerSave.sqf";
 SERVER_EXEC_DATA_SAVE = "server\core\databaseSaving\serverDataSave.sqf";
-SERVER_EXEC_PLAYER_CONNECTED = "server\initPlayer\PlayerConnected.sqf";
 SERVER_EXEC_INIT_SERVER = "server\initServer\serverConnected.sqf";
-SERVER_EXEC_DYNAMIC_WEATHER = "server\core\dynamicWeather\serverDynamicTemperatures.sqf";
 
+CLIENT_EXEC_PLAYER_DEAD = "player\eventHandlers\playerDead.sqf";
 CLIENT_EXEC_START_DYNAMIC_WEATHER = "player\core\dynamicWeather\clientDynamicWeather.sqf";
 CLIENT_EXEC_UPDATE_OVERCAST = "player\core\dynamicWeather\updateOverCast.sqf";
 CLIENT_EXEC_SETUP_GUI = "player\core\gui\setupGUI.sqf";
-CLIENT_EXEC_PLAYER_DEAD = "player\eventHandlers\playerDead.sqf";
 
 CLIENT_INIT_LOADING_TEXT = "LOADING CHARACTER";
 CLIENT_INIT_FINISH_LOAD_TEXT = "CHARACTER LOADED";

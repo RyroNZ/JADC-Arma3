@@ -14,17 +14,8 @@ if (_profile call iniDB_exists) then {
 
 		diag_log format["[server\initServer\serverConnected.sqf]: Profile exists for server. ProfileID: %2", _profile];
 
-	[_server, _profile] call fnc_load_data;
-
 
 	} else {
 		diag_log format["[server\initServer\serverConnected.sqf]: Setting up new profile for server. ProfileID: %2", _profile];
-		[_server] call fnc_new_data;
-
 };
-//server must have loaded data or setup new data
-[_server] call fnc_ready_data;
-	
-
-
-		
+[_server, _profile] call fnc_load_data;

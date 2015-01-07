@@ -1,3 +1,4 @@
+cutText [CLIENT_INIT_LOADING_TEXT, "BLACK FADED", 100];
 player allowDamage false;
 PV_playerLoaded = false;
 isPlayerInitialized = false;
@@ -8,7 +9,7 @@ PV_clientID = player;
 0 fadeMusic 0;
 0 fadeRadio 0;
 0 fadeSpeech 0;
-cutText [CLIENT_INIT_LOADING_TEXT, "BLACK FADED", 100];
+
 sleep 5;
 
 publicVariableServer "PV_clientID";

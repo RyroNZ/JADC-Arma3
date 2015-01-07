@@ -13,10 +13,7 @@ _profile = _this select 2;
 diag_log format["[server\initServer\serverDataReady.sqf]: Player (%1) is now ready. ProfileID: %2", name _player, _profile];
 readyUnits set [count readyUnits, _player];
 _clientID publicVariableClient "PV_currentWeather";
-[_player, _clientID] execVM "server\player\statusMonitor.sqf";
+[_player, _clientID] execVM SERVER_EXEC_STATUS_MONITOR;
 sleep 1;
 PV_playerLoaded = true;
 _clientID publicVariableClient "PV_playerLoaded";
-
-
-

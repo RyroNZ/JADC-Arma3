@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"PLAYER_TEMP",
+				"PLAYER_TEMP_OVERHEAT"
+			],
+			[
+				"PLAYER_TEMP_WATER",
+				"PLAYER_TEMP_WATER_HEAT_LOSS"
+			],
+			[
 				"CLIENT_INIT",
 				"CLIENT_INIT_FAIL_LOAD_TEXT"
 			],
@@ -251,6 +259,136 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "player/core/gui/updateBloodBorderGUI.sqf",
+			"settings":
+			{
+				"buffer_size": 3448,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "player/core/printEnvironmentToChat.sqf",
+			"settings":
+			{
+				"buffer_size": 802,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/initPlayer/playerConnected.sqf",
+			"settings":
+			{
+				"buffer_size": 358,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/initServer/serverConnected.sqf",
+			"settings":
+			{
+				"buffer_size": 497,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/initServer/serverGetData.sqf",
+			"settings":
+			{
+				"buffer_size": 1570,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/initPlayer/playerGetData.sqf",
+			"settings":
+			{
+				"buffer_size": 6822,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/initServer/serverDataReady.sqf",
+			"settings":
+			{
+				"buffer_size": 415,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/init.sqf",
+			"settings":
+			{
+				"buffer_size": 529,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/initPlayer/playerSetDefaults.sqf",
+			"settings":
+			{
+				"buffer_size": 1120,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/initServer/serverDataDefaults.sqf",
+			"settings":
+			{
+				"buffer_size": 138,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "constants.sqf",
+			"settings":
+			{
+				"buffer_size": 9637,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/initPlayer/playerReady.sqf",
+			"settings":
+			{
+				"buffer_size": 572,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/compile.sqf",
+			"settings":
+			{
+				"buffer_size": 1586,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 87 files for \"\"player\\initPlayer\\receiveCharacter.sqf\"\" (case sensitive)\n\nC:\\Users\\RyroNZ\\Documents\\Arma 3\\missions\\CraftZ.Altis\\player\\compile.sqf:\n    1  fnc_display_time = compile preprocessFileLineNumbers \"player\\core\\displayCurrentTime.sqf\";\n    2  fnc_reset_gun = compile preprocessFileLineNumbers \"player\\initPlayer\\resetPrimaryWeapon.sqf\";\n    3: fnc_receive_character = compile preprocessFileLineNumbers \"player\\initPlayer\\receiveCharacter.sqf\";\n    4  \n    5  fnc_gui_update_blood_border = compile preprocessFileLineNumbers \"player\\core\\gui\\updateBloodBorderGUI.sqf\";\n\n1 match in 1 file\n",
+			"settings":
+			{
+				"buffer_size": 607,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "player/compile.sqf",
+			"settings":
+			{
+				"buffer_size": 814,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "player/init.sqf",
+			"settings":
+			{
+				"buffer_size": 463,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -296,62 +434,78 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis"
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/eventHandlers",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/databaseSaving",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/playerStatusMonitor",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/eventHandlers",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer"
 	],
 	"file_history":
 	[
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerSetData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateThirst.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateHunger.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/constants.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateTempGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerSetDefaults.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/setupGUI.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/setPlayerStats.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverConnected.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverGetData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerConnected.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateTemperature.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather/serverDynamicWeather.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/init.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerRespawn.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/init.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/receiveCharacter.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/compile.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/init.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataDefaults.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/statusMonitor.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/setupGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataReady.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather/serverDynamicTemperatures.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/compile.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/dynamicWeather/clientDynamicWeather.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateBloodGUI.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateHungerGUI.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateTempGUI.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateThirstGUI.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/resetPrimaryWeapon.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/eventHandlers/playerDead.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/receiveCharacter.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/databaseSaving/serverDataSave.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/databaseSaving/serverPlayerSave.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerGetData.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerDisconnected.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/init.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerRespawn.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerKilled.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataLoad.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/eventHandlers/playerDied.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerConnected.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerSetData.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerSetDefaults.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/init.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateBloodBorderGUI.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateHunger.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/init.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/compile.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/displayTime.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/compile.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/setupGUI.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerNew.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerReady.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateTemperature.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateThirst.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/description.ext",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/addWeapons.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/addMagazines.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/addInventory.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerLoad.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerConnected.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather/serverDynamicTemperatures.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerSetData.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/setPlayerStats",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/mission.sqm",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/severUpdateReadyUnits.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/dynamicWeather/updateOverCast.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather/serverDynamicWeather.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataNew.sqf",
-		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataReady.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/serverDynamicWeather.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/serverDataSave.sqf",
 		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/clientDynamicWeather.sqf",
@@ -399,14 +553,34 @@
 		"where_history":
 		[
 			"C:\\Users\\RyroNZ\\Documents\\Arma 3\\missions\\CraftZ.Altis",
+			"C:\\Users\\RyroNZ\\Documents\\Arma 3\\missions\\CraftZ.Altis\\server",
+			"C:\\Users\\RyroNZ\\Documents\\Arma 3\\missions\\CraftZ.Altis",
 			"C:\\Users\\RyroNZ\\Documents\\Arma 3\\missions\\CraftZ.Altis\\player"
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"_playerReadFailed",
+			"serverReadFailed",
+			"\"player\\initPlayer\\receiveCharacter.sqf\"",
+			"\"server\\player\\",
+			"TOXCII",
+			"_airHeatLoss",
+			"_waterHeatLoss",
+			"Level\"",
+			"_defaultAirHeatLoss",
+			"_defaultWaterHeatLoss",
+			"_defaultRunTempGain",
+			"_defaultCarTempGain",
+			"_defaultDamageFreezing",
+			"_defaultDamageOverheating",
+			"_defaultTempEquillibrium",
+			"_defaultOverheatTemp",
+			"_defaultHypothermia",
+			"_defaultFreeze",
 			"SetVariable [\"hungerLevel\"",
 			"\"ARRAY\"",
 			"\"SCALAR\"",
@@ -521,6 +695,20 @@
 		"regex": false,
 		"replace_history":
 		[
+			"playerReadFailed",
+			"_serverReadFailed",
+			"PLAYER_TEMP_AIR_HEAT_LOSS",
+			"PLAYER_TEMP_WATER_HEAT_LOSS",
+			"PLAYER_TEMP_AIR_HEAT_LOSS",
+			"PLAYER_TEMP_WATER_HEAT_LOSS",
+			"PLAYER_TEMP_RUN_HEAT_GAIN",
+			"PLAYER_TEMP_CAR_HEAT_GAIN",
+			"PLAYER_DAMAGE_FREEZE",
+			"PLAYER_DAMAGE_OVERHEAT",
+			"PLAYER_TEMP_EQUILLIBRIUM",
+			"PLAYER_TEMP_OVERHEAT",
+			"PLAYER_TEMP_HYPOTHERMIA",
+			"PLAYER_TEMP_FREEZE",
 			"setVariable [PLAYER_HUNGER_LEVEL_IDC",
 			"DB_TYPE_ARRAY",
 			"DB_TYPE_SCALAR",
@@ -593,13 +781,484 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "player/core/gui/updateBloodBorderGUI.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2947,
+								2941
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "player/core/printEnvironmentToChat.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 802,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								802,
+								802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/initPlayer/playerConnected.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								301,
+								301
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "server/initServer/serverConnected.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 497,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								497,
+								497
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "server/initServer/serverGetData.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								376,
+								326
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "server/initPlayer/playerGetData.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5295,
+								5295
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 420.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "server/initServer/serverDataReady.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 415,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								413,
+								413
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "server/init.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 529,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "server/initPlayer/playerSetDefaults.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								241,
+								241
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "server/initServer/serverDataDefaults.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 138,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								138,
+								138
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 10,
+					"file": "constants.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9637,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6603,
+								6603
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2160.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "server/initPlayer/playerReady.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								572,
+								572
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "server/compile.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1586,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 607,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										423,
+										463
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								442,
+								442
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "player/compile.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 814,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								814,
+								814
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "player/init.sqf",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								324,
+								324
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQF Language/SQF.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -631,7 +1290,7 @@
 		"cols":
 		[
 			0.0,
-			0.605005780776,
+			0.57288480919,
 			1.0
 		],
 		"rows":
@@ -675,7 +1334,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
@@ -683,7 +1342,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 383.0,
+	"side_bar_width": 391.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

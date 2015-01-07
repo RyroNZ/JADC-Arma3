@@ -1,18 +1,1 @@
-switch(toUpper(WEATHER_DEFAULT_START)) do {
-		case "CLEAR": {
-			PV_currentWeather = [0, 0, 0, [random 3, random 3, true], date];
-		};
-		
-		case "CLOUDY": {
-			PV_currentWeather = [0, 0, 0.6, [random 3, random 3, true], date];
-		};
-		
-		case "RAIN": {
-			PV_currentWeather = [1, 0, 1, [random 3, random 3, true], date];
-		};
-
-		default {
-			// clear
-			PV_currentWeather = [0, 0, 0, [random 3, random 3, true], date];
-		};
-	};
+PV_currentWeather = [WEATHER_DEFAULT_RAIN, WEATHER_DEFAULT_FOG, WEATHER_DEFAULT_OVERCAST, WEATHER_DEFAULT_WIND, WEATHER_DEFAULT_DATETIME];

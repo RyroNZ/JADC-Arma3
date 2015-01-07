@@ -1,6 +1,5 @@
 call compile preProcessFile "\inidbi\init.sqf";
 
-fnc_load_player = compile preprocessFileLineNumbers "server\initPlayer\playerGetData.sqf";
 fnc_set_player_data = compile preprocessFileLineNumbers "server\initPlayer\playerSetData.sqf";
 fnc_setup_new_player = compile preprocessFileLineNumbers "server\initPlayer\playerSetDefaults.sqf";
 fnc_player_ready = compile preprocessFileLineNumbers "server\initPlayer\playerReady.sqf";
@@ -14,10 +13,10 @@ fnc_load_data = compile preprocessFileLineNumbers "server\initServer\serverGetDa
 fnc_new_data = compile preprocessFileLineNumbers "server\initServer\serverDataDefaults.sqf";
 fnc_ready_data = compile preprocessFileLineNumbers "server\initServer\serverDataReady.sqf";
 
-fnc_status_hunger = compile preprocessFileLineNumbers "server\player\updateHunger.sqf";
-fnc_status_thirst = compile preprocessFileLineNumbers "server\player\updateThirst.sqf";
-fnc_status_run_speed = compile preprocessFileLineNumbers "server\player\runSpeed.sqf";
-fnc_status_temperature = compile preprocessFileLineNumbers "server\player\updateTemperature.sqf";
+fnc_status_hunger = compile preprocessFileLineNumbers "server\core\playerStatusMonitor\updateHunger.sqf";
+fnc_status_thirst = compile preprocessFileLineNumbers "server\core\playerStatusMonitor\updateThirst.sqf";
+fnc_status_run_speed = compile preprocessFileLineNumbers "server\core\playerStatusMonitor\runSpeed.sqf";
+fnc_status_temperature = compile preprocessFileLineNumbers "server\core\playerStatusMonitor\updateTemperature.sqf";
 
 
 
