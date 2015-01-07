@@ -16,7 +16,7 @@ while {true} do {
 
 		{
 			{	
-				_nearLoot = nearestObjects [_x, ["ALL"] , LOOT_MUST_SPAWN_M_APART];
+				_nearLoot = nearestObjects [_x, LOOT_COMPLETE_ARRAY , LOOT_MUST_SPAWN_M_APART];
 				diag_log format["Object is attemping to spawn near: %1", str _nearLoot];
 				if (count _nearLoot < 1) then {
 					if (random (LOOT_SPAWN_CHANCE SELECT 0) > random 1) then {
