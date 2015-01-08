@@ -3,8 +3,8 @@ _lootPositions_array = [];
 
 
 while {true} do {
+	
 	systemChat format["updating loot"];
-
 	{	
 			private["_loot", "_lootPos", "_player"];
 			_player = _x;
@@ -18,6 +18,7 @@ while {true} do {
 			{	
 				if (!(_x in currentItemPos_array)) then {
 					[_x] call fn_spawnLoot;
+					sleep 0.001;
 				};
 			} forEach _buildingPositions;
 			diag_log format["[%1 Items] current items", str (count currentItemPos_array)];
@@ -25,7 +26,7 @@ while {true} do {
 		} forEach _buildingsNearby_array;
 
 
-	} forEach allUnits;
+	} forEach readyUnits;
 	sleep LOOT_RESPAWN_TIME;
 };
 
@@ -36,7 +37,7 @@ while {true} do {
 
 Spawn loot for player around a distance.. frequently check this
 Despawn loot after player has left that distance for a certain time diag_frame
-Only spawn loot in some locations // not every single location should have look
+Only spawn loot in some locations // not every single location should have loot
 Once loot has spawned, stop checking that area for loot for specified time frame
 
 

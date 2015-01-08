@@ -1,3 +1,4 @@
+//hint "despawner";
 fn_itemDespawner = {
 	private["_loot", "_lootPos", "_player", "_firstRun", "_noPlayersNearby"];
 	_loot = _this select 0;
@@ -18,7 +19,7 @@ fn_itemDespawner = {
 				_noPlayersNearby = true;
 			} else { _noPlayersNearby = false;}
 
-		} forEach allUnits;
+		} forEach readyUnits;
 
 		if (_noPlayersNearby) exitWith {
 			diag_log format["[%1 Items] current items", str (count currentItemPos_array)];
@@ -46,7 +47,7 @@ fn_dummyItemDespawner = {
 				_noPlayersNearby = true;
 			} else { _noPlayersNearby = false; diag_log "players nearby";}
 
-		} forEach allUnits; 
+		} forEach readyUnits; 
 
 		if (_noPlayersNearby) exitWith {
 			diag_log format["[%1 Items] current items", str (count currentItemPos_array)];
@@ -54,4 +55,5 @@ fn_dummyItemDespawner = {
 			currentItemPos_array = currentItemPos_array - [_lootPos];
 		};
 	};
+	sleep 5;
 };

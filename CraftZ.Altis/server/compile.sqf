@@ -1,6 +1,7 @@
 call compile preProcessFile "\inidbi\init.sqf";
-call compile preProcessFile "server\core\lootSpawner\lootDespawner.sqf";
 call compile preProcessFile "server\core\lootSpawner\lootDoSpawn.sqf";
+call compile preProcessFile "server\core\lootSpawner\lootDespawner.sqf";
+
 
 fnc_set_player_data = compile preprocessFileLineNumbers "server\initPlayer\playerSetData.sqf";
 fnc_setup_new_player = compile preprocessFileLineNumbers "server\initPlayer\playerSetDefaults.sqf";
