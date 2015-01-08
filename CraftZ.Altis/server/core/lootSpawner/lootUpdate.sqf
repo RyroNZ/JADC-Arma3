@@ -1,5 +1,5 @@
-currentItemPos_array = [];
+currentItemPos_array = [nil];
 
-execVM "server\core\lootSpawner\lootSpawn.sqf";
+execVM "server\core\lootSpawner\lootSpawner.sqf";
 
 

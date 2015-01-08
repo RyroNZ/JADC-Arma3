@@ -181,6 +181,8 @@ SERVER_EXEC_PLAYER_SAVE = "server\core\databaseSaving\serverPlayerSave.sqf";
 SERVER_EXEC_DATA_SAVE = "server\core\databaseSaving\serverDataSave.sqf";
 SERVER_EXEC_INIT_SERVER = "server\initServer\serverConnected.sqf";
 
+SERVER_EXEC_LOOT_DESPAWNER = "server\core\lootSpawner\lootDespawner.sqf";
+
 CLIENT_EXEC_PLAYER_DEAD = "player\eventHandlers\playerDead.sqf";
 CLIENT_EXEC_START_DYNAMIC_WEATHER = "player\core\dynamicWeather\clientDynamicWeather.sqf";
 CLIENT_EXEC_UPDATE_OVERCAST = "player\core\dynamicWeather\updateOverCast.sqf";
@@ -237,13 +239,13 @@ DB_SUB_CATAGORY_IMMUNITY = "immunity";
 DB_SUB_CATAGORY_TOXICITY = "toxicity";
 
 
-LOOT_RESPAWN_TIME = 60; //Check for new loot to spawn every 30 seconds.
-LOOT_SPAWN_DISTANCE =  1250; //spawn loot within 1000m of any player
-LOOT_SPAWN_RESET = 120; //have option to despawn loot after this amount of time
-LOOT_DESPAWN_DISTANCE = 1600; //despawn loot after reset and player is = distance away
-LOOT_MUST_SPAWN_M_APART = 10; //loot must spawn at least this far away. DO NOT SET TO 0
-
-LOOT_SPAWN_CHANCE = [0.5, 0.5, 0.1, 0.3, 0.2, 0.8];	// Food, Water, Weapons, Uniforms, Building Supplies, Junk
+LOOT_RESPAWN_TIME = 10; //Check for new loot to spawn every 30 seconds.
+LOOT_SPAWN_DISTANCE =  20; //spawn loot within 1000m of any player
+LOOT_SPAWN_RESET = 2; //have option to despawn loot after this amount of time
+LOOT_DESPAWN_DISTANCE = 5; //despawn loot after reset and player is = distance away
+LOOT_MUST_SPAWN_M_APART = 6; //loot must spawn at least this far away. DO NOT SET TO 0
+LOOT_MAX_SPAWN_POINTS_PER_BUILDING = 5;
+LOOT_SPAWN_CHANCE = [0.1, 0.15, 0.15, 0.25, 0.75, 0.75, 0.4, 0.95];	// JUNK, FOOD, WATER, HEALTH, WEAPONS, UNIFORMS, BUILDING SUPPLIES, MILITARY
 
 LOOT_FOOD_ARRAY = ["Item_U_B_CombatUniform_mcam", "Item_FirstAidKit"];
 LOOT_WATER_ARRAY = [];
@@ -252,4 +254,5 @@ LOOT_WEAPONS_ARRAY = ["srifle_EBR_MRCO_pointer_F", "20Rnd_762x51_Mag", "groundWe
 LOOT_UNIFORMS_ARRAY = [];
 LOOT_BUILDING_SUPPLIES_ARRAY = [];
 LOOT_JUNK_ARRAY = [];
-LOOT_COMPLETE_ARRAY = LOOT_FOOD_ARRAY + LOOT_WATER_ARRAY + LOOT_HEALTH_ARRAY + LOOT_WEAPONS_ARRAY + LOOT_UNIFORMS_ARRAY +LOOT_BUILDING_SUPPLIES_ARRAY + LOOT_JUNK_ARRAY;
+LOOT_MILITARY_ARRAY = [];
+LOOT_COMPLETE_ARRAY = LOOT_FOOD_ARRAY + LOOT_WATER_ARRAY + LOOT_HEALTH_ARRAY + LOOT_WEAPONS_ARRAY + LOOT_UNIFORMS_ARRAY +LOOT_BUILDING_SUPPLIES_ARRAY + LOOT_JUNK_ARRAY + LOOT_MILITARY_ARRAY;
