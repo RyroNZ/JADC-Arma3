@@ -6,15 +6,15 @@ fn_itemDespawner = {
 	private ["_noPlayersNearby"];
 
 
-	systemChat "item spawned";
+	//systemChat "item spawned";
 	sleep LOOT_SPAWN_RESET;
-	systemChat "item spawned can now be removed";
+	//systemChat "item spawned can now be removed";
 
 	while {true} do {
 	_noPlayersNearby = false;
 		{
 
-			if ((_x distance _lootPos) > LOOT_DESPAWN_DISTANCE) then {
+		if ((_x distance _lootPos) > LOOT_DESPAWN_DISTANCE) then {
 				diag_log format["Player %1 is %2 m away from %3", name _x, str (_x distance _lootPos), str _loot];
 				_noPlayersNearby = true;
 			} else { _noPlayersNearby = false;}
@@ -52,7 +52,7 @@ fn_dummyItemDespawner = {
 		if (_noPlayersNearby) exitWith {
 			diag_log format["[%1 Items] current items", str (count currentItemPos_array)];
 			diag_log format["Removing %1 from %2", str _lootPos, str currentItemPos_array];
-			currentItemPos_array = currentItemPos_array - [_lootPos];
+			currentItemPos_array = currentItemPos_array - [_loot];
 		};
 	};
 	sleep 5;

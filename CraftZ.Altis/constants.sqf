@@ -239,25 +239,38 @@ DB_SUB_CATAGORY_IMMUNITY = "immunity";
 DB_SUB_CATAGORY_TOXICITY = "toxicity";
 
 
-LOOT_RESPAWN_TIME = 30; //Check for new loot to spawn every 30 seconds.
-LOOT_SPAWN_DISTANCE =  3500; //spawn loot within 1000m of any player
-LOOT_SPAWN_RESET = 2; //have option to despawn loot after this amount of time
-LOOT_DESPAWN_DISTANCE = 3500; //despawn loot after reset and player is = distance away
+LOOT_RESPAWN_TIME = 10; //Check for new loot to spawn every 30 seconds.
+LOOT_SPAWN_DISTANCE =  200; //spawn loot within 1000m of any player
+LOOT_SPAWN_RESET = 900; //have option to despawn loot after this amount of time
+LOOT_DESPAWN_DISTANCE = 100; //despawn loot after reset and player is = distance away
 LOOT_MUST_SPAWN_M_APART = 6; //loot must spawn at least this far away. DO NOT SET TO 0
-LOOT_MAX_SPAWN_POINTS_PER_BUILDING = 5;
-LOOT_SPAWN_CHANCE = [0.1, 0.15, 0.15, 0.25, 0.75, 0.75, 0.4, 0.1, 0.1];	// MUST REMAIN IN THIS ORDER! JUNK, FOOD, WATER, HEALTH, WEAPONS, UNIFORMS, BUILDING SUPPLIES, MILITARY OTHER, MILITARY WEAPONS
+LOOT_SPAWN_CHANCE = [0, 0.4, 0.45, 0.5, 0.75, 0.75, 0.4, 0.5, 0.6];	// MUST REMAIN IN THIS ORDER! JUNK(or empty), FOOD, WATER, GENERAL ITEMS, WEAPONS, UNIFORMS, BUILDING SUPPLIES, MILITARY OTHER, MILITARY WEAPONS
 
 
-LOOT_GROUNDWEAPON_HOLDER = "groundWeaponHolder";
-LOOT_FOOD_ARRAY = [];
-LOOT_WATER_ARRAY = [];
-LOOT_HEALTH_ARRAY = [];
-LOOT_WEAPONS_ARRAY = [];
-LOOT_UNIFORMS_ARRAY = [];
-LOOT_BUILDING_SUPPLIES_ARRAY = [];
-LOOT_JUNK_ARRAY = [];
-LOOT_MILITARY_ARRAY = ["U_B_CombatUniform_mcam", "FirstAidKit"];
-LOOT_MILITARY_WEAPONS_ARRAY = [["srifle_EBR_MRCO_pointer_F", "20Rnd_762x51_Mag"]];
-LOOT_COMPLETE_ARRAY = LOOT_FOOD_ARRAY + LOOT_WATER_ARRAY + LOOT_HEALTH_ARRAY + LOOT_WEAPONS_ARRAY + LOOT_UNIFORMS_ARRAY +LOOT_BUILDING_SUPPLIES_ARRAY + LOOT_JUNK_ARRAY + LOOT_MILITARY_ARRAY;
 LOOT_MAX_MAGS_TO_SPAWN = 3; // max amount of mags that will spawn with a gun
 LOOT_MAX_ITEMS_TO_SPAWN = 3; // max amount of items that will spawn together
+LOOT_GROUNDWEAPON_HOLDER = "groundWeaponHolder";
+LOOT_JUNK_ARRAY = [];
+LOOT_FOOD_ARRAY = [];
+LOOT_WATER_ARRAY = [];
+LOOT_GENERAL_ARRAY = ["FirstAidKit", "ItemWatch", "ItemCompass", "ItemGPS", "ItemRadio", "Binocular", "Rangefinder", "optic_Aco",
+	"optic_ACO_grn", "optic_Aco_smg", "optic_ACO_grn_smg", "optic_Holosigh", "optic_Holosight_smg", "acc_pointer_IR", "acc_flashlight", "optic_Yorris", "optic_MRD", "muzzle_snds_acp"];
+LOOT_WEAPONS_ARRAY = [["hgun_P07_F", "16Rnd_9x21_Mag"], ["hgun_Rook40_F", "16Rnd_9x21_Mag"], ["arifle_SDAR_F", "20Rnd_556x45_UW_mag"], 
+	["arifle_SDAR_F", "20Rnd_556x45_Stanag"], ["arifle_TRG21_F", "30Rnd_556x45_Stanag"], ["arifle_TRG20_F", "30Rnd_556x45_Stanag"],
+	["arifle_TRG21_GL_F", "30Rnd_556x45_Stanag"], ["hgun_ACPC2_F", "9Rnd_45ACP_Mag"], ["arifle_Mk20_F", "30Rnd_556x45_Stanag"], 
+	["arifle_Mk20C_F", "30Rnd_556x45_Stanag"], ["SMG_01_F", "30Rnd_45ACP_Mag_SMG_01"], ["SMG_02_F", "30Rnd_9x21_Mag"], 
+	["hgun_Pistol_heavy_01_F", "11Rnd_45ACP_Mag"], ["hgun_Pistol_heavy_02_F", "6Rnd_45ACP_Cylinder"], ["hgun_PDW2000_Holo_snds_F", "16Rnd_9x21_Mag"],
+	["hgun_PDW2000_Holo_F", "30Rnd_9x21_Mag"] ];
+LOOT_UNIFORMS_ARRAY = ["U_C_Poloshirt_blue", "U_C_Poloshirt_burgundy", "U_C_Poloshirt_stripped", "U_C_Poloshirt_tricolour", "U_C_Poloshirt_salmon", 
+	"U_C_Poloshirt_redwhite", "U_C_Commoner1_1", "U_C_Commoner1_2", "U_C_Commoner1_3", "U_Rangemaster", "U_NikosBody", "U_OrestesBody", "U_C_Poor_1", 
+	"U_C_Poor_2", "U_C_WorkerCoveralls", "U_C_HunterBody_grn", "U_C_Poor_shorts_1", "U_C_Commoner_shorts", "U_C_ShirtSurfer_shorts", "U_C_TeeSurfer_shorts_1", 
+	"U_C_TeeSurfer_shorts_2", "U_C_Scientist", "U_NikosAgedBody", "V_Press_F", "H_Cap_red", "H_Cap_blu", "H_Beret_02", "H_RacingHelmet_1_F"];
+LOOT_BUILDING_SUPPLIES_ARRAY = [];
+LOOT_MILITARY_ARRAY = ["Medikit", "Toolkit", "optic_LRPS", "optic_NVS", "optic_Nightstalker", "optic_tws", "optic_tws_mg", "optic_DMS", "optic_MRCO"];
+LOOT_MILITARY_WEAPONS_ARRAY = [["srifle_EBR_F", "20Rnd_762x51_Mag"], ["launch_RPG32_F", "RPG32_F"], ["srifle_GM6_F", "5Rnd_127x108_Mag"], 
+	["srifle_GM6_F", "5Rnd_127x108_APDS_Mag"], ["LMG_Mk200_F", "200Rnd_65x39_cased_Box"], ["LMG_Mk200_F", "200Rnd_65x39_cased_Box_Tracer"], 
+	["arifle_Katiba_F", "30Rnd_65x39_caseless_green"], ["arifle_Katiba_GL_F", "30Rnd_65x39_caseless_green"], ["arifle_MXC_F", "30Rnd_65x39_caseless_mag"],
+	["arifle_MX_F", "30Rnd_65x39_caseless_mag"], ["arifle_MX_SW_F", "100Rnd_65x39_caseless_mag_Tracer"], ["arifle_MXM_F", "30Rnd_65x39_caseless_mag"],
+	["arifle_MX_GL_ACO_F", "30Rnd_65x39_caseless_mag_Tracer"], ["LMG_Zafir_F", "150Rnd_762x51_Box_Tracer"], ["arifle_Mk20_GL_F", "30Rnd_556x45_Stanag_Tracer_Yellow"],
+	["srifle_DMR_01_F", "10Rnd_762x51_Mag"] ];
+LOOT_COMPLETE_ARRAY = LOOT_FOOD_ARRAY + LOOT_WATER_ARRAY + LOOT_HEALTH_ARRAY + LOOT_WEAPONS_ARRAY + LOOT_UNIFORMS_ARRAY +LOOT_BUILDING_SUPPLIES_ARRAY + LOOT_JUNK_ARRAY + LOOT_MILITARY_ARRAY;

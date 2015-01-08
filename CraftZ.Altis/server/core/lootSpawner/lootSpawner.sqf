@@ -18,8 +18,8 @@ while {true} do {
 			{	
 				if (!(_x in currentItemPos_array)) then {
 					[_x] call fn_spawnLoot;
-					sleep 0.001;
 				};
+				sleep 0.01;
 			} forEach _buildingPositions;
 			diag_log format["[%1 Items] current items", str (count currentItemPos_array)];
 			diag_log format["current Loot positions %1", str _lootPositions_array];
