@@ -1,4 +1,5 @@
 [] call compile preprocessFileLineNumbers "constants.sqf";
+[] call compile preprocessFileLineNumbers "server\LOOT_TABLE.sqf";
 
 
 

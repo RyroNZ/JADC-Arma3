@@ -239,48 +239,12 @@ DB_SUB_CATAGORY_IMMUNITY = "immunity";
 DB_SUB_CATAGORY_TOXICITY = "toxicity";
 
 
-LOOT_RESPAWN_TIME = 10; //Check for new loot to spawn every 30 seconds.
-LOOT_SPAWN_DISTANCE =  250; //spawn loot within 1000m of any player
+LOOT_RESPAWN_TIME = 1; //Check for new loot to spawn every 30 seconds.
+LOOT_SPAWN_DISTANCE =  400; //spawn loot within 1000m of any player
 LOOT_SPAWN_RESET = 900; //have option to despawn loot after this amount of time
 LOOT_DESPAWN_DISTANCE = 750; //despawn loot after reset and player is = distance away
 LOOT_MUST_SPAWN_M_APART = 1; //loot must spawn at least this far away. DO NOT SET TO 0
-LOOT_SPAWN_CHANCE = [100, 50, 50, 100, 180, 100, 198, 199 ];	// SPAWN DIFFICULTY 0-100 (0 always spawns, 100 never spawns).. JUNK(or empty)BACKPACKS, GENERAL ITEMS, WEAPONS, UNIFORMS, BUILDING SUPPLIES, MILITARY OTHER, MILITARY WEAPONS
-
-
+LOOT_SPAWN_CHANCE = 20;	// SPAWN DIFFICULTY 0-100 (100 always spawns, 0 never spawns).. 
+LOOT_GROUNDWEAPON_HOLDER = "groundWeaponHolder";
 LOOT_MAX_MAGS_TO_SPAWN = 3; // max amount of mags that will spawn with a gun
 LOOT_MAX_ITEMS_TO_SPAWN = 1.25; // max amount of items that will spawn together
-LOOT_GROUNDWEAPON_HOLDER = "groundWeaponHolder";
-LOOT_JUNK_ARRAY = ["ItemRadio"];
-LOOT_FOOD_ARRAY = ["ItemCompass"];
-LOOT_WATER_ARRAY = ["ItemWatch"];
-LOOT_GENERAL_ARRAY = ["FirstAidKit", "ItemWatch", "ItemCompass",  "ItemRadio", "Binocular", "Rangefinder", "optic_Aco",
-	"optic_ACO_grn", "optic_Aco_smg", "optic_ACO_grn_smg", "optic_Holosigh", "optic_Holosight_smg", "acc_pointer_IR", "acc_flashlight", "optic_Yorris", "optic_MRD", "muzzle_snds_acp", "U_C_Poloshirt_blue", "U_C_Poloshirt_burgundy", "U_C_Poloshirt_stripped", "U_C_Poloshirt_tricolour", "U_C_Poloshirt_salmon", 
-	"U_C_Poloshirt_redwhite", "U_C_Commoner1_1", "U_C_Commoner1_2", "U_C_Commoner1_3", "U_Rangemaster", "U_NikosBody", "U_OrestesBody", "U_C_Poor_1", 
-	"U_C_Poor_2", "U_C_WorkerCoveralls", "U_C_HunterBody_grn", "U_C_Poor_shorts_1", "U_C_Commoner_shorts", "U_C_ShirtSurfer_shorts", "U_C_TeeSurfer_shorts_1", 
-	"U_C_TeeSurfer_shorts_2", "U_C_Scientist", "U_NikosAgedBody", "V_Press_F", "H_Cap_red", "H_Cap_blu", "H_Beret_02", "H_RacingHelmet_1_F", "U_BG_Guerilla1_1", 
-	"U_BG_Guerilla2_1", "U_BG_Guerilla2_2", "U_BG_Guerilla2_3", "U_BG_Guerilla3_1", "U_BG_Guerilla3_2", "U_BG_leader", "U_OG_Guerilla1_1", "U_OG_Guerilla2_1", "U_OG_Guerilla2_2", "U_OG_Guerilla2_3", "U_OG_Guerilla3_1", "U_OG_Guerilla3_2", "U_OG_leader", "U_C_Journalist",
-	"V_Rangemaster_belt", "V_BandollierB_khk", "H_Bandanna_khk_hs", "H_Bandanna_khk"];
-LOOT_WEAPONS_ARRAY = [["hgun_P07_F", "16Rnd_9x21_Mag"], ["hgun_Rook40_F", "16Rnd_9x21_Mag"], ["arifle_SDAR_F", "20Rnd_556x45_UW_mag"], 
-	["arifle_SDAR_F", "30Rnd_556x45_Stanag"], ["arifle_TRG21_F", "30Rnd_556x45_Stanag"], ["arifle_TRG20_F", "30Rnd_556x45_Stanag"],
-	["arifle_TRG21_GL_F", "30Rnd_556x45_Stanag"], ["hgun_ACPC2_F", "9Rnd_45ACP_Mag"], ["arifle_Mk20_F", "30Rnd_556x45_Stanag"], 
-	["arifle_Mk20C_F", "30Rnd_556x45_Stanag"], ["SMG_01_F", "30Rnd_45ACP_Mag_SMG_01"], ["SMG_02_F", "30Rnd_9x21_Mag"], 
-	["hgun_Pistol_heavy_01_F", "11Rnd_45ACP_Mag"], ["hgun_Pistol_heavy_02_F", "6Rnd_45ACP_Cylinder"], ["hgun_PDW2000_Holo_snds_F", "16Rnd_9x21_Mag"],
-	["hgun_PDW2000_Holo_F", "30Rnd_9x21_Mag"] ];
-LOOT_BACKPACK_ARRAY = ["B_AssaultPack_khk", "B_AssaultPack_dgtl", "B_AssaultPack_rgr", "B_AssaultPack_sgg", "B_AssaultPack_blk", "B_AssaultPack_cbr", "B_HuntingBackpack", "B_Kitbag_mcamo", "B_Kitbag_sgg", "B_Bergen_sgg", "B_Bergen_mcamo", "B_Bergen_rgr", "B_Bergen_blk", "B_FieldPack_blk",
-		"B_FieldPack_ocamo", "B_FieldPack_oucamo", "B_FieldPack_cbr", "B_Carryall_oli", "B_Carryall_khk", "B_Carryall_cbr", "B_OutdoorPack_blk", "B_OutdoorPack_tan", "B_OutdoorPack_blu"];
-LOOT_BUILDING_SUPPLIES_ARRAY = ["ItemGPS"];
-LOOT_MILITARY_ARRAY = ["ItemGPS", "Medikit", "Toolkit", "optic_LRPS", "optic_NVS", "optic_Nightstalker", "optic_tws", "optic_tws_mg", "optic_DMS", "optic_MRCO",
-	"U_B_CombatUniform_mcam", "U_B_CombatUniform_mcam_tshirt", "U_B_CombatUniform_mcam_vest", "U_B_HeliPilotCoveralls", "U_B_Wetsuit", "U_O_CombatUniform_ocamo","U_O_PilotCoveralls",  "U_B_CombatUniform_mcam_worn", "U_B_SpecopsUniform_sgg",
-		"U_B_PilotCoveralls",  "U_O_CombatUniform_oucamo", "U_O_SpecopsUniform_ocamo", "U_O_SpecopsUniform_blk", "U_O_OfficerUniform_ocamo", "U_I_CombatUniform",
-		"U_IG_Guerilla2_1", "U_IG_Guerilla2_2", "U_IG_Guerilla2_3", "U_IG_Guerilla3_1", "U_IG_Guerilla3_2", "U_IG_leader", "V_BandollierB_blk",
-		"V_PlateCarrier1_rgr", "V_PlateCarrier2_rgr", "V_PlateCarrier3_rgr", "V_PlateCarrierSpec_rgr", "V_Chestrig_khk", "V_TacVest_camo", "V_TacVest_blk_POLICE", "V_TacVestCamo_khk", 
-		"V_HarnessOGL_gry", "V_PlateCarrierIA1_dgtl", "V_RebreatherB", "H_HelmetB_camo", "H_HelmetB", "H_HelmetIA", "H_Cap_blk_CMMG", "H_MilCap_mcamo",
-		"H_MilCap_oucamo", "H_MilCap_rucamo", "H_MilCap_gry", "H_MilCap_dgtl", "H_MilCap_blue", "H_HelmetSpecO_blk", "H_Bandanna_mcamo", "H_Shemag_khk",
-		"H_Beret_blk_POLICE", "H_Beret_ocamo"];
-LOOT_MILITARY_WEAPONS_ARRAY = [["srifle_EBR_F", "20Rnd_762x51_Mag"], ["launch_RPG32_F", "RPG32_F"], ["srifle_GM6_F", "5Rnd_127x108_Mag"], 
-	["srifle_GM6_F", "5Rnd_127x108_APDS_Mag"], ["LMG_Mk200_F", "200Rnd_65x39_cased_Box"], ["LMG_Mk200_F", "200Rnd_65x39_cased_Box_Tracer"], 
-	["arifle_Katiba_F", "30Rnd_65x39_caseless_green"], ["arifle_Katiba_GL_F", "30Rnd_65x39_caseless_green"], ["arifle_MXC_F", "30Rnd_65x39_caseless_mag"],
-	["arifle_MX_F", "30Rnd_65x39_caseless_mag"], ["arifle_MX_SW_F", "100Rnd_65x39_caseless_mag_Tracer"], ["arifle_MXM_F", "30Rnd_65x39_caseless_mag"],
-	["arifle_MX_GL_ACO_F", "30Rnd_65x39_caseless_mag_Tracer"], ["LMG_Zafir_F", "150Rnd_762x51_Box_Tracer"], ["arifle_Mk20_GL_F", "30Rnd_556x45_Stanag_Tracer_Yellow"],
-	["srifle_DMR_01_F", "10Rnd_762x51_Mag"] ];
-LOOT_COMPLETE_ARRAY = LOOT_BACKPACK_ARRAY +  LOOT_GENERAL_ARRAY + LOOT_WEAPONS_ARRAY + LOOT_BUILDING_SUPPLIES_ARRAY + LOOT_JUNK_ARRAY + LOOT_MILITARY_ARRAY + LOOT_MILITARY_WEAPONS_ARRAY;

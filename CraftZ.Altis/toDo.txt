@@ -1,0 +1,14 @@
+[] Make own icons for Mod
+	[] Add Icons to game
+[] Make hatchet
+	[] hatchet model
+	[] hatchet animation
+	[] hatchet scripting
+	
+[] make custom items
+	[] food model
+	[] food scripting
+	[] water model
+	[] water scripting
+	[] meds model
+	[] meds scripting

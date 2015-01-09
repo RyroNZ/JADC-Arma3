@@ -13,11 +13,12 @@ while {true} do {
 			_buildingsNearby_array = nearestObjects [_player, ["house"], LOOT_SPAWN_DISTANCE];
 			//Get the buildings nearby
 
-		{		
+		{	
+			_building = _x;	
 			_buildingPositions = ([_x] call BIS_fnc_buildingPositions);
 			{	
 				if (!(_x in currentItemPos_array)) then {
-					[_x] call fn_spawnLoot;
+					[_x, _building] call fn_spawnLoot;
 				};
 				//sleep 0.001;
 			} forEach _buildingPositions;

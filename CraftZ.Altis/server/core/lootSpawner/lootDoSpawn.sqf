@@ -5,91 +5,98 @@ fn_spawnLoot =
 	private ["_lootPos", "_itemsToSpawn", "_junkLoot", "_foodLoot", "_waterLoot", "_healthLoot", "_weaponLoot", "_uniformLoot", "_buildingLoot", "_militaryLoot", "_militaryWeaponsLoot"];
 
 	_lootPos = _this select 0;	
+	_building = _this select 1;
 	_itemsToSpawn = [];
 
-	_junkLoot = LOOT_SPAWN_CHANCE select 0;
-	_backpackLoot = LOOT_SPAWN_CHANCE select 1;
-	_generalLoot = LOOT_SPAWN_CHANCE select 2;
-	_weaponLoot = LOOT_SPAWN_CHANCE select 3;
-	_uniformLoot = LOOT_SPAWN_CHANCE select 4;
-	_buildingLoot = LOOT_SPAWN_CHANCE select 5;
-	_militaryLoot = LOOT_SPAWN_CHANCE select 6;
-	_militaryWeaponsLoot = LOOT_SPAWN_CHANCE select 7;
-
 	currentItemPos_array pushBack (_lootPos);	
-	_selectCat = random 100;
-	switch (true) do
-	{
-		case (_selectCat > _militaryWeaponsLoot):
+	systemChat format["Nearest Building: %1", _building];
+	systemChat str ((configFile >> "cfgVehicles" >> (typeOf _building) >> "vehicleClass") call BIS_fnc_GetCfgData);
+	if (random 100 < LOOT_SPAWN_CHANCE) then {
+		switch ((configFile >> "cfgVehicles" >> (typeOf _building) >> "vehicleClass") call BIS_fnc_GetCfgData) do
 		{
 
-			_weaponChoice = (LOOT_MILITARY_WEAPONS_ARRAY call BIS_fnc_selectRandom);
-			_weapon = _weaponChoice Select 0;
-			_mag = _weaponChoice select 1;
-			_magAmount = (random LOOT_MAX_MAGS_TO_SPAWN);
-			[_weapon, _mag, _magAmount, _lootPos ] call fn_spawnWeapon;
-		};
-
-		case (_selectCat > _militaryLoot): 
-		{
-			for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+			case "Wreck":
 			{
-				_item = LOOT_MILITARY_ARRAY call BIS_fnc_selectRandom;
-				_itemsToSpawn set [_x, _item];
+				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+				{
+					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_itemsToSpawn set [_x, _item];
+				};
+				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
 			};
-			[_itemsToSpawn, _lootPos ] call fn_spawnItems;
-		};
-
-		case (_selectCat > _buildingLoot):
-		{
-			for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+			case "Structures_Village":
 			{
-				_item = LOOT_BUILDING_SUPPLIES_ARRAY call BIS_fnc_selectRandom;
-				_itemsToSpawn set [_x, _item];
+				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+				{
+					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_itemsToSpawn set [_x, _item];
+				};
+				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
+
 			};
-			[_itemsToSpawn, _lootPos ] call fn_spawnItems;
-		};
-
-		case (_selectCat > _weaponLoot):
-		{	
-			_weaponChoice = (LOOT_WEAPONS_ARRAY call BIS_fnc_selectRandom);
-			_weapon = _weaponChoice Select 0;
-			_mag = _weaponChoice select 1;
-			_magAmount = (random LOOT_MAX_MAGS_TO_SPAWN);
-			[_weapon, _mag, _magAmount, _lootPos ] call fn_spawnWeapon;
-
-		};
-
-		case (_selectCat > _generalLoot):
-		{
-			for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+			case "Structures_Transport":
 			{
-				_item = LOOT_GENERAL_ARRAY call BIS_fnc_selectRandom;
-				_itemsToSpawn set [_x, _item];
+				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+				{
+					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_itemsToSpawn set [_x, _item];
+				};
+				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
 			};
-			[_itemsToSpawn, _lootPos ] call fn_spawnItems;
-		};
-
-		case (_selectCat > _junkLoot):
-		{
-			for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+			case "Structures_Town":
 			{
-				_item = LOOT_JUNK_ARRAY call BIS_fnc_selectRandom;
-				_itemsToSpawn set [_x, _item];
+				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+				{
+					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_itemsToSpawn set [_x, _item];
+				};
+				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
 			};
-			[_itemsToSpawn, _lootPos ] call fn_spawnItems;
-		};
+			case "Structures_Military":
+			{
+				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+				{
+					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_itemsToSpawn set [_x, _item];
+				};
+				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
+			};
+			case "Structures_Infrastructure":
+			{
+				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+				{
+					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_itemsToSpawn set [_x, _item];
+				};
+				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
+			};
+			case "Structures_Cultural":
+			{
+				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+				{
+					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_itemsToSpawn set [_x, _item];
+				};
+				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
+			};
+			case "Structures_Industrial":
+			{
+				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
+				{
+					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_itemsToSpawn set [_x, _item];
+				};
+				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
+			};
 
-		case (_selectCat > _backpackLoot):
-		{
-			_backpackToSpawn = (LOOT_BACKPACK_ARRAY call BIS_fnc_selectRandom);
-			[_backpackToSpawn, _lootPos ] call fn_spawnBackpack;
-		};
-		default 
-		{
-			[[] ,_lootPos] spawn fn_spawnItems;
-		};
+			default 
+			{
+				[[], _lootPos] call	fn_spawnItems;
+			};
 
+		};
+	} else {
+		[[], _lootPos] call	fn_spawnItems;
 	};
 };
 
@@ -125,15 +132,20 @@ fn_spawnBackpack = {
 
 fn_spawnItems = 
 {
+
 	private ["_itemsToSpawn", "_amountToSpawn", "_pos", "_loot"];
 	_itemsToSpawn = _this select 0;
 	_pos = _this select 1;
 	
 	_loot = createVehicle [LOOT_GROUNDWEAPON_HOLDER, _pos, [], 0, "CAN_COLLIDE"];
 	{
+		if ( isClass (configFile >> "CFGVehicles" >> _x)) then {
+			[_x, _pos] call fn_spawnBackpack;
+		} else {
 		systemChat format["Adding %1 of %2", str _x, str (count _itemsToSpawn)];
 		_loot addItemCargoGlobal [_x, 1];
 		_loot setDir (random 360);
+		};
 	} forEach _itemsToSpawn;
 
 	[_loot, _pos] spawn fn_itemDespawner;
