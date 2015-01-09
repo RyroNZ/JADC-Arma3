@@ -1,0 +1,37 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, zombieNormal">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Idle",0,4346,-82.510437,-123.572449,7.489563,-73.572449,0.000000,"Idle"};
+globals[] = {0.000000,0,0,0,0,640,480,1,11,6316128,1,-361.119720,361.119141,802.399231,-298.896698,1067,1627,1};
+window[] = {0,-1,-1,-32000,-32000,2311,512,2006,512,1,1089};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "zombieNormal";
+  class States
+  {
+    /*%FSM<STATE "Idle">*/
+    class Idle
+    {
+      name = "Idle";
+      init = /*%FSM<STATEINIT""">*/"_this disableAI ""FSM"";" \n
+       "_this setBehaviour ""CARELESS"";" \n
+       "_this setCombatMode ""RED"";" \n
+       "_this setSkill 0;" \n
+       "" \n
+       "_this moveTo [14391, 15932, 0];" \n
+       "_this doMove [14391, 15932, 0];" \n
+       "systemChat str _this;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Idle";
+  finalStates[] =
+  {
+  };
+};
+/*%FSM</COMPILE>*/

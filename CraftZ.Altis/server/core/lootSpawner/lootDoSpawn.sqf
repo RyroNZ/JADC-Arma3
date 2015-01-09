@@ -7,7 +7,6 @@ fn_spawnLoot =
 	_lootPos = _this select 0;	
 	_building = _this select 1;
 	_itemsToSpawn = [];
-
 	currentItemPos_array pushBack (_lootPos);	
 	systemChat format["Nearest Building: %1", _building];
 	systemChat str ((configFile >> "cfgVehicles" >> (typeOf _building) >> "vehicleClass") call BIS_fnc_GetCfgData);
@@ -28,7 +27,7 @@ fn_spawnLoot =
 			{
 				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
 				{
-					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_item = LOOT_STRUCTURE_VILLAGE call BIS_fnc_selectRandom;
 					_itemsToSpawn set [_x, _item];
 				};
 				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
@@ -38,7 +37,7 @@ fn_spawnLoot =
 			{
 				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
 				{
-					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_item = LOOT_STRUCTURE_TRANSPORT call BIS_fnc_selectRandom;
 					_itemsToSpawn set [_x, _item];
 				};
 				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
@@ -47,7 +46,7 @@ fn_spawnLoot =
 			{
 				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
 				{
-					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_item = LOOT_STRUCTURE_TOWN call BIS_fnc_selectRandom;
 					_itemsToSpawn set [_x, _item];
 				};
 				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
@@ -56,7 +55,7 @@ fn_spawnLoot =
 			{
 				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
 				{
-					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_item = LOOT_STRUCTURE_MILITARY call BIS_fnc_selectRandom;
 					_itemsToSpawn set [_x, _item];
 				};
 				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
@@ -65,7 +64,7 @@ fn_spawnLoot =
 			{
 				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
 				{
-					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_item = LOOT_STRUCTURE_INFRASTURCUTRE call BIS_fnc_selectRandom;
 					_itemsToSpawn set [_x, _item];
 				};
 				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
@@ -74,7 +73,7 @@ fn_spawnLoot =
 			{
 				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
 				{
-					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_item = LOOT_STRUCTURE_CULTURAL call BIS_fnc_selectRandom;
 					_itemsToSpawn set [_x, _item];
 				};
 				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
@@ -83,7 +82,7 @@ fn_spawnLoot =
 			{
 				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
 				{
-					_item = LOOT_STRUCTURE_WRECK call BIS_fnc_selectRandom;
+					_item = LOOT_STRUCTURE_INDUSTRIAL call BIS_fnc_selectRandom;
 					_itemsToSpawn set [_x, _item];
 				};
 				[_itemsToSpawn, _lootPos ] call fn_spawnItems;
@@ -142,6 +141,7 @@ fn_spawnItems =
 		if ( isClass (configFile >> "CFGVehicles" >> _x)) then {
 			[_x, _pos] call fn_spawnBackpack;
 		} else {
+
 		systemChat format["Adding %1 of %2", str _x, str (count _itemsToSpawn)];
 		_loot addItemCargoGlobal [_x, 1];
 		_loot setDir (random 360);

@@ -18,6 +18,8 @@ while {true} do {
 			_buildingPositions = ([_x] call BIS_fnc_buildingPositions);
 			{	
 				if (!(_x in currentItemPos_array)) then {
+
+					
 					[_x, _building] call fn_spawnLoot;
 				};
 				//sleep 0.001;

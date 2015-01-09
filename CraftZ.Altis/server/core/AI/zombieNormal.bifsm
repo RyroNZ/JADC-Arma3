@@ -1,0 +1,68 @@
+version=1;
+class GraphItems
+{
+	class Item0
+	{
+		Flags=4346;
+		BasicText="";
+		Left=-82.510437;
+		Top=-123.57245;
+		Right=7.489563;
+		Bottom=-73.572449;
+		BgColor=255;
+		class ItemInfo
+		{
+			Text="Idle";
+			lStyle=-842150451;
+			Shape=6;
+			Group=-842150451;
+			FontFace="Arial";
+			FontHeight=10;
+			FontWeight=700;
+			FontUnderline=1;
+			FontCharSet=0;
+			ItemType=0;
+			class ItemInfo
+			{
+				Id=1;
+				InitCode="this doMove [14391, 15932, 0];";
+			};
+		};
+	};
+};
+class GraphLinks
+{
+};
+class Globals
+{
+	NextGroupID=1;
+	NextID=11;
+	FSMName="zombieNormal";
+	class DefaultLink
+	{
+		ArrowSize=0;
+	};
+	DefaultLinkColor=6316128;
+	DefaultLinkUseCustom=1;
+	PZoomLeft=-361.11972;
+	PZoomRight=361.11914;
+	PZoomBottom=802.39923;
+	PZoomTop=-298.8967;
+	Clxs=1067;
+	Clys=1627;
+	Aspect=1;
+};
+class Window
+{
+	Flags=0;
+	MaxPosX=-1;
+	MaxPosY=-1;
+	MinPosX=-32000;
+	MinPosY=-32000;
+	Left=58;
+	Top=52;
+	Right=1552;
+	Bottom=1851;
+	ShowCmd=1;
+	SplitPos=1089;
+};
