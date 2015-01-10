@@ -1,0 +1,822 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_item",
+				"_itemsToSpawn"
+			],
+			[
+				"LOOT_MILITAR",
+				"LOOT_MILITARY_WEAPONS_ARRAY"
+			],
+			[
+				"addBack",
+				"addBackpackCargoGlobal"
+			],
+			[
+				"_military",
+				"_militaryWeaponsLoot"
+			],
+			[
+				"_weap",
+				"_weaponSelect"
+			],
+			[
+				"_mag",
+				"_magAmountToSpawn"
+			],
+			[
+				"addMaga",
+				"addMagazineCargoGlobal"
+			],
+			[
+				"addItemCargo",
+				"addItemCargoGlobal"
+			],
+			[
+				"exi",
+				"exitWith"
+			],
+			[
+				"_lootPos",
+				"_lootPositions_array"
+			],
+			[
+				"_loo",
+				"_lootPositions_array"
+			],
+			[
+				"_curre",
+				"_currentItemIndex"
+			],
+			[
+				"OBJ",
+				"objNull"
+			],
+			[
+				"DB_SUB",
+				"DB_SUB_CATAGORY_GADGETS"
+			],
+			[
+				"DB_SUB_CATAG",
+				"DB_SUB_CATAGORY_UNIFORM_GEAR"
+			],
+			[
+				"DB_USB_CATAGORY_VEST",
+				"DB_SUB_CATAGORY_VEST_GEAR"
+			],
+			[
+				"DB_SUB_CATAGORY",
+				"DB_SUB_CATAGORY_HEALTH"
+			],
+			[
+				"_pl",
+				"_playerData_array"
+			],
+			[
+				"PLAYER_TEMP",
+				"PLAYER_TEMP_OVERHEAT"
+			],
+			[
+				"PLAYER_TEMP_WATER",
+				"PLAYER_TEMP_WATER_HEAT_LOSS"
+			],
+			[
+				"CLIENT_INIT",
+				"CLIENT_INIT_FAIL_LOAD_TEXT"
+			],
+			[
+				"GUI_TH",
+				"GUI_THIRST_STEP_4"
+			],
+			[
+				"_blood",
+				"_bloodBorder_array"
+			],
+			[
+				"_bloodBo",
+				"_bloodBorder_array"
+			],
+			[
+				"_playe",
+				"_playerStats_array"
+			],
+			[
+				"_bloodBorder",
+				"_bloodBorderColor_array"
+			],
+			[
+				"_tempCol",
+				"_tempColor_array"
+			],
+			[
+				"_tempIcon",
+				"_tempIcon_array"
+			],
+			[
+				"_thirst",
+				"_thirstColor_array"
+			],
+			[
+				"_hungerCol",
+				"_hungerColor_array"
+			],
+			[
+				"_hungerIco",
+				"_hungerIcon_array"
+			],
+			[
+				"_bloodBorder_2_sick",
+				"_bloodBorder_2_sick_up"
+			],
+			[
+				"_bloodBorder_1_sick",
+				"_bloodBorder_1_sick_up"
+			],
+			[
+				"_bloodBorder_3",
+				"_bloodBorder_3_sick_down"
+			],
+			[
+				"_bloodBorder_1",
+				"_bloodBorder_1_up"
+			],
+			[
+				"_bloodBorder_2",
+				"_bloodBorder_2_down"
+			],
+			[
+				"_bloodColor",
+				"_bloodBorder_color_ok"
+			],
+			[
+				"_bloodIcon",
+				"_bloodIcon_6"
+			],
+			[
+				"_blod",
+				"_bloodIcon_1"
+			],
+			[
+				"_blodoIc",
+				"_bloodIcon_5"
+			],
+			[
+				"_bloodI",
+				"_bloodIcon_3"
+			],
+			[
+				"_tempColor",
+				"_tempColor_2"
+			],
+			[
+				"_tempCOlo",
+				"_tempColor_0"
+			],
+			[
+				"_temp",
+				"_tempIcon_1"
+			],
+			[
+				"_tempIco",
+				"_tempIcon_3"
+			],
+			[
+				"_thirstCol",
+				"_thirstColor_4"
+			],
+			[
+				"_thir",
+				"_thirstIcon_4"
+			],
+			[
+				"_thi",
+				"_thirstIcon_3"
+			],
+			[
+				"_th",
+				"_thirstIcon_2"
+			],
+			[
+				"_hunger",
+				"_hungerColor_4"
+			],
+			[
+				"_hung",
+				"_hungerIcon_4"
+			],
+			[
+				"_hungerIcon",
+				"_hungerIcon_0"
+			],
+			[
+				"_bloodBorder_1_si",
+				"_bloodBorder_1_sick_down"
+			],
+			[
+				"_player",
+				"_playerUniform"
+			],
+			[
+				"_bloo",
+				"_bloodBorder_color_sick"
+			],
+			[
+				"_bloodBorder_3_",
+				"_bloodBorder_3_sick_down"
+			],
+			[
+				"_tempC",
+				"_tempColor_4"
+			],
+			[
+				"Publi",
+				"publicVariableClient"
+			],
+			[
+				"_pla",
+				"_playerHunger"
+			],
+			[
+				"disa",
+				"disableSerialization"
+			],
+			[
+				"_playerDa",
+				"_playerDataStats"
+			],
+			[
+				"_play",
+				"_playerMagazines"
+			],
+			[
+				"preprocess",
+				"preprocessFileLineNumbers"
+			],
+			[
+				"playerUnif",
+				"playerUniformGear"
+			],
+			[
+				"playerBack",
+				"playerBackpackGear"
+			],
+			[
+				"onPlaye",
+				"onPlayerDisconnected"
+			],
+			[
+				"_air",
+				"_airHeatLoss"
+			],
+			[
+				"_defau",
+				"_defaultWaterTempVariation"
+			],
+			[
+				"surface",
+				"surfaceIsWater"
+			],
+			[
+				"publ",
+				"publicVariable"
+			],
+			[
+				"DEFAULT_HUNGER_",
+				"DEFAULT_HUNGER_RATE_IDLE"
+			],
+			[
+				"public",
+				"publicVariableClient"
+			],
+			[
+				"PV_",
+				"PV_playerLoaded"
+			],
+			[
+				"fnc_st",
+				"fnc_status_hunger"
+			],
+			[
+				"prepr",
+				"preprocessFileLineNumbers"
+			],
+			[
+				"addP",
+				"addPublicVariableEventHandler"
+			],
+			[
+				"fnc_se",
+				"fnc_setup_new_player"
+			],
+			[
+				"sec",
+				"secondaryWeaponItems"
+			],
+			[
+				"removeWea",
+				"removeAllWeapons"
+			],
+			[
+				"fnc_clean_player",
+				"fnc_clean_player"
+			],
+			[
+				"preP",
+				"preprocessFileLineNumbers"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"packagecontrol: add",
+				"Package Control: Add Repository"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 261.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/constants.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/lootSpawner/lootDoSpawn.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/lootSpawner/lootSpawner.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/printEnvironmentToChat.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/lootSpawner/lootUpdate.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerReady.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerGetData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/lootSpawner/lootDespawner.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather/serverDynamicWeather.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/compile.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataReady.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/dynamicWeather/serverDynamicTemperatures.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/init.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/init.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerSetData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/setPlayerStats.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/lootSpawner/lootDespawn.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/lootSpawner/lootDoDelete.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/setupGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerSetDefaults.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/description.ext",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/compile.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/init.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/getCharacterFromServer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/player/updateHunger.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateBloodBorderGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/playerConnected.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverConnected.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverGetData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataDefaults.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateThirst.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateHunger.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateTempGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/updateTemperature.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerRespawn.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/receiveCharacter.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/statusMonitor.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/dynamicWeather/clientDynamicWeather.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateBloodGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateHungerGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/gui/updateThirstGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/resetPrimaryWeapon.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/eventHandlers/playerDead.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/databaseSaving/serverDataSave.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/databaseSaving/serverPlayerSave.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerDisconnected.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/onPlayerKilled.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataLoad.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/eventHandlers/playerDied.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/displayTime.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/setupGUI.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerNew.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerReady.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/addWeapons.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/addMagazines.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/addInventory.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerLoad.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerConnected.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverPlayerSetData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/addPlayerItems/setPlayerStats",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/mission.sqm",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/severUpdateReadyUnits.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/dynamicWeather/updateOverCast.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverDataNew.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/serverDynamicWeather.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/serverDataSave.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/core/clientDynamicWeather.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/serverPlayerSave.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/core/serverPlayerSave.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initServer/serverData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/Player/updateThirst.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/serverSavePlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/serverSaveData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverLoadPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverSetPlayerData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverSetupNewPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverSetupPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/Player/updateHunger.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/Player/runSpeed.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/Player/statusMonitor.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/player/runSpeed.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/clientSetupPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/clientCleanPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/clientCleanPlayerGun.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/clientLoadPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/serverSendPlayerData.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/clientGetLoadout.sqf",
+		"/C/Users/RyroNZ/AppData/Roaming/Sublime Text 3/Packages/SqlBeautifier/SQL Beautifier.sublime-settings",
+		"/C/Users/RyroNZ/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/RyroNZ/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/cleanPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/eventHandlers/sendToChat.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/getLoadout.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/cleanPlayerGun.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/setupPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/setupPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/initPlayer/setupNewPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/player/initPlayer/loadPlayer.sqf",
+		"/C/Users/RyroNZ/Documents/Arma 3/missions/CraftZ.Altis/server/serverLoadData.sqf",
+		"/C/Users/RyroNZ/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\Users\\RyroNZ\\Documents\\Arma 3\\missions\\CraftZ.Altis",
+			"C:\\Users\\RyroNZ\\Documents\\Arma 3\\missions\\CraftZ.Altis\\server",
+			"C:\\Users\\RyroNZ\\Documents\\Arma 3\\missions\\CraftZ.Altis",
+			"C:\\Users\\RyroNZ\\Documents\\Arma 3\\missions\\CraftZ.Altis\\player"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ceil",
+			"U_C_Journalist",
+			"99",
+			"LOOT_MAX_SPAWN_POINTS_PER_BUILDING",
+			"createVehicle",
+			"tToSpawn = _this select 2;",
+			"systemChat",
+			"_loot",
+			" lootPos",
+			"//[",
+			"\"server\\core\\lootSpawner\\lootDespawner.sqf\";",
+			"SERVER_EXEC_LOOT_DESPAWNER",
+			"SERVER_EXEC_LOOT_DESPAWNER ",
+			"lootDespawner",
+			"_x",
+			"diag_log format[\"Player %1 is %2 m away from %3\", name _x, str (_x distance _lootPos), str \"dummyItem\"];",
+			"200",
+			"systemChat",
+			"wepHolder",
+			"5",
+			"currenI",
+			"lootDoDelete.sqf",
+			"_playerDataArray",
+			"_playerReadFailed",
+			"serverReadFailed",
+			"\"player\\initPlayer\\receiveCharacter.sqf\"",
+			"\"server\\player\\",
+			"TOXCII",
+			"_airHeatLoss",
+			"_waterHeatLoss",
+			"Level\"",
+			"_defaultAirHeatLoss",
+			"_defaultWaterHeatLoss",
+			"_defaultRunTempGain",
+			"_defaultCarTempGain",
+			"_defaultDamageFreezing",
+			"_defaultDamageOverheating",
+			"_defaultTempEquillibrium",
+			"_defaultOverheatTemp",
+			"_defaultHypothermia",
+			"_defaultFreeze",
+			"SetVariable [\"hungerLevel\"",
+			"\"ARRAY\"",
+			"\"SCALAR\"",
+			"\"serverWeather\"",
+			"\"STRING\"",
+			"\"SCALAR\"",
+			"\"ARRAY\"",
+			"\"customPlayerData\"",
+			"\"playerData\"",
+			"\"PlayerID_%1\"",
+			"\"customPlayerData\"",
+			"\"playerData\"",
+			"_thirstInside ",
+			"_tempInside ",
+			"_foodInside ",
+			"_bloodInside ",
+			"\"hungerLevel\"",
+			"\";\n",
+			"_bloodBorder ",
+			" _bloodBorder ",
+			"_bloodBorder",
+			"_foodInside ctrlCommit 0;",
+			"_thirstInside ctrlCommit 0;",
+			"_tempInside ctrlCommit 0;",
+			"_bloodInside ctrlCommit 0;",
+			"_bloodBorder ctrlCommit 0;",
+			"palyer",
+			";};\n",
+			"immunity",
+			"ctrlCO",
+			"ctrlCommit 10;",
+			"thrist",
+			"DEFAULT_DAMAGE_THIRST",
+			"DEFAULT_THIRST_RATE_IDLE",
+			"DEFAULT_THIRST_RATE_MULTI",
+			"DEFAULT_MAX_THIRST",
+			"DEFAULT_MAX_HUNGER",
+			"_defaultMaxHunger",
+			"DEFAULT_DAMAGE_HUNGER ",
+			"DEFAULT_HUNGER_RATE_IDLE",
+			"DEFAULT_HUNGER_RATE_MULTI",
+			"\"player\\initPlayer\\setupGUI.sqf\";",
+			"//};",
+			"1};",
+			"{0",
+			"\\food\\",
+			"PV_playerLoaded",
+			"PV_playerLoaded == true",
+			";",
+			"_this",
+			"_palyerDataStats_array",
+			"_this",
+			"_x",
+			"compile preprocessfile",
+			"compile preprocess",
+			"uniformGear",
+			" playerData",
+			"playerHasDied",
+			"publicVariableClient",
+			"addPublicVariableEventHandler",
+			"readyUnits",
+			"_defaultTempequilibrium",
+			"Temperature",
+			"_playerTemperature",
+			"_temperatureLevel",
+			"DEFAULT_AIR_HEAT_LOSS",
+			"DEFAULT_WATER_HEAT_LOSS = 1.0832;",
+			"DEFAULT_RUN_TEMPERATURE_GAIN",
+			"DEFAULT_CAR_TEMPERATURE_GAIN",
+			"DEFAULT_DAMAGE_FREEZING ",
+			"DEFAULT_DAMAGE_OVERHEATING",
+			"DEFAULT_OVERHEAT_TEMPERATURE",
+			"DEFAULT_HYPO_TEMPERATURE",
+			"DEFAULT_FREEZE_TEMPERATURE",
+			"DEFAULT_WATER_DI",
+			"_hungerLevel",
+			"addPublicVariableEventHandler",
+			"clientDynamic",
+			"serverDynamic",
+			"setOvercast",
+			"\"PV_playerLoaded\"",
+			"diag_log",
+			"rain",
+			"setOvercast",
+			"serverDynamicWeather.sqf",
+			"localize",
+			" in "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"floor",
+			"_lootPos ",
+			"_lootPos",
+			"diag_log",
+			"_loot",
+			"_playerData_array",
+			"playerReadFailed",
+			"_serverReadFailed",
+			"PLAYER_TEMP_AIR_HEAT_LOSS",
+			"PLAYER_TEMP_WATER_HEAT_LOSS",
+			"PLAYER_TEMP_AIR_HEAT_LOSS",
+			"PLAYER_TEMP_WATER_HEAT_LOSS",
+			"PLAYER_TEMP_RUN_HEAT_GAIN",
+			"PLAYER_TEMP_CAR_HEAT_GAIN",
+			"PLAYER_DAMAGE_FREEZE",
+			"PLAYER_DAMAGE_OVERHEAT",
+			"PLAYER_TEMP_EQUILLIBRIUM",
+			"PLAYER_TEMP_OVERHEAT",
+			"PLAYER_TEMP_HYPOTHERMIA",
+			"PLAYER_TEMP_FREEZE",
+			"setVariable [PLAYER_HUNGER_LEVEL_IDC",
+			"DB_TYPE_ARRAY",
+			"DB_TYPE_SCALAR",
+			"DB_CATAGORY_WEATHER",
+			"DB_TYPE_STRING",
+			"DB_TYPE_SCALAR",
+			"DB_TYPE_ARRAY",
+			"DB_CATAGORY_CUSTOM_VARIABLES",
+			"DB_CATAGORY_PLAYER_DATA",
+			"PLAYER_ID_PREFIX",
+			"DB_CATAGORY_CUSTOM_VARIABLES",
+			"DB_CATAGORY_PLAYER_DATA",
+			"_ui ",
+			"_ui",
+			"_ui ",
+			" _ui ",
+			"_ui",
+			"",
+			"ctrlCo",
+			"ctrlCommit 0;",
+			"thirst",
+			"_defaulDamageThirst",
+			"_defaulThirstIdle",
+			"_defaulThirstMul",
+			"_defaultMaxThirst",
+			"_defaultMaxHunger",
+			"_defaultDamageHunger",
+			"_defaultHungerRateIdle",
+			"_defaultHungerRateMul",
+			"1];",
+			"[0",
+			"\\hunger\\",
+			"_playerDataInventory_array",
+			"_playerDataStats_array ",
+			"_palyerDataStats_array",
+			"_defaultTempEquillibrium",
+			"",
+			"Temp",
+			"",
+			"Temp",
+			"_playerTemp",
+			"_playerTemperature",
+			"_defaultAirHeatLoss",
+			"_defaultWaterHeatLoss",
+			"_defaultRunTempGain",
+			"_defaultCarTempGain",
+			"_defaultDamageFreezing",
+			"_defaultDamageOverheating",
+			"_defaultOverheatTemperature",
+			"_defaultHypothermiaTemperature",
+			"_defaultFreezeTemperature",
+			"_temperatureLevel",
+			"diag_log",
+			"readyUnits",
+			"READY_UNITS",
+			"SPAWN_POINTS",
+			"READY_UNITS",
+			"",
+			"playerData",
+			"readyUnits",
+			"player",
+			"profile"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.338793853291,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "craftZ.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 391.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
