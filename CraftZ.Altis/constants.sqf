@@ -248,3 +248,6 @@ LOOT_SPAWN_CHANCE = 100;	// SPAWN DIFFICULTY 0-100 (100 always spawns, 0 never s
 LOOT_GROUNDWEAPON_HOLDER = "WeaponHolderSimulated";
 LOOT_MAX_MAGS_TO_SPAWN = 3; // max amount of mags that will spawn with a gun
 LOOT_MAX_ITEMS_TO_SPAWN = 1.25; // max amount of items that will spawn together
+
+AI_MAX_WANDER = 100;
+AI_ZOMBIE_CHARS = ["C_man_p_fugitive_F_asia"];

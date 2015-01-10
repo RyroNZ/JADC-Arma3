@@ -1,9 +1,39 @@
 /*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, zombieNormal">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"Idle",0,4346,-82.510437,-123.572449,7.489563,-73.572449,0.000000,"Idle"};
-globals[] = {0.000000,0,0,0,0,640,480,1,11,6316128,1,-361.119720,361.119141,802.399231,-298.896698,1067,1627,1};
-window[] = {0,-1,-1,-32000,-32000,2311,512,2006,512,1,1089};
+item0[] = {"Idle",0,250,-82.510437,-123.572449,7.489563,-73.572449,0.000000,"Idle"};
+item1[] = {"Valid",8,218,-83.244415,-9.144029,6.755585,40.855972,0.000000,"Valid"};
+item2[] = {"Wander",3,250,-74.423767,118.251846,15.576229,168.251846,0.000000,"Wander"};
+item3[] = {"Time_Check",4,218,-204.129089,120.182243,-114.129089,170.182266,0.000000,"Time Check"};
+item4[] = {"Completed",4,218,51.369606,76.715904,141.369598,126.715897,0.000000,"Completed"};
+item5[] = {"Failed",4,218,48.125465,154.332993,138.125458,204.332993,0.000000,"Failed"};
+item6[] = {"In_Position",4,218,103.921242,116.881866,193.921234,166.881866,0.000000,"In Position"};
+item7[] = {"",7,210,33.859432,280.312500,41.859425,288.312500,0.000000,""};
+item8[] = {"",7,210,149.135620,281.485291,157.135620,289.485291,0.000000,""};
+item9[] = {"",7,210,148.896072,377.300751,156.896072,385.300751,0.000000,""};
+item10[] = {"Target_",4,218,4.616638,361.050842,94.616653,411.050842,0.000000,"Target?"};
+item11[] = {"CHASE",2,250,6.457287,482.852997,96.457314,532.852966,0.000000,"CHASE"};
+item12[] = {"No_Target_",4,218,-155.003540,485.480286,-65.003464,535.480286,0.000000,"No Target?"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,4};
+link4[] = {2,5};
+link5[] = {2,6};
+link6[] = {2,7};
+link7[] = {3,2};
+link8[] = {4,2};
+link9[] = {5,2};
+link10[] = {6,2};
+link11[] = {7,8};
+link12[] = {8,9};
+link13[] = {9,10};
+link14[] = {10,11};
+link15[] = {11,10};
+link16[] = {11,12};
+link17[] = {12,2};
+globals[] = {0.000000,0,0,0,0,640,480,1,31,6316128,1,-331.188416,344.806396,681.999573,-482.759125,964,1661,1};
+window[] = {0,-1,-1,-1,-1,1885,58,2023,52,1,986};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -14,17 +44,122 @@ class FSM
     class Idle
     {
       name = "Idle";
-      init = /*%FSM<STATEINIT""">*/"_this disableAI ""FSM"";" \n
-       "_this setBehaviour ""CARELESS"";" \n
-       "_this setCombatMode ""RED"";" \n
-       "_this setSkill 0;" \n
+      init = /*%FSM<STATEINIT""">*/"_agent = _this;" \n
+       "_agentStartPos = getPosATL _agent;" \n
        "" \n
-       "_this moveTo [14391, 15932, 0];" \n
-       "_this doMove [14391, 15932, 0];" \n
-       "systemChat str _this;"/*%FSM</STATEINIT""">*/;
+       "_target = ObjNull;" \n
+       "_lastTime = 0;" \n
+       "" \n
+       "//systemChat format[""Normal Zombie %1 spawned at %2"", _zombieAI, _zPos];"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
+        /*%FSM<LINK "Valid">*/
+        class Valid
+        {
+          priority = 0.000000;
+          to="Wander";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(!isNil ""_agent"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Wander">*/
+    class Wander
+    {
+      name = "Wander";
+      init = /*%FSM<STATEINIT""">*/"_newPos = [_agent, _agentStartPos] call fn_zombieWander;" \n
+       "_prevTarget = _target;" \n
+       "_target = [_agent, _prevTarget] call fn_zombieFindTarget;" \n
+       "systemChat ""Agent wandering"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Completed">*/
+        class Completed
+        {
+          priority = 0.000000;
+          to="Wander";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"moveToCompleted _agent;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Failed">*/
+        class Failed
+        {
+          priority = 0.000000;
+          to="Wander";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"moveToFailed _agent;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "In_Position">*/
+        class In_Position
+        {
+          priority = 0.000000;
+          to="Wander";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_agent distance _newPos) < 3;"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Target_">*/
+        class Target_
+        {
+          priority = 0.000000;
+          to="CHASE";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(isNull _target);"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Time_Check">*/
+        class Time_Check
+        {
+          priority = 0.000000;
+          to="Wander";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _lastTime > 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_lastTime = time"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "CHASE">*/
+    class CHASE
+    {
+      name = "CHASE";
+      init = /*%FSM<STATEINIT""">*/"systemChat format[""%1 found target: %2"",_agent,  _target];" \n
+       "_target = [_agent] call fn_zombieFindTarget;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "No_Target_">*/
+        class No_Target_
+        {
+          priority = 0.000000;
+          to="Wander";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(isNull _target);"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"systemChat ""Target Lost"";"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Target_">*/
+        class Target_
+        {
+          priority = 0.000000;
+          to="CHASE";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(isNull _target);"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
       };
     };
     /*%FSM</STATE>*/
