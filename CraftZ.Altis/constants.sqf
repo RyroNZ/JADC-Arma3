@@ -16,7 +16,6 @@ PLAYER_TEMP_LEVEL_IDC = "tempLevel";
 PLAYER_TOXICITY_LEVEL_IDC = "toxicityLevel";
 PLAYER_IMMUNITY_LEVEL_IDC = "immunityLevel";
 
-
 PLAYER_MAX_TOXICITY = 50;
 PLAYER_MAX_THIRST = 2000;
 PLAYER_MAX_HUNGER = 4500;
@@ -63,7 +62,9 @@ PLAYER_TEMP_WATER_RESISTANCE_WETSUIT = 0.1; //90% reduction in heat loss in wate
 PLAYER_TEMP_WATER_RESISTANCE_UNIFORM = 1; //0% reduction in heat loss in water when wearing uniform
 PLAYER_TEMP_WATER_RESISTANCE_VEST = 1;//0% reduction in heat loss in water when wearing vest
 
-UI_USEABLE_ITEMS = ["1Rnd_Soda"];
+
+GUI_EXIT_OK = 1;
+GUI_EXIT_CANCEL = 0;
 
 GUI_COLOR_EMPTY = [0,0,0,0];
 GUI_TEMP_COLOR_4 = [0.79,0.07,0,1];
