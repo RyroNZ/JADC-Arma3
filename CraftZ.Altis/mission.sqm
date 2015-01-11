@@ -52,7 +52,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14652.302,17.91,16637.277};
+					position[]={14663.558,17.91,16636.244};
 					id=0;
 					side="CIV";
 					vehicle="C_man_1";
@@ -70,7 +70,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14654.113,17.91,16618.59};
+					position[]={14664.239,17.91,16635.248};
 					id=1;
 					side="CIV";
 					vehicle="C_man_1";
@@ -89,7 +89,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14667.646,17.91,16624.855};
+					position[]={14665.286,17.91,16634.143};
 					id=2;
 					side="CIV";
 					vehicle="C_man_1";

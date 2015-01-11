@@ -1,1 +1,0 @@
-_ctrl ctrlAddEventHandler["MouseButtonDown","_this call whatever"];
