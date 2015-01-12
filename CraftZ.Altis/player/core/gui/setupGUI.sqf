@@ -1,5 +1,6 @@
 disableSerialization;
 cutRsc["playerHUD", "PLAIN"];
+[] execVM "player\core\inventory\useItem.sqf";
 
 while {true} do {
 

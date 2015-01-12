@@ -49,8 +49,6 @@ fn_zombieFindTarget = {
 	_agentPos = getPos _agent;
 	_target = ObjNull;
 
-	_agentEyeDirection = eyeDirection _agent;
-
 	_targets = _agent nearEntities ["Civilian", 50];
 
 	if (!(isNil "_prevTarget")) then 

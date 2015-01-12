@@ -41,7 +41,7 @@ fn_createUseMenu = {
         _slPicFrame = _idc displayCtrl 6001;
         _slDescFrame = _idc displayCtrl 6002;
         _slCfgNameFrame = _idc displayCtrl 6005;
-        _slItemDesc = ((configFile >> "CfgMagazines" >> _slItemData >> "descriptionShort") call BIS_fnc_getCfgData);
+        _slItemDesc = ((configFile >> "CfgMagazines" >> _slItemCfgName >> "descriptionShort") call BIS_fnc_getCfgData);
 
         _slPicFrame ctrlSetText _slItemPicture;
         _slDescFrame ctrlSetText format["%1\n%2", _slItemName, _slItemDesc];
@@ -57,7 +57,7 @@ fn_createUseMenu = {
 
 };
 
-fn_getUseableItems = {
+fn_fn_getUseableItems = {
     private ["_useableItems", "_cfgMagazines", "_useable", "_curItem"];
     _useableItems = [];
     _cfgMagazines = configFile >> "CfgMagazines";
@@ -67,12 +67,13 @@ fn_getUseableItems = {
         if (isClass _curItem) then {
 
             _useable = ((_curItem >> "useable") call BIS_fnc_getCfgData);
+            if (!(isNil "_useable")) them {
+                if (_useable == "true") then {
+                    _useableItems pushBack (configName _curItem);
+                };
+            };
 
         };
-        if (!isNil "_useable" && _useable == "true") then {
-            _useableItems pushBack (configName _curItem);
-        };
-    
 
     };
     _useableItems
@@ -83,48 +84,15 @@ fn_useSelectedItem = {
     _idc = _this select 0;
     _exitCode = _this select 1;
 
-    systemChat format["Exiting with: %1", str _exitCode];
     if (_exitCode == 1) then {
        _slCfgNameFrame = _idc displayCtrl 6005;
        _slItemCfgName = ctrlText _slCfgNameFrame;
 
-       
         _slUseAttrib = ((configFile >> "CfgMagazines" >> _slItemCfgName >> "useable_attributes") call BIS_fnc_getCfgData);
+        PV_itemUsed = [player, _slUseAttrib, _slItemCfgName];
+        publicVariableServer "PV_itemUsed";
 
-        _stats_update = [player, _slUseAttrib];
-        //publicVariableServer stats_update;
-
-        _player = _stats_update select 0;
-        _stats = _stats_update select 1;
-        systemChat str _stats_update;
-
-        _currentHunger = _player getVariable PLAYER_HUNGER_LEVEL_IDC;
-        _currentThirst = _player getVariable PLAYER_THIRST_LEVEL_IDC;
-        _currentTemp = _player getVariable PLAYER_TEMP_LEVEL_IDC;
-        _currentToxicity = _player getVariable PLAYER_TOXICITY_LEVEL_IDC;
-        _currentImmunity = _player getVariable PLAYER_IMMUNITY_LEVEL_IDC;
-
-        _itemHunger = _stats select 0;
-        _itemThirst = _stats select 1;
-        _itemToxicity = _stats select 2;
-        _itemImmunity = _stats select 3;
-        _itemBlood = _stats select 4;
-        _itemTemperature = _stats select 5;
-        _itemToCreate = _stats select 6;
-
-        systemChat format ["About to Create: %1", _itemToCreate];
-        if (_itemToCreate != "") then {
-
-            systemChat format["Creating: %1", _itemToCreate];
-            _itemToCreate createVehicle (getPos _player);
-
-        };
-
-        _player setVariable [PLAYER_HUNGER_LEVEL_IDC, _currentHunger + _itemHunger ];
-        _player setVariable [PLAYER_THIRST_LEVEL_IDC, _currentThirst + _itemThirst];
-        _player setVariable [PLAYER_TEMP_LEVEL_IDC, _currentTemp + _itemTemp];
-        _player setVariable [PLAYER_TOXICITY_LEVEL_IDC, _currentToxicity + _itemToxicity];
-        _player setVariable [PLAYER_IMMUNITY_LEVEL_IDC, _currentImmunity + _itemImmunity];
+        
     };
     
 };
