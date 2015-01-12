@@ -268,7 +268,7 @@ class craftMenu
 			y = 0.39 * safezoneH + safezoneY;
 			w = 0.0412833 * safezoneW;
 			h = 0.022 * safezoneH;
-			action = "[_this] execVM fn_useSelectedItem";
+			action = "closeDialog 1";
 		};
 		class craftMenu_cancel: RscButtonMenu
 		{
