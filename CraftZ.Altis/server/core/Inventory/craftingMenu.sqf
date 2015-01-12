@@ -44,6 +44,22 @@ fn_getCraftableItems = {
 };
 
 fn_craftSelectedItem = {
+
+	_idc = _this select 0;
+	_exitCode = _this select 1;
+
+	_craftMenu_data = (toArray (ctrlText (_idc displayCtrl 7018)));
+
+	if (_exitCode == 1) then {	
+		_player = _craftMenu_data select 0;
+		_reqItems_array = _craftMenu_data select 1;
+		_itemToCreate = _craftMenu_data select 2;
+
+		{
+
+		} forEach _reqItems_array;
+
+	};
 	
 };
 
@@ -54,6 +70,7 @@ fn_drawRequiredMaterials = {
 	_idc = ctrlIDC(_this select 0);
 	_selectedIndex = _this select 1;
 	_cfgMagazines = configFile >> "CfgMagazines";
+	_reqItems_array = [];
 	
 	_cfgName = lbData [_idc, _selectedIndex];
 
@@ -63,6 +80,23 @@ fn_drawRequiredMaterials = {
 	{
 		_reqItemCfgName = _x select 0;
 		_reqItemCount = _x select 1;
+		
+		_playerItems = (uniformItems _player) + (vestItems _player) + (backpackItems _player);
+		_playerItemsCount = 0;
+		{
+			if (_x == _reqItemCfgName) then {
+				_playerItemsCount = _playerItemsCount + 1;
+			};
+		} forEach _playerItems;
+
+		_reqItemCountDisplay = format['%1/%2', _playerItemsCount, _reqItemCount];
+
+		for "_i" from 0 to (_reqItemCount) do {
+			systemChat "Adding item";
+
+			_reqItems_array pushBack (_reqItemCfgName);
+
+		};
 
 		_reqPic = ((_cfgMagazines >> _reqItemCfgName >> "picture") call BIS_fnc_getCfgData);
 		_reqTooltip = ((_cfgMagazines >> _reqItemCfgName >> "displayName") call BIS_fnc_getCfgData);
@@ -78,14 +112,13 @@ fn_drawRequiredMaterials = {
 
 				_itemPicFrame_1 ctrlSetText _reqPic;
 				_itemPicFrame_1 ctrlSetTooltip _reqTooltip;
-				_itemCountFrame_1 ctrlSetText (str _reqItemCount);
+				_itemCountFrame_1 ctrlSetText (_reqItemCountDisplay);
 
 
 				_itemPicFrame_1 ctrlCommit 0;
 				_itemCountFrame_1 ctrlCommit 0;
 
 			};
-
 			case 2:
 			{
 				_itemPicFrame_2 = _displayIDC displayCtrl 7004;
@@ -93,12 +126,11 @@ fn_drawRequiredMaterials = {
 
 				_itemPicFrame_2 ctrlSetText _reqPic;
 				_itemPicFrame_2 ctrlSetTooltip _reqTooltip;
-				_itemCountFrame_2 ctrlSetText (str _reqItemCount);
+				_itemCountFrame_2 ctrlSetText (_reqItemCountDisplay);
 
 
 				_itemPicFrame_2 ctrlCommit 0;
 				_itemCountFrame_2 ctrlCommit 0;
-
 			};
 			case 3:
 			{
@@ -107,7 +139,7 @@ fn_drawRequiredMaterials = {
 
 				_itemPicFrame_3 ctrlSetText _reqPic;
 				_itemPicFrame_3 ctrlSetTooltip _reqTooltip;
-				_itemCountFrame_3 ctrlSetText (str _reqItemCount);
+				_itemCountFrame_3 ctrlSetText (_reqItemCountDisplay);
 
 
 				_itemPicFrame_3 ctrlCommit 0;
@@ -120,7 +152,7 @@ fn_drawRequiredMaterials = {
 
 				_itemPicFrame_4 ctrlSetText _reqPic;
 				_itemPicFrame_4 ctrlSetTooltip _reqTooltip;
-				_itemCountFrame_4 ctrlSetText (str _reqItemCount);
+				_itemCountFrame_4 ctrlSetText (_reqItemCountDisplay);
 
 
 				_itemPicFrame_4 ctrlCommit 0;
@@ -133,7 +165,7 @@ fn_drawRequiredMaterials = {
 
 				_itemPicFrame_5 ctrlSetText _reqPic;
 				_itemPicFrame_5 ctrlSetTooltip _reqTooltip;
-				_itemCountFrame_5 ctrlSetText (str _reqItemCount);
+				_itemCountFrame_5 ctrlSetText (_reqItemCountDisplay);
 
 
 				_itemPicFrame_5 ctrlCommit 0;
@@ -146,7 +178,7 @@ fn_drawRequiredMaterials = {
 
 				_itemPicFrame_6 ctrlSetText _reqPic;
 				_itemPicFrame_6 ctrlSetTooltip _reqTooltip;
-				_itemCountFrame_6 ctrlSetText (str _reqItemCount);
+				_itemCountFrame_6 ctrlSetText (_reqItemCountDisplay);
 
 
 				_itemPicFrame_6 ctrlCommit 0;
@@ -159,7 +191,7 @@ fn_drawRequiredMaterials = {
 
 				_itemPicFrame_7 ctrlSetText _reqPic;
 				_itemPicFrame_7 ctrlSetTooltip _reqTooltip;
-				_itemCountFrame_7 ctrlSetText (str _reqItemCount);
+				_itemCountFrame_7 ctrlSetText (_reqItemCountDisplay);
 
 
 				_itemPicFrame_7 ctrlCommit 0;
@@ -170,6 +202,9 @@ fn_drawRequiredMaterials = {
 		};
 		_count = _count + 1;
 	} forEach _requiredMaterials;
+	_craftMenu_data = _displayIDC displayCtrl 7018;
+	_craftMenu_data ctrlSetText (toString [player, _reqItems_array, _cfgName]);
+	_craftMenu_data ctrlCommit 0;
 };
 
 [] call fn_createCraftMenu;

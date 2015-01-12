@@ -281,6 +281,18 @@ class craftMenu
 			h = 0.022 * safezoneH;
 			action = "closeDialog 0";
 		};
+		class craftMenu_data: RscText
+		{
+			idc = 7018;
+			text = ""; //--- ToDo: Localize;
+			x = -8.5 * GUI_GRID_W + GUI_GRID_X;
+			y = 17 * GUI_GRID_H + GUI_GRID_Y;
+			w = 4 * GUI_GRID_W;
+			h = 2.5 * GUI_GRID_H;
+			colorText[] = {-1,-1,-1,0};
+			colorBackground[] = {-1,-1,-1,0};
+			colorActive[] = {-1,-1,-1,0};
+		};
 
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END
