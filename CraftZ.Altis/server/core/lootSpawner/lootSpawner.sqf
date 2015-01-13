@@ -24,12 +24,11 @@ while {true} do {
 				};
 				//sleep 0.001;
 			} forEach _buildingPositions;
-			diag_log format["[%1 Items] current items", str (count currentItemPos_array)];
-			diag_log format["current Loot positions %1", str _lootPositions_array];
 		} forEach _buildingsNearby_array;
 
 
 	} forEach readyUnits;
+	diag_log format["[%1 Items] current items", str (count currentItemPos_array)];
 	sleep LOOT_RESPAWN_TIME;
 };
 

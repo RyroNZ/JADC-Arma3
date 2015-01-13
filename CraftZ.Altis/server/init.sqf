@@ -24,7 +24,7 @@ onPlayerDisconnected SERVER_EVENT_ON_PLAYER_DISCONNECTED;
 [] execVM SERVER_EXEC_PLAYER_CONNECTED;
 [] execVM SERVER_EXEC_INIT_SERVER;
 [] execVM "server\core\Inventory\receiveItemUsed.sqf";
-[] execVM "server\core\Inventory\craftingMenu.sqf";
+[] execVM "server\core\Inventory\receiveItemCrafted.sqf";
 
 
 

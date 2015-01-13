@@ -283,7 +283,7 @@ class craftMenu
 		};
 		class craftMenu_data: RscText
 		{
-			idc = 7018;
+			idc = 7019;
 			text = ""; //--- ToDo: Localize;
 			x = -8.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 17 * GUI_GRID_H + GUI_GRID_Y;
@@ -293,7 +293,6 @@ class craftMenu
 			colorBackground[] = {-1,-1,-1,0};
 			colorActive[] = {-1,-1,-1,0};
 		};
-
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END
 		////////////////////////////////////////////////////////

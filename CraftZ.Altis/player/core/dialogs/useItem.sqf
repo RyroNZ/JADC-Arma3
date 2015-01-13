@@ -57,7 +57,7 @@ fn_createUseMenu = {
 
 };
 
-fn_fn_getUseableItems = {
+fn_getUseableItems = {
     private ["_useableItems", "_cfgMagazines", "_useable", "_curItem"];
     _useableItems = [];
     _cfgMagazines = configFile >> "CfgMagazines";
@@ -67,7 +67,7 @@ fn_fn_getUseableItems = {
         if (isClass _curItem) then {
 
             _useable = ((_curItem >> "useable") call BIS_fnc_getCfgData);
-            if (!(isNil "_useable")) them {
+            if (!(isNil "_useable")) then {
                 if (_useable == "true") then {
                     _useableItems pushBack (configName _curItem);
                 };

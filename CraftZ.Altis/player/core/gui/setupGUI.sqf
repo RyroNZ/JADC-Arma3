@@ -1,6 +1,7 @@
 disableSerialization;
 cutRsc["playerHUD", "PLAIN"];
-[] execVM "player\core\inventory\useItem.sqf";
+[] execVM "player\core\dialogs\useItem.sqf";
+[] execVM "player\core\dialogs\craftingMenu.sqf";
 
 while {true} do {
 
