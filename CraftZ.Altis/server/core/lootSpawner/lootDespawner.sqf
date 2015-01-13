@@ -17,15 +17,12 @@ fn_itemDespawner = {
 		{
 
 		if ((_x distance _lootPos) > LOOT_DESPAWN_DISTANCE) then {
-				diag_log format["Player %1 is %2 m away from %3", name _x, str (_x distance _lootPos), str _loot];
 				_noPlayersNearby = true;
 			} else { _noPlayersNearby = false;}
 
 		} forEach readyUnits;
 
 		if (_noPlayersNearby) exitWith {
-			diag_log format["[%1 Items] current items", str (count currentItemPos_array)];
-			diag_log format["Removing %1 from %2", str _lootPos, str currentItemPos_array];
 			currentItemPos_array = currentItemPos_array - [_lootPos];
 			deletevehicle _loot;
 		};
@@ -38,22 +35,17 @@ fn_dummyItemDespawner = {
 	private ["_noPlayersNearby"];
 	_noPlayersNearby = true;
 	_lootPos = _this select 0;
-	systemChat "Dummy item spawned";
 	sleep LOOT_SPAWN_RESET; 
-	systemChat "Dummy item can now be removed.";
 	while {true} do {
 		{
 			
 			if ((_x distance _lootPos) > LOOT_DESPAWN_DISTANCE) then {
-				diag_log format["Player %1 is %2 m away from %3", name _x, str (_x distance _lootPos), str "dummyItem"];
 				_noPlayersNearby = true;
-			} else { _noPlayersNearby = false; diag_log "players nearby";}
+			} else { _noPlayersNearby = false;};
 
 		} forEach readyUnits; 
 
 		if (_noPlayersNearby) exitWith {
-			diag_log format["[%1 Items] current items", str (count currentItemPos_array)];
-			diag_log format["Removing %1 from %2", str _lootPos, str currentItemPos_array];
 			currentItemPos_array = currentItemPos_array - [_loot];
 		};
 	};

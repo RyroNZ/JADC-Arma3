@@ -129,7 +129,7 @@ class craftMenu
 		class craftMenu_item1_count: RscText
 		{
 			idc = 7003;
-			text = "1/1";
+			text = "";
 			x = 0.324546 * safezoneW + safezoneX;
 			y = 0.300 * safezoneH + safezoneY;
 			w = 0.0412833 * safezoneW;
@@ -148,7 +148,7 @@ class craftMenu
 		class craftMenu_item2_count: RscText
 		{
 			idc = 7005;
-			text = "1/1";
+			text = "";
 			x = 0.37615 * safezoneW + safezoneX;
 			y = 0.300 * safezoneH + safezoneY;
 			w = 0.0412833 * safezoneW;
@@ -167,7 +167,7 @@ class craftMenu
 		class craftMenu_item3_count: RscText
 		{
 			idc = 7007;
-			text = "1/1";
+			text = "";
 			x = 0.427754 * safezoneW + safezoneX;
 			y = 0.300 * safezoneH + safezoneY;
 			w = 0.0412833 * safezoneW;
@@ -186,7 +186,7 @@ class craftMenu
 		class craftMenu_item4_count: RscText
 		{
 			idc = 7009;
-			text = "1/1";
+			text = "";
 			x = 0.479358 * safezoneW + safezoneX;
 			y = 0.300 * safezoneH + safezoneY;
 			w = 0.0412833 * safezoneW;
@@ -205,7 +205,7 @@ class craftMenu
 		class craftMenu_item5_count: RscText
 		{
 			idc = 7011;
-			text = "1/1";
+			text = "";
 			x = 0.530962 * safezoneW + safezoneX;
 			y = 0.300 * safezoneH + safezoneY;
 			w = 0.0412833 * safezoneW;
@@ -224,7 +224,7 @@ class craftMenu
 		class craftMenu_item6_count: RscText
 		{
 			idc = 7013;
-			text = "1/1";
+			text = "";
 			x = 0.582567 * safezoneW + safezoneX;
 			y = 0.300 * safezoneH + safezoneY;
 			w = 0.0412833 * safezoneW;
@@ -242,7 +242,7 @@ class craftMenu
 		class craftMenu_item7_count: RscText
 		{
 			idc = 7015;
-			text = "1/1";
+			text = "";
 			x = 0.634171 * safezoneW + safezoneX;
 			y = 0.300 * safezoneH + safezoneY;
 			w = 0.0412833 * safezoneW;
@@ -296,8 +296,79 @@ class craftMenu
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END
 		////////////////////////////////////////////////////////
-
-
 	};
 
+	
 };
+
+class mainDialog
+	{    
+
+		idd = 8999;
+		onLoad="uiNamespace setVariable ['mainDialog', _this select 0]";
+		movingEnable = false;
+		enableSimulation = true;
+
+		class controls
+		{
+			////////////////////////////////////////////////////////
+			// GUI EDITOR OUTPUT START (by RyroNZ, v1.063, #Mapoxa)
+			////////////////////////////////////////////////////////
+
+			class mainDialog_background: RscPicture
+			{
+				idc = 9000;
+				text = "#(argb,8,8,3)color(0,0,0,0.5)";
+				x = 0.025278 * safezoneW + safezoneX;
+				y = 0.103957 * safezoneH + safezoneY;
+				w = 0.11868 * safezoneW;
+				h = 0.341037 * safezoneH;
+			};
+			class mainDialog_craftingMenu: RscButtonMenu
+			{
+				idc = 9050;
+				text = "CRAFTING"; //--- ToDo: Localize;
+				textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
+				x = 0.035598 * safezoneW + safezoneX;
+				y = 0.147961 * safezoneH + safezoneY;
+				w = 0.0980404 * safezoneW;
+				h = 0.0220024 * safezoneH;
+				action = "closeDialog 1";
+			};
+			class mainDialog_close: RscButtonMenu
+			{
+				idc = 9001;
+				text = "CLOSE"; //--- ToDo: Localize;
+				textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
+				x = 0.040758 * safezoneW + safezoneX;
+				y = 0.41199 * safezoneH + safezoneY;
+				w = 0.0877204 * safezoneW;
+				h = 0.0220024 * safezoneH;
+				action = "closeDialog 0";
+			};
+			class mainDialog_header: RscStructuredText
+			{
+				idc = 9004;
+				text = "JADC Menu"; //--- ToDo: Localize;
+				x = 0.030438 * safezoneW + safezoneX;
+				y = 0.114958 * safezoneH + safezoneY;
+				w = 0.10836 * safezoneW;
+				h = 0.0220024 * safezoneH;
+			};
+			class mainDialog_group: RscButtonMenu
+			{
+				idc = 9002;
+				text = "GROUPS"; //--- ToDo: Localize;
+				textureNoShortcut = "#(argb,8,8,3)color(0,0,0,0)";
+				x = 0.035598 * safezoneW + safezoneX;
+				y = 0.180965 * safezoneH + safezoneY;
+				w = 0.0980404 * safezoneW;
+				h = 0.0220024 * safezoneH;
+				action = "closeDialog 2";
+			};
+			////////////////////////////////////////////////////////
+			// GUI EDITOR OUTPUT END
+			////////////////////////////////////////////////////////
+
+		};
+	};

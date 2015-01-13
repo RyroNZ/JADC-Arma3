@@ -2,7 +2,6 @@ disableSerialization;
 
 fn_createCraftMenu = {
 	_craftableItems = [] call fn_getCraftableItems;
-	systemChat str _craftableItems;
 	_handle = createDialog "craftMenu";
 	waitUntil {dialog};
 	_idc = uiNamespace getVariable "craftMenu";
@@ -11,7 +10,6 @@ fn_createCraftMenu = {
 	_comboBox = _idc displayCtrl 7001;
 
 	{
-		systemChat format["Getting %1 displayName", _x];
 		_itemName = ((configFile >> "CfgMagazines">> _x >> "displayName") call BIS_fnc_getCfgData);
 		_index = _comboBox lbAdd (_itemName);
 		_comboBox lbSetData [_index, _x];
@@ -20,7 +18,6 @@ fn_createCraftMenu = {
 
 	_idc displaySetEventHandler ["Unload", "_this call fn_craftSelectedItem"];
 	_comboBox ctrlSetEventHandler ["LBSelChanged", "_this call fn_drawRequiredMaterials"];
-
 };
 
 fn_getCraftableItems = {
@@ -79,6 +76,7 @@ fn_drawRequiredMaterials = {
 	_playerItems = (uniformItems player) + (vestItems player) + (backpackItems player);
 
 	_count = 1;
+	[_displayIDC] call fn_unloadCraftingMenu;
 	{
 		_reqItemCfgName = _x select 0;
 		_reqItemCount = _x select 1;
@@ -101,6 +99,8 @@ fn_drawRequiredMaterials = {
 		_reqPic = ((_cfgMagazines >> _reqItemCfgName >> "picture") call BIS_fnc_getCfgData);
 		_reqTooltip = ((_cfgMagazines >> _reqItemCfgName >> "displayName") call BIS_fnc_getCfgData);
 		_reqItemCountDisplay = format['%1/%2', _playerItemsCount, _reqItemCount];
+
+	
 
 		switch (_count) do
 		{
@@ -183,5 +183,52 @@ fn_drawRequiredMaterials = {
 	} forEach _requiredMaterials;
 };
 
-[] call fn_createCraftMenu;
+fn_unloadCraftingMenu = {
 
+	_displayIDC = _this select 0;
+
+	_itemPicFrame_1 = _displayIDC displayCtrl 7002;
+	_itemCountFrame_1 = _displayIDC displayCtrl 7003;
+	_itemPicFrame_1 ctrlSetText "#(argb,8,8,3)color(0,0,0,0.5)";
+	_itemPicFrame_1 ctrlSetTooltip "";
+	_itemCountFrame_1 ctrlSetText "";
+
+	_itemPicFrame_2 = _displayIDC displayCtrl 7004;
+	_itemCountFrame_2 = _displayIDC displayCtrl 7005;
+	_itemPicFrame_2 ctrlSetText "#(argb,8,8,3)color(0,0,0,0.5)";
+	_itemPicFrame_2 ctrlSetTooltip "";
+	_itemCountFrame_2 ctrlSetText "";
+
+	_itemPicFrame_3 = _displayIDC displayCtrl 7006;
+	_itemCountFrame_3 = _displayIDC displayCtrl 7007;
+	_itemPicFrame_3 ctrlSetText "#(argb,8,8,3)color(0,0,0,0.5)";
+	_itemPicFrame_3 ctrlSetTooltip "";
+	_itemCountFrame_3 ctrlSetText "";
+
+	_itemPicFrame_4 = _displayIDC displayCtrl 7008;
+	_itemCountFrame_4 = _displayIDC displayCtrl 7009;
+	_itemPicFrame_4 ctrlSetText "#(argb,8,8,3)color(0,0,0,0.5)";
+	_itemPicFrame_4 ctrlSetTooltip "";
+	_itemCountFrame_4 ctrlSetText "";
+
+	_itemPicFrame_5 = _displayIDC displayCtrl 7010;
+	_itemCountFrame_5 = _displayIDC displayCtrl 7011;
+	_itemPicFrame_5 ctrlSetText "#(argb,8,8,3)color(0,0,0,0.5)";
+	_itemPicFrame_5 ctrlSetTooltip "";
+	_itemCountFrame_5 ctrlSetText "";
+
+	_itemPicFrame_6 = _displayIDC displayCtrl 7012;
+	_itemCountFrame_6 = _displayIDC displayCtrl 7013;
+	_itemPicFrame_6 ctrlSetText "#(argb,8,8,3)color(0,0,0,0.5)";
+	_itemPicFrame_6 ctrlSetTooltip "";
+	_itemCountFrame_6 ctrlSetText "";
+
+	_itemPicFrame_7 = _displayIDC displayCtrl 7014;
+	_itemCountFrame_7 = _displayIDC displayCtrl 7015;
+	_itemPicFrame_7 ctrlSetText "#(argb,8,8,3)color(0,0,0,0.5)";
+	_itemPicFrame_7 ctrlSetTooltip "";
+	_itemCountFrame_7 ctrlSetText "";
+
+};
+
+[] call fn_createCraftMenu;

@@ -176,7 +176,7 @@ class RscStructuredText
     {
         font = "PuristaMedium";
         color = "#ffffff";
-        align = "left";
+        align = "center";
         shadow = 1;
     };
     x = 0;
@@ -1341,7 +1341,7 @@ class RscButtonMenu
     {
         font = "PuristaLight";
         color = "#E5E5E5";
-        align = "left";
+        align = "center";
         shadow = "false";
     };
     class ShortcutPos
