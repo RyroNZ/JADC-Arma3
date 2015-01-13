@@ -2,7 +2,14 @@ fn_createZombie = {
 	
 	_zombieCreatePos = _this select 0;
 	_agent = createAgent [AI_ZOMBIE_CHARS select 0, _zombieCreatePos, [], 40, "NONE"];
-	
+	if (count(lineIntersectsObjs [(getposASL _agent), [(getposASL _agent select 0),(getposASL _agent select 1),((getposASL _agent select 2) + 20)]]) > 0) exitWith
+    {
+    	diag_log format["Removing agent: %1; reason: spawning indoors", str _agent];
+        deleteVehicle _agent;
+    };
+	[_agent] spawn fn_zombieDespawner;
+	currentZombieAgent_array pushBack _agent;
+
 	_agent disableAI "FSM";
 	_agent setBehaviour "CARELESS";	
 	_agent setCombatMode "RED";
@@ -49,7 +56,7 @@ fn_zombieFindTarget = {
 	_agentPos = getPos _agent;
 	_target = ObjNull;
 
-	_targets = _agent nearEntities ["Civilian", 50];
+	_targets = (_agentPos) nearEntities ["Civilian", 35];
 
 	if (!(isNil "_prevTarget")) then 
 	{
@@ -75,4 +82,31 @@ fn_zombieFindTarget = {
 	};
 	_target
 
+};
+
+fn_zombieDespawner = {
+	private["_zombie", "_zombiePos", "_noPlayersNearby"];
+	_noPlayersNearby = true;
+	_zombie = _this select 0;
+
+	//systemChat "item spawned";
+	sleep ZOMBIE_SPAWN_RESET;
+	//systemChat "item spawned can now be removed";
+
+	while {true} do {
+	
+		{
+
+		if ((_x distance _zombie) > ZOMBIE_DESPAWN_DISTANCE) then {
+				_noPlayersNearby = true;
+			} else { _noPlayersNearby = false;}
+
+		} forEach readyUnits;
+
+		if (_noPlayersNearby) exitWith {
+			currentZombieAgent_array = currentZombieAgent_array - [_zombie];
+			deletevehicle _zombie;
+		};
+	};
+	sleep 5;
 };

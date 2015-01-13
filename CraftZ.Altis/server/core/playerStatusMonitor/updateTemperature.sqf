@@ -36,9 +36,10 @@ if (!isNil "_playerTemp") then {
 		if (uniform _player != "") then {
 			if (_playerUniform == "U_B_Wetsuit" || _playerUniform == "U_I_Wetsuit" || _playerUniform == "U_O_Wetsuit") then {
 				_waterHeatLoss = PLAYER_TEMP_WATER_HEAT_LOSS * PLAYER_TEMP_WATER_RESISTANCE_WETSUIT;
-			};
+			} else {
 			_waterHeatLoss = PLAYER_TEMP_WATER_HEAT_LOSS * PLAYER_TEMP_WATER_RESISTANCE_UNIFORM;
 			_airHeatLoss = PLAYER_TEMP_AIR_HEAT_LOSS * PLAYER_TEMP_AIR_RESISTANCE_UNIFORM;
+			};
 
 		};
 		if (vest _player != "") then {

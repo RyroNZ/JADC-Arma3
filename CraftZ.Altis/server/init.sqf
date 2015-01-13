@@ -12,6 +12,7 @@ Description: Sets required variables, EventHandlers and scripts to run on the se
 
 //init Variables
 readyUnits = [];
+currentZombieAgent_array = [];
 serverReady = false;
 onPlayerDisconnected SERVER_EVENT_ON_PLAYER_DISCONNECTED;
 
@@ -25,7 +26,7 @@ onPlayerDisconnected SERVER_EVENT_ON_PLAYER_DISCONNECTED;
 [] execVM SERVER_EXEC_INIT_SERVER;
 [] execVM "server\core\receiveFromDialog\receiveItemUsed.sqf";
 [] execVM "server\core\receiveFromDialog\receiveItemCrafted.sqf";
-[] execVM "server\core\receiveFromDialog\dialogMainMenu.sqf";
+
 
 
 

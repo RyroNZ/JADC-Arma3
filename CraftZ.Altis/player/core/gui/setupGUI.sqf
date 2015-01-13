@@ -1,6 +1,7 @@
 disableSerialization;
 cutRsc["playerHUD", "PLAIN"];
 [] execVM "player\core\dialogs\useItem.sqf";
+[] execVM "player\core\dialogs\dialogMainMenu.sqf";
 
 
 while {true} do {
