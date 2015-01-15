@@ -8,7 +8,6 @@ SERVER_SAVE_DATA_REFRESH = 30;
 SERVER_PLAYER_SAVE_REFRESH = 2.5;
 CLIENT_GUI_REFRESH = 2;
 
-PLAYER_SPAWN_POINTS = ["spawnPoint_1","spawnPoint_2","spawnPoint_3","spawnPoint_4","spawnPoint_5","spawnPoint_6","spawnPoint_7","spawnPoint_8","spawnPoint_9","spawnPoint_10","spawnPoint_11","spawnPoint_12","spawnPoint_13","spawnPoint_14","spawnPoint_15", "spawnPoint_16"];
 
 PLAYER_HUNGER_LEVEL_IDC = "hungerLevel";
 PLAYER_THIRST_LEVEL_IDC = "thirstLevel";
@@ -205,7 +204,12 @@ DB_TYPE_STRING = "STRING";
 DB_CATAGORY_WEATHER = "serverWeather";
 DB_CATAGORY_TEMP = "serverTemperature";
 DB_CATAGORY_DATETIME = "serverTime";
+DB_CATAGORY_VEHICLES = "currentVehicles";
 
+
+DB_SUB_CATAGORY_LAND_VEHICLES = "currentLandVehicles";
+DB_SUB_CATAGORY_SEA_VEHICLES = "currentSeaVehicles";
+DB_SUB_CATAGORY_AIR_VEHICLES = "currentAirVehicles";
 DB_SUB_CATAGORY_RAIN = "currentRain";
 DB_SUB_CATAGORY_FOG = "currentFog";
 DB_SUB_CATAGORY_OVERCAST = "currentOvercast";
@@ -248,7 +252,7 @@ LOOT_SPAWN_RESET = 900; //have option to despawn loot after this amount of time
 LOOT_DESPAWN_DISTANCE = 1000; //despawn loot after reset and player is = distance away
 LOOT_MUST_SPAWN_M_APART = 1; //loot must spawn at least this far away. DO NOT SET TO 0
 LOOT_SPAWN_CHANCE = 100;	// SPAWN DIFFICULTY 0-100 (100 always spawns, 0 never spawns).. 
-LOOT_GROUNDWEAPON_HOLDER = "WeaponHolderSimulated";
+LOOT_GROUNDWEAPON_HOLDER = "weaponHolderSimulated";
 LOOT_MAX_MAGS_TO_SPAWN = 3; // max amount of mags that will spawn with a gun
 LOOT_MAX_ITEMS_TO_SPAWN = 1.25; // max amount of items that will spawn together
 
@@ -256,6 +260,11 @@ AI_MAX_WANDER = 100;
 AI_ZOMBIE_CHARS = ["C_man_p_fugitive_F_asia"];
 ZOMBIE_SPAWN_RESET = 900;
 ZOMBIE_DESPAWN_DISTANCE = 1000;
-ZOMBIE_SPAWN_CHANCE = 0.15;
+ZOMBIE_SPAWN_CHANCE = 0.5;
+MAX_ZOMBIES_IN_AREA = 2;
 
+
+VEHICLE_MAX_AIR = 5;
+VEHICLE_MAX_LAND = 50;
+VEHICLE_MAX_SEA = 30;
 

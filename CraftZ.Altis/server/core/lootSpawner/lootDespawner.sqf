@@ -23,7 +23,7 @@ fn_itemDespawner = {
 		} forEach readyUnits;
 
 		if (_noPlayersNearby) exitWith {
-			currentItemPos_array = currentItemPos_array - [_lootPos];
+			currentItemPos_array = currentItemPos_array - [(_loot select 0), (_loot select 1)];
 			deletevehicle _loot;
 		};
 	};
@@ -46,7 +46,7 @@ fn_dummyItemDespawner = {
 		} forEach readyUnits; 
 
 		if (_noPlayersNearby) exitWith {
-			currentItemPos_array = currentItemPos_array - [_loot];
+			currentItemPos_array = currentItemPos_array - [(_loot select 0), (_loot select 1)];
 		};
 	};
 	sleep 5;

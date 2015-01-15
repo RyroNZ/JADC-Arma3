@@ -11,7 +11,10 @@ class Mission
 		"A3_Weapons_F_Vests",
 		"a3_weapons_f",
 		"A3_Weapons_F_Headgear",
-		"A3_Weapons_F_Uniforms"
+		"A3_Weapons_F_Uniforms",
+		"A3_Air_F_Heli_Light_01",
+		"A3_Soft_F_MRAP_01",
+		"A3_Boat_F_Boat_Transport_01"
 	};
 	addOnsAuto[]=
 	{
@@ -23,6 +26,9 @@ class Mission
 		"a3_weapons_f",
 		"A3_Weapons_F_Headgear",
 		"A3_Weapons_F_Uniforms",
+		"A3_Air_F_Heli_Light_01",
+		"A3_Soft_F_MRAP_01",
+		"A3_Boat_F_Boat_Transport_01",
 		"a3_map_altis"
 	};
 	randomSeed=9962886;
@@ -52,7 +58,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14663.558,17.91,16636.244};
+					position[]={14679.192,17.91,16712.053};
 					id=0;
 					side="CIV";
 					vehicle="C_man_1";
@@ -102,7 +108,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=9;
+		items=12;
 		class Item0
 		{
 			position[]={11529.997,22.950001,11696.217};
@@ -176,10 +182,34 @@ class Mission
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 		};
+		class Item9
+		{
+			position[]={14629.038,17.91,16634.322};
+			id=12;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_F";
+			skill=0.60000002;
+		};
+		class Item10
+		{
+			position[]={14645.043,17.91,16650.861};
+			id=13;
+			side="EMPTY";
+			vehicle="B_MRAP_01_F";
+			skill=0.60000002;
+		};
+		class Item11
+		{
+			position[]={14987.527,-36.662647,15432.006};
+			id=14;
+			side="EMPTY";
+			vehicle="B_Lifeboat";
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
-		items=17;
+		items=315;
 		class Item0
 		{
 			position[]={14383.786,2.4683838,15361.786};
@@ -278,10 +308,1797 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={8412.5889,96.9188,25185.652};
-			name="respawn_civilian";
+			position[]={8744.8574,26.238194,10797.459};
+			name="landSpawn_1";
 			type="Empty";
-			colorName="ColorCIV";
+		};
+		class Item17
+		{
+			position[]={4083.9194,41.451683,11675.07};
+			name="landSpawn_2";
+			type="Empty";
+		};
+		class Item18
+		{
+			position[]={4136.2246,31.902531,12644.229};
+			name="landSpawn_3";
+			type="Empty";
+		};
+		class Item19
+		{
+			position[]={3879.4927,29.616825,13835.48};
+			name="landSpawn_4";
+			type="Empty";
+		};
+		class Item20
+		{
+			position[]={4690.7661,19.037464,14564.61};
+			name="landSpawn_5";
+			type="Empty";
+		};
+		class Item21
+		{
+			position[]={6518.6968,32.57,15488.856};
+			name="landSpawn_6";
+			type="Empty";
+		};
+		class Item22
+		{
+			position[]={7196.4692,158.26727,17686.51};
+			name="landSpawn_7";
+			type="Empty";
+		};
+		class Item23
+		{
+			position[]={8295.2832,185.82306,16988.191};
+			name="landSpawn_8";
+			type="Empty";
+		};
+		class Item24
+		{
+			position[]={9096.2871,265.3736,19237.191};
+			name="landSpawn_9";
+			type="Empty";
+		};
+		class Item25
+		{
+			position[]={8356.8984,58.55695,19935.512};
+			name="landSpawn_10";
+			type="Empty";
+		};
+		class Item26
+		{
+			position[]={9034.6699,47.685696,20941.916};
+			name="landSpawn_11";
+			type="Empty";
+		};
+		class Item27
+		{
+			position[]={6570.0435,288.14487,21660.777};
+			name="landSpawn_12";
+			type="Empty";
+		};
+		class Item28
+		{
+			position[]={4475.1104,291.85474,20520.869};
+			name="landSpawn_13";
+			type="Empty";
+		};
+		class Item29
+		{
+			position[]={5306.9219,121.70927,18590.221};
+			name="landSpawn_14";
+			type="Empty";
+		};
+		class Item30
+		{
+			position[]={5204.23,130.88136,18477.258};
+			name="landSpawn_15";
+			type="Empty";
+		};
+		class Item31
+		{
+			position[]={6467.3521,172.37288,21188.383};
+			name="landSpawn_16";
+			type="Empty";
+		};
+		class Item32
+		{
+			position[]={6128.4634,192.58229,19370.695};
+			name="landSpawn_17";
+			type="Empty";
+		};
+		class Item33
+		{
+			position[]={7032.1611,186.60361,19103.689};
+			name="landSpawn_18";
+			type="Empty";
+		};
+		class Item34
+		{
+			position[]={5235.0376,117.1703,17830.283};
+			name="landSpawn_19";
+			type="Empty";
+		};
+		class Item35
+		{
+			position[]={3643.2996,222.58733,20870.027};
+			name="landSpawn_20";
+			type="Empty";
+		};
+		class Item36
+		{
+			position[]={3766.5308,81.739265,22266.67};
+			name="landSpawn_21";
+			type="Empty";
+		};
+		class Item37
+		{
+			position[]={4136.2246,261.8576,19021.535};
+			name="landSpawn_22";
+			type="Empty";
+		};
+		class Item38
+		{
+			position[]={6374.9272,180.33829,18384.83};
+			name="landSpawn_23";
+			type="Empty";
+		};
+		class Item39
+		{
+			position[]={8141.2437,135.57761,18425.91};
+			name="landSpawn_24";
+			type="Empty";
+		};
+		class Item40
+		{
+			position[]={9835.6729,162.53444,19986.859};
+			name="landSpawn_25";
+			type="Empty";
+		};
+		class Item41
+		{
+			position[]={10862.601,192.76393,20695.449};
+			name="landSpawn_26";
+			type="Empty";
+		};
+		class Item42
+		{
+			position[]={11519.835,95.214371,20181.98};
+			name="landSpawn_27";
+			type="Empty";
+		};
+		class Item43
+		{
+			position[]={11499.296,88.297813,21712.123};
+			name="landSpawn_28";
+			type="Empty";
+		};
+		class Item44
+		{
+			position[]={12998.612,67.624664,22389.904};
+			name="landSpawn_29";
+			type="Empty";
+		};
+		class Item45
+		{
+			position[]={13912.578,40.623741,22400.172};
+			name="landSpawn_30";
+			type="Empty";
+		};
+		class Item46
+		{
+			position[]={12238.685,81.891335,20561.947};
+			name="landSpawn_31";
+			type="Empty";
+		};
+		class Item47
+		{
+			position[]={14641.696,55.0042,20982.992};
+			name="landSpawn_32";
+			type="Empty";
+		};
+		class Item48
+		{
+			position[]={13471,24.206541,19463.119};
+			name="landSpawn_33";
+			type="Empty";
+		};
+		class Item49
+		{
+			position[]={14826.545,51.971592,18970.188};
+			name="landSpawn_34";
+			type="Empty";
+		};
+		class Item50
+		{
+			position[]={14200.116,18.98016,18395.102};
+			name="landSpawn_35";
+			type="Empty";
+		};
+		class Item51
+		{
+			position[]={14179.577,19.692177,18446.447};
+			name="landSpawn_36";
+			type="Empty";
+		};
+		class Item52
+		{
+			position[]={12721.342,34.551491,16382.296};
+			name="landSpawn_37";
+			type="Empty";
+		};
+		class Item53
+		{
+			position[]={9732.9824,129.29085,15786.669};
+			name="landSpawn_38";
+			type="Empty";
+		};
+		class Item54
+		{
+			position[]={9034.6699,29.870207,14020.329};
+			name="landSpawn_39";
+			type="Empty";
+		};
+		class Item55
+		{
+			position[]={7751.0103,106.14194,12633.959};
+			name="landSpawn_40";
+			type="Empty";
+		};
+		class Item56
+		{
+			position[]={10410.754,13.719576,12233.45};
+			name="landSpawn_41";
+			type="Empty";
+		};
+		class Item57
+		{
+			position[]={10410.754,77.879677,14143.563};
+			name="landSpawn_42";
+			type="Empty";
+		};
+		class Item58
+		{
+			position[]={12464.608,37.468025,18590.221};
+			name="landSpawn_43";
+			type="Empty";
+		};
+		class Item59
+		{
+			position[]={10965.294,85.667801,17388.699};
+			name="landSpawn_44";
+			type="Empty";
+		};
+		class Item60
+		{
+			position[]={11858.722,60.652817,18610.76};
+			name="landSpawn_45";
+			type="Empty";
+		};
+		class Item61
+		{
+			position[]={10903.679,63.380402,18333.484};
+			name="landSpawn_46";
+			type="Empty";
+		};
+		class Item62
+		{
+			position[]={14857.353,18.108732,16125.561};
+			name="landSpawn_47";
+			type="Empty";
+		};
+		class Item63
+		{
+			position[]={15185.969,36.348633,18621.027};
+			name="landSpawn_48";
+			type="Empty";
+		};
+		class Item64
+		{
+			position[]={17393.863,22.164312,17737.859};
+			name="landSpawn_49";
+			type="Empty";
+		};
+		class Item65
+		{
+			position[]={16469.625,12.733871,16105.021};
+			name="landSpawn_50";
+			type="Empty";
+		};
+		class Item66
+		{
+			position[]={18472.135,64.669151,16628.76};
+			name="landSpawn_51";
+			type="Empty";
+		};
+		class Item67
+		{
+			position[]={19386.102,28.400629,14636.495};
+			name="landSpawn_52";
+			type="Empty";
+		};
+		class Item68
+		{
+			position[]={17886.785,20.433975,12983.119};
+			name="landSpawn_53";
+			type="Empty";
+		};
+		class Item69
+		{
+			position[]={19098.564,116.18282,11401.63};
+			name="landSpawn_54";
+			type="Empty";
+		};
+		class Item70
+		{
+			position[]={18338.635,160.65421,10076.874};
+			name="landSpawn_55";
+			type="Empty";
+		};
+		class Item71
+		{
+			position[]={20053.607,65.626579,9820.1406};
+			name="landSpawn_56";
+			type="Empty";
+		};
+		class Item72
+		{
+			position[]={16798.244,70.760262,10888.158};
+			name="landSpawn_57";
+			type="Empty";
+		};
+		class Item73
+		{
+			position[]={17999.75,74.218956,9645.5605};
+			name="landSpawn_58";
+			type="Empty";
+		};
+		class Item74
+		{
+			position[]={19488.797,72.47332,9101.2793};
+			name="landSpawn_59";
+			type="Empty";
+		};
+		class Item75
+		{
+			position[]={19365.566,76.475769,9183.4355};
+			name="landSpawn_60";
+			type="Empty";
+		};
+		class Item76
+		{
+			position[]={19345.025,60.878643,6842.0088};
+			name="landSpawn_61";
+			type="Empty";
+		};
+		class Item77
+		{
+			position[]={20371.951,59.269295,5886.9507};
+			name="landSpawn_62";
+			type="Empty";
+		};
+		class Item78
+		{
+			position[]={21193.496,24.993843,6503.1172};
+			name="landSpawn_63";
+			type="Empty";
+		};
+		class Item79
+		{
+			position[]={21604.264,14.695354,7601.9458};
+			name="landSpawn_64";
+			type="Empty";
+		};
+		class Item80
+		{
+			position[]={20659.494,78.260574,9399.0908};
+			name="landSpawn_65";
+			type="Empty";
+		};
+		class Item81
+		{
+			position[]={20392.49,20.499769,10662.229};
+			name="landSpawn_66";
+			type="Empty";
+		};
+		class Item82
+		{
+			position[]={20371.953,104.78579,12880.426};
+			name="landSpawn_67";
+			type="Empty";
+		};
+		class Item83
+		{
+			position[]={19817.414,79.053329,12202.645};
+			name="landSpawn_68";
+			type="Empty";
+		};
+		class Item84
+		{
+			position[]={20320.607,10.024485,15037.004};
+			name="landSpawn_69";
+			type="Empty";
+		};
+		class Item85
+		{
+			position[]={21501.576,1.7569482,14954.848};
+			name="landSpawn_70";
+			type="Empty";
+		};
+		class Item86
+		{
+			position[]={20515.723,24.418795,13681.441};
+			name="landSpawn_71";
+			type="Empty";
+		};
+		class Item87
+		{
+			position[]={21727.498,17.389999,16392.564};
+			name="landSpawn_72";
+			type="Empty";
+		};
+		class Item88
+		{
+			position[]={20751.918,38.964527,16710.92};
+			name="landSpawn_73";
+			type="Empty";
+		};
+		class Item89
+		{
+			position[]={22333.387,15.098447,17737.859};
+			name="landSpawn_74";
+			type="Empty";
+		};
+		class Item90
+		{
+			position[]={23781.354,3.1900001,17861.092};
+			name="landSpawn_75";
+			type="Empty";
+		};
+		class Item91
+		{
+			position[]={24623.434,2.456548,19298.811};
+			name="landSpawn_76";
+			type="Empty";
+		};
+		class Item92
+		{
+			position[]={25342.283,13.236987,20561.949};
+			name="landSpawn_77";
+			type="Empty";
+		};
+		class Item93
+		{
+			position[]={26276.789,40.151684,21681.314};
+			name="landSpawn_78";
+			type="Empty";
+		};
+		class Item94
+		{
+			position[]={26482.174,49.078911,22513.141};
+			name="landSpawn_79";
+			type="Empty";
+		};
+		class Item95
+		{
+			position[]={26625.943,23.954161,23653.043};
+			name="landSpawn_80";
+			type="Empty";
+		};
+		class Item96
+		{
+			position[]={24736.398,57.62957,22040.746};
+			name="landSpawn_81";
+			type="Empty";
+		};
+		class Item97
+		{
+			position[]={22662.002,23.083477,21455.389};
+			name="landSpawn_82";
+			type="Empty";
+		};
+		class Item98
+		{
+			position[]={21532.383,18.293936,19401.504};
+			name="landSpawn_83";
+			type="Empty";
+		};
+		class Item99
+		{
+			position[]={20033.07,35.761299,18487.525};
+			name="landSpawn_84";
+			type="Empty";
+		};
+		class Item100
+		{
+			position[]={19560.68,50.992142,18107.561};
+			name="landSpawn_85";
+			type="Empty";
+		};
+		class Item101
+		{
+			position[]={19190.988,21.211943,16382.296};
+			name="landSpawn_86";
+			type="Empty";
+		};
+		class Item102
+		{
+			position[]={18338.637,17.520239,14728.922};
+			name="landSpawn_87";
+			type="Empty";
+		};
+		class Item103
+		{
+			position[]={17938.135,17.352039,13527.398};
+			name="landSpawn_88";
+			type="Empty";
+		};
+		class Item104
+		{
+			position[]={17506.826,59.988426,11555.673};
+			name="landSpawn_89";
+			type="Empty";
+		};
+		class Item105
+		{
+			position[]={18379.715,94.239334,11052.47};
+			name="landSpawn_90";
+			type="Empty";
+		};
+		class Item106
+		{
+			position[]={18821.293,35.997669,13794.404};
+			name="landSpawn_91";
+			type="Empty";
+		};
+		class Item107
+		{
+			position[]={19057.484,57.885529,12490.189};
+			name="landSpawn_92";
+			type="Empty";
+		};
+		class Item108
+		{
+			position[]={20967.572,14.200397,15396.435};
+			name="landSpawn_93";
+			type="Empty";
+		};
+		class Item109
+		{
+			position[]={16171.82,13.350027,16926.578};
+			name="landSpawn_94";
+			type="Empty";
+		};
+		class Item110
+		{
+			position[]={16058.856,39.756458,18713.453};
+			name="landSpawn_95";
+			type="Empty";
+		};
+		class Item111
+		{
+			position[]={14426.042,34.819736,20490.063};
+			name="landSpawn_96";
+			type="Empty";
+		};
+		class Item112
+		{
+			position[]={15001.121,60.333817,19103.691};
+			name="landSpawn_97";
+			type="Empty";
+		};
+		class Item113
+		{
+			position[]={11838.184,25.103735,21958.59};
+			name="landSpawn_98";
+			type="Empty";
+		};
+		class Item114
+		{
+			position[]={13327.229,64.61985,21938.049};
+			name="landSpawn_99";
+			type="Empty";
+		};
+		class Item115
+		{
+			position[]={11694.413,100.36401,21013.803};
+			name="landSpawn_100";
+			type="Empty";
+		};
+		class Item116
+		{
+			position[]={9342.75,15.726185,21691.586};
+			name="landSpawn_101";
+			type="Empty";
+		};
+		class Item117
+		{
+			position[]={8243.9375,66.588264,21907.244};
+			name="landSpawn_102";
+			type="Empty";
+		};
+		class Item118
+		{
+			position[]={7299.1636,104.93437,20685.184};
+			name="landSpawn_103";
+			type="Empty";
+		};
+		class Item119
+		{
+			position[]={5399.3472,81.088737,16146.1};
+			name="landSpawn_104";
+			type="Empty";
+		};
+		class Item120
+		{
+			position[]={6487.8901,99.807701,13681.441};
+			name="landSpawn_105";
+			type="Empty";
+		};
+		class Item121
+		{
+			position[]={5450.6934,74.742928,12551.805};
+			name="landSpawn_106";
+			type="Empty";
+		};
+		class Item122
+		{
+			position[]={6662.4683,87.975807,12099.95};
+			name="landSpawn_107";
+			type="Empty";
+		};
+		class Item123
+		{
+			position[]={5152.8838,29.096418,10795.735};
+			name="landSpawn_108";
+			type="Empty";
+		};
+		class Item124
+		{
+			position[]={4588.0747,12.098124,10271.995};
+			name="landSpawn_109";
+			type="Empty";
+		};
+		class Item125
+		{
+			position[]={8089.8979,109.34911,11771.329};
+			name="landSpawn_110";
+			type="Empty";
+		};
+		class Item126
+		{
+			position[]={8079.6284,42.788292,11247.589};
+			name="landSpawn_111";
+			type="Empty";
+		};
+		class Item127
+		{
+			position[]={9743.252,53.775494,13527.398};
+			name="landSpawn_112";
+			type="Empty";
+		};
+		class Item128
+		{
+			position[]={9938.3682,13.025044,12675.038};
+			name="landSpawn_113";
+			type="Empty";
+		};
+		class Item129
+		{
+			position[]={11601.991,26.730083,15037.004};
+			name="landSpawn_114";
+			type="Empty";
+		};
+		class Item130
+		{
+			position[]={11797.107,32.571758,16793.074};
+			name="landSpawn_115";
+			type="Empty";
+		};
+		class Item131
+		{
+			position[]={13162.922,19.159142,17943.248};
+			name="landSpawn_116";
+			type="Empty";
+		};
+		class Item132
+		{
+			position[]={13111.574,38.323563,19678.781};
+			name="landSpawn_117";
+			type="Empty";
+		};
+		class Item133
+		{
+			position[]={12546.765,68.681633,20428.447};
+			name="landSpawn_118";
+			type="Empty";
+		};
+		class Item134
+		{
+			position[]={13501.807,65.330147,21167.846};
+			name="landSpawn_119";
+			type="Empty";
+		};
+		class Item135
+		{
+			position[]={23308.967,13.044811,20017.67};
+			name="landSpawn_120";
+			type="Empty";
+		};
+		class Item136
+		{
+			position[]={24140.777,38.861935,20828.953};
+			name="landSpawn_121";
+			type="Empty";
+		};
+		class Item137
+		{
+			position[]={23771.086,47.00605,22492.6};
+			name="landSpawn_122";
+			type="Empty";
+		};
+		class Item138
+		{
+			position[]={24407.781,54.29734,23365.5};
+			name="landSpawn_123";
+			type="Empty";
+		};
+		class Item139
+		{
+			position[]={23832.699,66.869247,24207.59};
+			name="landSpawn_124";
+			type="Empty";
+		};
+		class Item140
+		{
+			position[]={28186.877,23.950771,25583.695};
+			name="landSpawn_125";
+			type="Empty";
+		};
+		class Item141
+		{
+			position[]={27765.836,6.8583083,23642.775};
+			name="landSpawn_126";
+			type="Empty";
+		};
+		class Item142
+		{
+			position[]={27776.104,16.942789,21876.434};
+			name="landSpawn_127";
+			type="Empty";
+		};
+		class Item143
+		{
+			position[]={24192.129,3.1900001,18816.15};
+			name="landSpawn_128";
+			type="Empty";
+		};
+		class Item144
+		{
+			position[]={24058.627,3.1900001,18733.996};
+			name="landSpawn_129";
+			type="Empty";
+		};
+		class Item145
+		{
+			position[]={16305.32,15.216805,20500.334};
+			name="landSpawn_130";
+			type="Empty";
+		};
+		class Item146
+		{
+			position[]={17599.252,-9.5502859e-005,18888.037};
+			name="landSpawn_131";
+			type="Empty";
+		};
+		class Item147
+		{
+			position[]={15689.167,30.708872,21239.732};
+			name="landSpawn_132";
+			type="Empty";
+		};
+		class Item148
+		{
+			position[]={15031.931,24.75753,22523.408};
+			name="landSpawn_133";
+			type="Empty";
+		};
+		class Item149
+		{
+			position[]={19149.916,48.305275,6944.707};
+			name="landSpawn_134";
+			type="Empty";
+		};
+		class Item150
+		{
+			position[]={18472.146,15.416208,7386.2935};
+			name="landSpawn_135";
+			type="Empty";
+		};
+		class Item151
+		{
+			position[]={12906.196,109.67622,6954.9775};
+			name="landSpawn_136";
+			type="Empty";
+		};
+		class Item152
+		{
+			position[]={10770.187,63.016102,8782.9336};
+			name="landSpawn_137";
+			type="Empty";
+		};
+		class Item153
+		{
+			position[]={11899.807,17.446194,9347.75};
+			name="landSpawn_138";
+			type="Empty";
+		};
+		class Item154
+		{
+			position[]={11406.882,161.81996,7591.6792};
+			name="landSpawn_139";
+			type="Empty";
+		};
+		class Item155
+		{
+			position[]={9835.6836,101.00455,7581.4121};
+			name="landSpawn_140";
+			type="Empty";
+		};
+		class Item156
+		{
+			position[]={10030.798,38.475822,9203.9795};
+			name="landSpawn_141";
+			type="Empty";
+		};
+		class Item157
+		{
+			position[]={10256.724,59.161175,9399.0986};
+			name="landSpawn_142";
+			type="Empty";
+		};
+		class Item158
+		{
+			position[]={10729.11,28.824341,9799.6074};
+			name="landSpawn_143";
+			type="Empty";
+		};
+		class Item159
+		{
+			position[]={8120.7139,65.369225,9994.7256};
+			name="landSpawn_144";
+			type="Empty";
+		};
+		class Item160
+		{
+			position[]={7514.8247,14.903246,11237.323};
+			name="landSpawn_145";
+			type="Empty";
+		};
+		class Item161
+		{
+			position[]={6405.7441,54.425976,11391.365};
+			name="landSpawn_146";
+			type="Empty";
+		};
+		class Item162
+		{
+			position[]={21635.082,54.281059,5157.832};
+			name="landSpawn_147";
+			type="Empty";
+		};
+		class Item163
+		{
+			position[]={7146.8965,0.0019568813,10543.091};
+			name="seaSpawn_1";
+			type="Empty";
+		};
+		class Item164
+		{
+			position[]={5086.98,-0.0009155391,9614.0996};
+			name="seaSpawn_2";
+			type="Empty";
+		};
+		class Item165
+		{
+			position[]={4319.5605,-0.0027018939,9686.8037};
+			name="seaSpawn_3";
+			type="Empty";
+		};
+		class Item166
+		{
+			position[]={3802.562,0.0021913047,9888.7578};
+			name="seaSpawn_4";
+			type="Empty";
+		};
+		class Item167
+		{
+			position[]={2808.9561,-0.0029923574,8911.293};
+			name="seaSpawn_5";
+			type="Empty";
+		};
+		class Item168
+		{
+			position[]={2211.1768,-0.0011044359,10817.751};
+			name="seaSpawn_6";
+			type="Empty";
+		};
+		class Item169
+		{
+			position[]={3083.6111,-0.00099721318,11294.365};
+			name="seaSpawn_7";
+			type="Empty";
+		};
+		class Item170
+		{
+			position[]={2687.7844,0.00042414697,11932.544};
+			name="seaSpawn_8";
+			type="Empty";
+		};
+		class Item171
+		{
+			position[]={2728.1755,-0.00033893355,13216.979};
+			name="seaSpawn_9";
+			type="Empty";
+		};
+		class Item172
+		{
+			position[]={3204.7822,0.00089129491,13677.437};
+			name="seaSpawn_10";
+			type="Empty";
+		};
+		class Item173
+		{
+			position[]={3544.0635,0.0027740812,15188.063};
+			name="seaSpawn_11";
+			type="Empty";
+		};
+		class Item174
+		{
+			position[]={3834.8745,0.0012968985,16213.993};
+			name="seaSpawn_12";
+			type="Empty";
+		};
+		class Item175
+		{
+			position[]={3810.6401,0.00048846263,17046.051};
+			name="seaSpawn_13";
+			type="Empty";
+		};
+		class Item176
+		{
+			position[]={3366.3447,0.002975917,17458.039};
+			name="seaSpawn_14";
+			type="Empty";
+		};
+		class Item177
+		{
+			position[]={2647.3938,0.001937333,17587.291};
+			name="seaSpawn_15";
+			type="Empty";
+		};
+		class Item178
+		{
+			position[]={2695.863,0.0015696508,18063.904};
+			name="seaSpawn_16";
+			type="Empty";
+		};
+		class Item179
+		{
+			position[]={2413.1299,0.0001513976,19396.809};
+			name="seaSpawn_17";
+			type="Empty";
+		};
+		class Item180
+		{
+			position[]={2453.5198,0.0026120469,20059.221};
+			name="seaSpawn_18";
+			type="Empty";
+		};
+		class Item181
+		{
+			position[]={2639.3162,0.0022417328,21133.623};
+			name="seaSpawn_19";
+			type="Empty";
+		};
+		class Item182
+		{
+			position[]={2324.2705,0.0018046098,21844.506};
+			name="seaSpawn_20";
+			type="Empty";
+		};
+		class Item183
+		{
+			position[]={2913.9714,0.00028137292,22232.26};
+			name="seaSpawn_21";
+			type="Empty";
+		};
+		class Item184
+		{
+			position[]={3810.6411,-0.00035860622,22805.813};
+			name="seaSpawn_22";
+			type="Empty";
+		};
+		class Item185
+		{
+			position[]={4973.8877,0.00089673244,22846.203};
+			name="seaSpawn_23";
+			type="Empty";
+		};
+		class Item186
+		{
+			position[]={5717.0723,0.0013289996,22910.828};
+			name="seaSpawn_24";
+			type="Empty";
+		};
+		class Item187
+		{
+			position[]={6589.5073,-0.00058688101,23064.314};
+			name="seaSpawn_25";
+			type="Empty";
+		};
+		class Item188
+		{
+			position[]={7534.644,-0.00062761828,23540.928};
+			name="seaSpawn_26";
+			type="Empty";
+		};
+		class Item189
+		{
+			position[]={8625.1875,-0.0018753204,23993.309};
+			name="seaSpawn_27";
+			type="Empty";
+		};
+		class Item190
+		{
+			position[]={9037.1709,0.001048379,23742.885};
+			name="seaSpawn_28";
+			type="Empty";
+		};
+		class Item191
+		{
+			position[]={9562.248,-5.4453394e-005,23193.566};
+			name="seaSpawn_29";
+			type="Empty";
+		};
+		class Item192
+		{
+			position[]={9513.7793,1.8907983,22345.354};
+			name="seaSpawn_30";
+			type="Empty";
+		};
+		class Item193
+		{
+			position[]={10079.246,0.00057016074,22555.387};
+			name="seaSpawn_31";
+			type="Empty";
+		};
+		class Item194
+		{
+			position[]={10612.401,0.00051988201,22797.734};
+			name="seaSpawn_32";
+			type="Empty";
+		};
+		class Item195
+		{
+			position[]={11121.321,0.0020050001,22975.455};
+			name="seaSpawn_33";
+			type="Empty";
+		};
+		class Item196
+		{
+			position[]={11896.818,-0.0018156653,23306.662};
+			name="seaSpawn_34";
+			type="Empty";
+		};
+		class Item197
+		{
+			position[]={13213.551,-0.00042912585,23452.068};
+			name="seaSpawn_35";
+			type="Empty";
+		};
+		class Item198
+		{
+			position[]={14304.092,47.271328,23379.365};
+			name="seaSpawn_36";
+			type="Empty";
+		};
+		class Item199
+		{
+			position[]={14586.826,0.0001970866,23815.588};
+			name="seaSpawn_37";
+			type="Empty";
+		};
+		class Item200
+		{
+			position[]={15378.48,-0.0016363652,22999.689};
+			name="seaSpawn_38";
+			type="Empty";
+		};
+		class Item201
+		{
+			position[]={16339.775,-0.0017078471,22119.168};
+			name="seaSpawn_39";
+			type="Empty";
+		};
+		class Item202
+		{
+			position[]={17511.098,-0.00013951247,21917.211};
+			name="seaSpawn_40";
+			type="Empty";
+		};
+		class Item203
+		{
+			position[]={17042.57,-0.00069635914,21279.031};
+			name="seaSpawn_41";
+			type="Empty";
+		};
+		class Item204
+		{
+			position[]={16881.008,0.0002132525,20172.318};
+			name="seaSpawn_42";
+			type="Empty";
+		};
+		class Item205
+		{
+			position[]={17688.816,0,19437.201};
+			name="seaSpawn_43";
+			type="Empty";
+		};
+		class Item206
+		{
+			position[]={18036.176,-0.0021049702,18508.207};
+			name="seaSpawn_44";
+			type="Empty";
+		};
+		class Item207
+		{
+			position[]={18674.346,3.1339121e-005,18605.146};
+			name="seaSpawn_45";
+			type="Empty";
+		};
+		class Item208
+		{
+			position[]={19029.781,-0.0026685551,18968.666};
+			name="seaSpawn_46";
+			type="Empty";
+		};
+		class Item209
+		{
+			position[]={19328.672,8.7753229e-005,19590.686};
+			name="seaSpawn_47";
+			type="Empty";
+		};
+		class Item210
+		{
+			position[]={19651.795,-0.0024028555,20148.084};
+			name="seaSpawn_48";
+			type="Empty";
+		};
+		class Item211
+		{
+			position[]={20701.949,-1.8619816e-005,20560.072};
+			name="seaSpawn_49";
+			type="Empty";
+		};
+		class Item212
+		{
+			position[]={20928.135,0.00036236958,21044.766};
+			name="seaSpawn_50";
+			type="Empty";
+		};
+		class Item213
+		{
+			position[]={21445.135,-0.0014095309,21666.787};
+			name="seaSpawn_51";
+			type="Empty";
+		};
+		class Item214
+		{
+			position[]={22850.727,0.0020901249,22603.863};
+			name="seaSpawn_52";
+			type="Empty";
+		};
+		class Item215
+		{
+			position[]={23149.615,-0.0017687854,23855.982};
+			name="seaSpawn_53";
+			type="Empty";
+		};
+		class Item216
+		{
+			position[]={24530.971,-0.0020860194,24130.643};
+			name="seaSpawn_54";
+			type="Empty";
+		};
+		class Item217
+		{
+			position[]={25581.125,-0.00074129947,23581.324};
+			name="seaSpawn_55";
+			type="Empty";
+		};
+		class Item218
+		{
+			position[]={26049.652,-0.0012319956,24631.492};
+			name="seaSpawn_56";
+			type="Empty";
+		};
+		class Item219
+		{
+			position[]={27455.244,-0.0024677147,25810.91};
+			name="seaSpawn_57";
+			type="Empty";
+		};
+		class Item220
+		{
+			position[]={28707.35,0.000447514,25899.771};
+			name="seaSpawn_58";
+			type="Empty";
+		};
+		class Item221
+		{
+			position[]={27996.477,0,23742.889};
+			name="seaSpawn_59";
+			type="Empty";
+		};
+		class Item222
+		{
+			position[]={28456.928,-0.0021238313,22272.654};
+			name="seaSpawn_60";
+			type="Empty";
+		};
+		class Item223
+		{
+			position[]={28335.756,0.00066296011,21157.863};
+			name="seaSpawn_61";
+			type="Empty";
+		};
+		class Item224
+		{
+			position[]={27536.025,0.0016615076,20212.711};
+			name="seaSpawn_62";
+			type="Empty";
+		};
+		class Item225
+		{
+			position[]={26542.416,0.0026362105,20156.164};
+			name="seaSpawn_63";
+			type="Empty";
+		};
+		class Item226
+		{
+			position[]={26049.652,-0.0010910429,19202.936};
+			name="seaSpawn_64";
+			type="Empty";
+		};
+		class Item227
+		{
+			position[]={25718.453,0.00088172458,18807.105};
+			name="seaSpawn_65";
+			type="Empty";
+		};
+		class Item228
+		{
+			position[]={25217.609,0.0010844659,18354.723};
+			name="seaSpawn_66";
+			type="Empty";
+		};
+		class Item229
+		{
+			position[]={24635.986,-0.00048405689,17789.25};
+			name="seaSpawn_67";
+			type="Empty";
+		};
+		class Item230
+		{
+			position[]={24361.33,0.0010294672,16731.004};
+			name="seaSpawn_68";
+			type="Empty";
+		};
+		class Item231
+		{
+			position[]={24644.064,0.0027481217,16197.841};
+			name="seaSpawn_69";
+			type="Empty";
+		};
+		class Item232
+		{
+			position[]={24450.189,-0.00052266358,15301.16};
+			name="seaSpawn_70";
+			type="Empty";
+		};
+		class Item233
+		{
+			position[]={23303.102,0.00058168103,15252.694};
+			name="seaSpawn_71";
+			type="Empty";
+		};
+		class Item234
+		{
+			position[]={22689.166,0.0011034649,15196.147};
+			name="seaSpawn_72";
+			type="Empty";
+		};
+		class Item235
+		{
+			position[]={22592.229,1.4210606e-005,13984.414};
+			name="seaSpawn_73";
+			type="Empty";
+		};
+		class Item236
+		{
+			position[]={23521.209,0.0022004626,13717.833};
+			name="seaSpawn_74";
+			type="Empty";
+		};
+		class Item237
+		{
+			position[]={22398.355,-0.0027677072,13055.423};
+			name="seaSpawn_75";
+			type="Empty";
+		};
+		class Item238
+		{
+			position[]={21744.027,-0.00033956172,12627.276};
+			name="seaSpawn_76";
+			type="Empty";
+		};
+		class Item239
+		{
+			position[]={21873.277,0.0015889863,12037.567};
+			name="seaSpawn_77";
+			type="Empty";
+		};
+		class Item240
+		{
+			position[]={22745.713,0.00040498149,11165.119};
+			name="seaSpawn_78";
+			type="Empty";
+		};
+		class Item241
+		{
+			position[]={21582.471,-0.002462744,10559.254};
+			name="seaSpawn_79";
+			type="Empty";
+		};
+		class Item242
+		{
+			position[]={21735.953,0.00024875882,9832.2158};
+			name="seaSpawn_80";
+			type="Empty";
+		};
+		class Item243
+		{
+			position[]={22309.498,0.0013029655,8870.9082};
+			name="seaSpawn_81";
+			type="Empty";
+		};
+		class Item244
+		{
+			position[]={23028.449,0.00050828065,8265.043};
+			name="seaSpawn_82";
+			type="Empty";
+		};
+		class Item245
+		{
+			position[]={23456.588,-0.00083665753,7521.8477};
+			name="seaSpawn_83";
+			type="Empty";
+		};
+		class Item246
+		{
+			position[]={23400.043,0.0019891844,6609.0117};
+			name="seaSpawn_84";
+			type="Empty";
+		};
+		class Item247
+		{
+			position[]={22769.949,0.00067482248,6382.8218};
+			name="seaSpawn_85";
+			type="Empty";
+		};
+		class Item248
+		{
+			position[]={22115.625,0.00060496037,5962.7539};
+			name="seaSpawn_86";
+			type="Empty";
+		};
+		class Item249
+		{
+			position[]={22519.531,0.0012620809,4969.1338};
+			name="seaSpawn_87";
+			type="Empty";
+		};
+		class Item250
+		{
+			position[]={21477.453,0.00097465731,4694.4756};
+			name="seaSpawn_88";
+			type="Empty";
+		};
+		class Item251
+		{
+			position[]={20419.223,0.0021021292,4662.1611};
+			name="seaSpawn_89";
+			type="Empty";
+		};
+		class Item252
+		{
+			position[]={19554.867,0.0027510151,5203.4028};
+			name="seaSpawn_90";
+			type="Empty";
+		};
+		class Item253
+		{
+			position[]={18423.932,0.0016457501,5712.3296};
+			name="seaSpawn_91";
+			type="Empty";
+		};
+		class Item254
+		{
+			position[]={17963.48,-0.0022974513,6455.5254};
+			name="seaSpawn_92";
+			type="Empty";
+		};
+		class Item255
+		{
+			position[]={17583.811,0.00082309055,7109.8584};
+			name="seaSpawn_93";
+			type="Empty";
+		};
+		class Item256
+		{
+			position[]={17793.84,-0.0026303492,7756.1143};
+			name="seaSpawn_94";
+			type="Empty";
+		};
+		class Item257
+		{
+			position[]={17696.902,0.00053083274,8515.4678};
+			name="seaSpawn_95";
+			type="Empty";
+		};
+		class Item258
+		{
+			position[]={16977.953,0.0018571801,8838.5957};
+			name="seaSpawn_96";
+			type="Empty";
+		};
+		class Item259
+		{
+			position[]={16347.861,-0.0009284775,8830.5186};
+			name="seaSpawn_97";
+			type="Empty";
+		};
+		class Item260
+		{
+			position[]={15879.332,0.00013970188,9315.21};
+			name="seaSpawn_98";
+			type="Empty";
+		};
+		class Item261
+		{
+			position[]={15418.881,0.00035342772,10058.406};
+			name="seaSpawn_99";
+			type="Empty";
+		};
+		class Item262
+		{
+			position[]={15257.317,-3.6632176e-005,10583.488};
+			name="seaSpawn_100";
+			type="Empty";
+		};
+		class Item263
+		{
+			position[]={15669.301,0.00026153942,11536.717};
+			name="seaSpawn_101";
+			type="Empty";
+		};
+		class Item264
+		{
+			position[]={16145.908,0.0026391284,12013.331};
+			name="seaSpawn_102";
+			type="Empty";
+		};
+		class Item265
+		{
+			position[]={16347.861,-0.00038539869,12546.494};
+			name="seaSpawn_103";
+			type="Empty";
+		};
+		class Item266
+		{
+			position[]={16234.77,0.0019174825,12998.875};
+			name="seaSpawn_104";
+			type="Empty";
+		};
+		class Item267
+		{
+			position[]={16929.486,0.00060259434,13822.85};
+			name="seaSpawn_105";
+			type="Empty";
+		};
+		class Item268
+		{
+			position[]={16493.268,0.0016706842,14517.575};
+			name="seaSpawn_106";
+			type="Empty";
+		};
+		class Item269
+		{
+			position[]={16008.581,-0.00097507471,15074.972};
+			name="seaSpawn_107";
+			type="Empty";
+		};
+		class Item270
+		{
+			position[]={16032.816,0.00025962543,15511.195};
+			name="seaSpawn_108";
+			type="Empty";
+		};
+		class Item271
+		{
+			position[]={15160.381,0.00022351125,15543.51};
+			name="seaSpawn_109";
+			type="Empty";
+		};
+		class Item272
+		{
+			position[]={14231.398,0.0013699115,14905.33};
+			name="seaSpawn_110";
+			type="Empty";
+		};
+		class Item273
+		{
+			position[]={13463.98,-0.002586049,14226.76};
+			name="seaSpawn_111";
+			type="Empty";
+		};
+		class Item274
+		{
+			position[]={13690.166,-0.0018893236,13637.05};
+			name="seaSpawn_112";
+			type="Empty";
+		};
+		class Item275
+		{
+			position[]={14546.445,-0.0003041327,13079.655};
+			name="seaSpawn_113";
+			type="Empty";
+		};
+		class Item276
+		{
+			position[]={13811.337,-0.00047365966,12748.448};
+			name="seaSpawn_114";
+			type="Empty";
+		};
+		class Item277
+		{
+			position[]={13116.621,-0.00088294002,12853.465};
+			name="seaSpawn_115";
+			type="Empty";
+		};
+		class Item278
+		{
+			position[]={12648.092,-0.0018365586,12401.086};
+			name="seaSpawn_116";
+			type="Empty";
+		};
+		class Item279
+		{
+			position[]={12316.89,-0.0019575772,12069.88};
+			name="seaSpawn_117";
+			type="Empty";
+		};
+		class Item280
+		{
+			position[]={12195.717,-0.0002609581,11552.874};
+			name="seaSpawn_118";
+			type="Empty";
+		};
+		class Item281
+		{
+			position[]={-13225.947,0,33762.805};
+			name="seaSpawn_119";
+			type="Empty";
+		};
+		class Item282
+		{
+			position[]={11250.58,-0.0019890764,10413.847};
+			name="seaSpawn_120";
+			type="Empty";
+		};
+		class Item283
+		{
+			position[]={12341.124,0.00073353015,10268.437};
+			name="seaSpawn_121";
+			type="Empty";
+		};
+		class Item284
+		{
+			position[]={12995.45,-8.8883913e-005,9492.9307};
+			name="seaSpawn_122";
+			type="Empty";
+		};
+		class Item285
+		{
+			position[]={12971.215,0.0010421474,8596.25};
+			name="seaSpawn_123";
+			type="Empty";
+		};
+		class Item286
+		{
+			position[]={13213.56,0.0027159634,8022.6958};
+			name="seaSpawn_124";
+			type="Empty";
+		};
+		class Item287
+		{
+			position[]={13859.806,-0.00056344492,7263.3447};
+			name="seaSpawn_125";
+			type="Empty";
+		};
+		class Item288
+		{
+			position[]={14384.883,-0.00086158584,6762.498};
+			name="seaSpawn_126";
+			type="Empty";
+		};
+		class Item289
+		{
+			position[]={13674.011,-0.00081408536,5922.3628};
+			name="seaSpawn_127";
+			type="Empty";
+		};
+		class Item290
+		{
+			position[]={12720.795,-0.0022164849,6229.3354};
+			name="seaSpawn_128";
+			type="Empty";
+		};
+		class Item291
+		{
+			position[]={11985.687,0.0001174421,6221.2568};
+			name="seaSpawn_129";
+			type="Empty";
+		};
+		class Item292
+		{
+			position[]={10765.895,0.00067407865,6318.1963};
+			name="seaSpawn_130";
+			type="Empty";
+		};
+		class Item293
+		{
+			position[]={9529.9453,-0.00044200526,6415.1343};
+			name="seaSpawn_131";
+			type="Empty";
+		};
+		class Item294
+		{
+			position[]={9061.416,0.0025651422,6867.5127};
+			name="seaSpawn_132";
+			type="Empty";
+		};
+		class Item295
+		{
+			position[]={8366.6992,-0.0022409807,7788.4287};
+			name="seaSpawn_133";
+			type="Empty";
+		};
+		class Item296
+		{
+			position[]={8600.9639,0.0023210607,8790.126};
+			name="seaSpawn_134";
+			type="Empty";
+		};
+		class Item297
+		{
+			position[]={8964.4775,0.002643914,9331.3672};
+			name="seaSpawn_135";
+			type="Empty";
+		};
+		class Item298
+		{
+			position[]={9449.1641,0.00090953277,10009.938};
+			name="seaSpawn_136";
+			type="Empty";
+		};
+		class Item299
+		{
+			position[]={7340.7788,0.00024517678,9549.4785};
+			name="seaSpawn_137";
+			type="Empty";
+		};
+		class Item300
+		{
+			position[]={14131.773,29.022739,16205.244};
+			name="airSpawn";
+			type="Empty";
+		};
+		class Item301
+		{
+			position[]={14229.216,19.369287,16305.534};
+			name="airSpawn_1";
+			type="Empty";
+		};
+		class Item302
+		{
+			position[]={14251.678,19.321196,16327.05};
+			name="airSpawn_2";
+			type="Empty";
+		};
+		class Item303
+		{
+			position[]={14350.069,18.760265,16354.257};
+			name="airSpawn_3";
+			type="Empty";
+		};
+		class Item304
+		{
+			position[]={14418.72,18.934702,16338.753};
+			name="airSpawn_4";
+			type="Empty";
+		};
+		class Item305
+		{
+			position[]={15090.895,17.90733,17251};
+			name="airSpawn_5";
+			type="Empty";
+		};
+		class Item306
+		{
+			position[]={14775.778,17.91,16849.748};
+			name="airSpawn_6";
+			type="Empty";
+		};
+		class Item307
+		{
+			position[]={14577.257,17.91,16651.225};
+			name="airSpawn_7";
+			type="Empty";
+		};
+		class Item308
+		{
+			position[]={11565.657,23.667294,11970.713};
+			name="airSpawn_8";
+			type="Empty";
+		};
+		class Item309
+		{
+			position[]={11723.131,23.114639,11895.554};
+			name="airSpawn_9";
+			type="Empty";
+		};
+		class Item310
+		{
+			position[]={11703.191,22.880745,11867.433};
+			name="airSpawn_10";
+			type="Empty";
+		};
+		class Item311
+		{
+			position[]={11677.116,22.669378,11824.996};
+			name="airSpawn_11";
+			type="Empty";
+		};
+		class Item312
+		{
+			position[]={21182.547,17.987352,7587.2402};
+			name="airSpawn_12";
+			type="Empty";
+		};
+		class Item313
+		{
+			position[]={21088.352,26.265812,7100.5654};
+			name="airSpawn_13";
+			type="Empty";
+		};
+		class Item314
+		{
+			position[]={20927.232,27.903502,7136.9209};
+			name="airSpawn_14";
+			type="Empty";
 		};
 	};
 };

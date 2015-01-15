@@ -6,7 +6,7 @@ Description: Manage the players temperature
 
 */
 
-
+private["_waterTemp", "_airTemp", "_airHeatLoss", "_waterHeatLoss", "_playerTemp"];
 _player = _this select 0;
 _runSpeed = _this select 1;
 _playerTemp = _player getVariable PLAYER_TEMP_LEVEL_IDC;

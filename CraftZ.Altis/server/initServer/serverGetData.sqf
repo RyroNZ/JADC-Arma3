@@ -24,9 +24,13 @@ _serverAirTemp = [_profile, DB_CATAGORY_TEMP, DB_SUB_CATAGORY_AIR_TEMP, DB_TYPE_
 if (!inidb_errno) then {_serverReadFailed = true};
 _serverWaterTemp = [_profile, DB_CATAGORY_TEMP, DB_SUB_CATAGORY_WATER_TEMP, DB_TYPE_SCALAR] call iniDB_read;
 if (!inidb_errno) then {_serverReadFailed = true};
+_currentLandVehicles = [_profile, DB_CATAGORY_VEHICLES, DB_SUB_CATAGORY_LAND_VEHICLES, DB_TYPE_ARRAY] call iniDB_read;
+_currentSeaVehicles = [_profile, DB_CATAGORY_VEHICLES, DB_SUB_CATAGORY_SEA_VEHICLES, DB_TYPE_ARRAY] call iniDB_read;
+_currentAirVehicles = [_profile, DB_CATAGORY_VEHICLES, DB_SUB_CATAGORY_AIR_VEHICLES, DB_TYPE_ARRAY] call iniDB_read;
 
 PV_currentWeather = [_serverRain, _serverFog, _serverOvercast, _serverWind, _serverDateTime];
 PV_currentTemperatures = [_serverAirTemp, _serverWaterTemp];
+[_currentLandVehicles, _currentSeaVehicles, _currentAirVehicles] call fnc_spawn_existing_vehicles;
 
 if (_serverReadFailed) then {
 	[_server] call fnc_new_data;

@@ -17,9 +17,13 @@ while {true} do {
 			_building = _x;	
 			_buildingPositions = ([_x] call BIS_fnc_buildingPositions);
 			{	
-				if (!(_x in currentItemPos_array)) then {
-					[_building] execVM "server\core\ai\zombieSpawner.sqf";
+				if (!([(_x select 0), (_x select 1)] in currentItemPos_array)) then {
 					[_x, _building] call fn_spawnLoot;
+					//diag_log format["Spawning item at %1", _x];
+					//diag_log format["Current Loot Array: %1", currentItemPos_array];
+
+					//[_building] execVM "server\core\ai\zombieSpawner.sqf";
+
 				};
 				//sleep 0.001;
 			} forEach _buildingPositions;

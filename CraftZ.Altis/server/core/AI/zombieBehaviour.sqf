@@ -2,11 +2,11 @@ fn_createZombie = {
 	
 	_zombieCreatePos = _this select 0;
 	_agent = createAgent [AI_ZOMBIE_CHARS select 0, _zombieCreatePos, [], 40, "NONE"];
-	if (count(lineIntersectsObjs [(getposASL _agent), [(getposASL _agent select 0),(getposASL _agent select 1),((getposASL _agent select 2) + 20)]]) > 0) exitWith
-    {
-    	diag_log format["Removing agent: %1; reason: spawning indoors", str _agent];
-        deleteVehicle _agent;
-    };
+	//if (count(lineIntersectsObjs [(getposASL _agent), [(getposASL _agent select 0),(getposASL _agent select 1),((getposASL _agent select 2) + 20)]]) > 0) exitWith
+    //{
+    // 	diag_log format["Removing agent: %1; reason: spawning indoors", str _agent];
+    //    deleteVehicle _agent;
+    //};
 	[_agent] spawn fn_zombieDespawner;
 	currentZombieAgent_array pushBack _agent;
 

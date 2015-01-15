@@ -5,9 +5,10 @@ fn_spawnLoot =
 	private ["_lootPos", "_itemsToSpawn", "_junkLoot", "_foodLoot", "_waterLoot", "_healthLoot", "_weaponLoot", "_uniformLoot", "_buildingLoot", "_militaryLoot", "_militaryWeaponsLoot"];
 
 	_lootPos = _this select 0;	
+	_lootPos = [(_lootPos select 0), (_lootPos select 1), (_lootPos select 2) + 0.5];
 	_building = _this select 1;
 	_itemsToSpawn = [];
-	currentItemPos_array pushBack (_lootPos);	
+	currentItemPos_array pushBack ([(_lootPos select 0), (_lootPos select 1)]);	
 	systemChat format["Nearest Building: %1", _building];
 	systemChat str ((configFile >> "cfgVehicles" >> (typeOf _building) >> "vehicleClass") call BIS_fnc_GetCfgData);
 	if (random 100 < LOOT_SPAWN_CHANCE) then {
@@ -64,7 +65,7 @@ fn_spawnLoot =
 			{
 				for [{_x=0},{_x <=floor (random LOOT_MAX_ITEMS_TO_SPAWN)},{_x=_x+1}] do 
 				{
-					_item = LOOT_STRUCTURE_INFRASTURCUTRE call BIS_fnc_selectRandom;
+					_item = LOOT_STRUCTURE_INFRASTRUCTURE call BIS_fnc_selectRandom;
 					_itemsToSpawn set [_x, _item];
 				};
 				[_itemsToSpawn, _lootPos ] call fn_spawnItems;

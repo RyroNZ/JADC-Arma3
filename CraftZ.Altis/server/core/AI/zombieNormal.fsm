@@ -18,10 +18,10 @@ item13[] = {"Time_Check",4,218,157.454773,480.988464,247.454773,530.988464,0.000
 item14[] = {"valid",8,218,-218.704163,-32.107769,-128.704178,17.892250,0.000000,"valid"};
 item15[] = {"terminate",1,250,-395.294037,-30.479229,-305.294006,19.520756,0.000000,"terminate"};
 item16[] = {"attack_",4,218,-99.415375,567.563477,-9.415375,617.563477,0.000000,"attack?"};
-item17[] = {"DO_ATTACK",2,4346,-33.635025,683.938293,56.365044,733.938293,0.000000,"DO ATTACK"};
+item17[] = {"DO_ATTACK",2,250,-33.635025,683.938293,56.365044,733.938293,0.000000,"DO ATTACK"};
 item18[] = {"target_out_of_range",4,218,10.785469,569.034912,100.785469,619.034912,0.000000,"target out of range?"};
 item19[] = {"Time_Check_Damag",4,218,-109.415527,783.871277,-19.415518,833.871277,0.000000,"Time Check" \n "Damage"};
-item20[] = {"Time_Check_Anima",4,218,130.535172,784.882996,220.535126,834.882996,0.000000,"Time Check Animation"};
+item20[] = {"Time_Check_Anima",4,4314,130.535172,784.882996,220.535126,834.882996,0.000000,"Time Check Animation"};
 item21[] = {"BLANK",2,250,19.624435,824.763733,109.624451,874.763733,0.000000,"BLANK"};
 link0[] = {0,1};
 link1[] = {1,2};
@@ -52,8 +52,8 @@ link25[] = {18,11};
 link26[] = {19,21};
 link27[] = {20,17};
 link28[] = {21,20};
-globals[] = {0.000000,0,0,0,0,640,480,1,47,6316128,1,-158.217224,206.061279,1018.859375,488.628265,1159,1687,1};
-window[] = {0,-1,-1,-32000,-32000,1988,911,2876,155,1,1177};
+globals[] = {0.000000,0,0,0,0,640,480,1,47,6316128,1,-181.250153,270.665863,1034.967896,377.174713,582,582,1};
+window[] = {0,-1,-1,-32000,-32000,728,8,1030,0,1,600};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -231,7 +231,7 @@ class FSM
           priority = 0.000000;
           to="BLANK";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"(time - _lastTime > 0.6)"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _lastTime > 1.2) && ((_agent distance _target) < 2.5)"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/"_lastTime = time;" \n
            "_target setDamage (damage _target + 0.10);"/*%FSM</ACTION""">*/;
         };
@@ -263,7 +263,7 @@ class FSM
           priority = 0.000000;
           to="DO_ATTACK";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"(time - _lastTime > 1.9)"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _lastTime > 1)"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/"_lastTime = time;"/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
