@@ -6,28 +6,81 @@ Description: Saves the server information to a database, will be reloaded once s
 */
 
 
+fn_delete_objects = {
+	_didDelete = [_profile, DB_CATAGORY_SAVED_OBJECTS] call iniDB_deletesection;
+};
+
+fn_save_tents = {
+
+	_profile = _this select 0;
+	[] call fn_delete_objects;
+
+	_tentItems = [];
+	_tentMags = [];
+	_tentWeps = [];
+	_tentBackpacks = [];
+	_currentTents = [];
+	{
+		_currentTentsNearPlayer = (getPos _x) nearObjects ["Land_TentA_F", 2500];
+		{
+			if (!(_x in _currentTents)) then {
+				_currentTents pushback _x;
+			};
+		} forEach _currentTentsNearPlayer;
+
+
+	} forEach AllUnits;
+
+
+	systemChat str _currentTents;
+	_toSaveTents = [];
+	_count = 0;
+	{
+
+		_tentGWH = _x getVariable "_gwh";
+		if (!isNil "_tentGWH") then {
+			_tentItems = getItemCargo _tentGWH;
+			_tentMags = getMagazineCargo _tentGWH;
+			_tentWeps = getWeaponCargo _tentGWH;
+			_tentBackpacks = getBackpackCargo _tentGWH;
+		};
+		_tentComplete = [typeOf _x, getPos _x, getDir _x,  _tentItems, _tentMags, _tentWeps, _tentBackpacks];
+		[_profile, DB_CATAGORY_SAVED_OBJECTS, (format["%1_%2", DB_SUB_CATAGORY_TENTS, _count]), _tentComplete] call iniDB_write;
+		_count = _count + 1;
+	} forEach _currentTents;
+	
+};
+
+fn_save_vehicles = {
+	_currentVehicles = vehicles;
+
+	_count = 0;
+	{
+		if (typeOf _x in VEHICLES_AIR || typeOf _x in VEHICLES_LAND || typeOf _x in VEHICLES_SEA) then {
+			_vehicleItems = [];
+			_vehicleMags = [];
+			_vehicleWeps = [];
+			_vehicleBackpacks = [];
+
+			_vehicleItems = getItemCargo _x;
+			_vehicleMags = getMagazineCargo _x;
+			_vehicleWeps = getWeaponCargo _x;
+			_vehicleBackpacks = getBackpackCargo _x;
+
+			_vehicleComplete = [typeOf _x, getPos _x, getDir _x, _vehicleItems, _vehicleMags, _vehicleWeps, _vehicleBackpacks];
+			[_profile, DB_CATAGORY_SAVED_OBJECTS, (format["%1_%2", DB_SUB_CATAGORY_VEHICLES, _count]), _vehicleComplete] call iniDB_write;
+			_count = _count + 1;
+		};
+		
+
+	} forEach _currentVehicles;
+
+};
+
 while {true} do {
 
-	_currentVehicles = vehicles;
-	_vehicleLand = [];
-	_vehicleSea = [];
-	_vehicleAir = [];
-	{
-	switch (true) do {
-		case (typeOf _x in VEHICLES_LAND):
-		{
-			_vehicleLand pushback [typeOf _x, position _x, getDir _x];
-		};
-		case (typeOf _x in VEHICLES_SEA):	
-		{
-			_vehicleSea pushback [typeOf _x, position _x, getDir _x];
-		};
-		case (typeOf _x in VEHICLES_AIR):
-		{
-			_vehicleAir pushback [typeOf _x, position _x, getDir _x];
-		}
-	};
-} forEach _currentVehicles;
+
+	
 
 
 
@@ -43,10 +96,11 @@ while {true} do {
 		[_profile, DB_CATAGORY_DATETIME, DB_SUB_CATAGORY_DATETIME, date] call iniDB_write;
 		[_profile, DB_CATAGORY_TEMP, DB_SUB_CATAGORY_AIR_TEMP, (PV_currentTemperatures select 0)] call iniDB_write;
 		[_profile, DB_CATAGORY_TEMP, DB_SUB_CATAGORY_WATER_TEMP, (PV_currentTemperatures select 1)] call iniDB_write;
-		[_profile, DB_CATAGORY_VEHICLES, DB_SUB_CATAGORY_LAND_VEHICLES, _vehicleLand] call iniDB_write;
-		[_profile, DB_CATAGORY_VEHICLES, DB_SUB_CATAGORY_SEA_VEHICLES, _vehicleSea] call iniDB_write;
-		[_profile, DB_CATAGORY_VEHICLES, DB_SUB_CATAGORY_AIR_VEHICLES, _vehicleAir] call iniDB_write;
+		[_profile] call fn_save_tents;
+		[_profile] call fn_save_vehicles;
+		
+		systemChat "Saving server data";
 	};
-	sleep SERVER_SAVE_DATA_REFRESH;
+	sleep 5;
 };
 

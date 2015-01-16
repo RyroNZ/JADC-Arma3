@@ -204,9 +204,11 @@ DB_TYPE_STRING = "STRING";
 DB_CATAGORY_WEATHER = "serverWeather";
 DB_CATAGORY_TEMP = "serverTemperature";
 DB_CATAGORY_DATETIME = "serverTime";
-DB_CATAGORY_VEHICLES = "currentVehicles";
 
+DB_CATAGORY_SAVED_OBJECTS = "currentObjects";
 
+DB_SUB_CATAGORY_VEHICLES = "currentVehicles";
+DB_SUB_CATAGORY_TENTS = "currentTents";
 DB_SUB_CATAGORY_LAND_VEHICLES = "currentLandVehicles";
 DB_SUB_CATAGORY_SEA_VEHICLES = "currentSeaVehicles";
 DB_SUB_CATAGORY_AIR_VEHICLES = "currentAirVehicles";
@@ -247,11 +249,11 @@ DB_SUB_CATAGORY_TOXICITY = "toxicity";
 
 
 LOOT_RESPAWN_TIME = 10; //Check for new loot to spawn every 30 seconds.
-LOOT_SPAWN_DISTANCE =  450; //spawn loot within 1000m of any player
+LOOT_SPAWN_DISTANCE =  450; //spawn loot within xm of any player
 LOOT_SPAWN_RESET = 900; //have option to despawn loot after this amount of time
 LOOT_DESPAWN_DISTANCE = 1000; //despawn loot after reset and player is = distance away
 LOOT_MUST_SPAWN_M_APART = 1; //loot must spawn at least this far away. DO NOT SET TO 0
-LOOT_SPAWN_CHANCE = 100;	// SPAWN DIFFICULTY 0-100 (100 always spawns, 0 never spawns).. 
+LOOT_SPAWN_CHANCE = 30;	// SPAWN DIFFICULTY 0-100 (100 always spawns, 0 never spawns).. 
 LOOT_GROUNDWEAPON_HOLDER = "weaponHolderSimulated";
 LOOT_MAX_MAGS_TO_SPAWN = 3; // max amount of mags that will spawn with a gun
 LOOT_MAX_ITEMS_TO_SPAWN = 1.25; // max amount of items that will spawn together

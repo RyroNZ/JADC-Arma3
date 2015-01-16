@@ -14,7 +14,8 @@ class Mission
 		"A3_Weapons_F_Uniforms",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Soft_F_MRAP_01",
-		"A3_Boat_F_Boat_Transport_01"
+		"A3_Boat_F_Boat_Transport_01",
+		"A3_Structures_F_Civ_Camping"
 	};
 	addOnsAuto[]=
 	{
@@ -26,9 +27,8 @@ class Mission
 		"a3_weapons_f",
 		"A3_Weapons_F_Headgear",
 		"A3_Weapons_F_Uniforms",
-		"A3_Air_F_Heli_Light_01",
-		"A3_Soft_F_MRAP_01",
 		"A3_Boat_F_Boat_Transport_01",
+		"A3_Structures_F_Civ_Camping",
 		"a3_map_altis"
 	};
 	randomSeed=9962886;
@@ -58,7 +58,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={14679.192,17.91,16712.053};
+					position[]={14656.525,17.91,16653.459};
 					id=0;
 					side="CIV";
 					vehicle="C_man_1";
@@ -108,7 +108,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=12;
+		items=15;
 		class Item0
 		{
 			position[]={11529.997,22.950001,11696.217};
@@ -184,26 +184,50 @@ class Mission
 		};
 		class Item9
 		{
-			position[]={14629.038,17.91,16634.322};
+			position[]={14987.527,-36.662647,15432.006};
 			id=12;
 			side="EMPTY";
-			vehicle="B_Heli_Light_01_F";
+			vehicle="B_Lifeboat";
 			skill=0.60000002;
 		};
 		class Item10
 		{
-			position[]={14645.043,17.91,16650.861};
+			position[]={14668.469,17.91,16661.914};
 			id=13;
 			side="EMPTY";
-			vehicle="B_MRAP_01_F";
+			vehicle="Land_TentA_F";
 			skill=0.60000002;
 		};
 		class Item11
 		{
-			position[]={14987.527,-36.662647,15432.006};
+			position[]={14659.866,17.91,16671.203};
 			id=14;
 			side="EMPTY";
-			vehicle="B_Lifeboat";
+			vehicle="Land_TentA_F";
+			skill=0.60000002;
+		};
+		class Item12
+		{
+			position[]={14648.669,17.91,16670.521};
+			id=15;
+			side="EMPTY";
+			vehicle="Land_TentA_F";
+			skill=0.60000002;
+		};
+		class Item13
+		{
+			position[]={14638.839,17.91,16654.268};
+			id=16;
+			side="EMPTY";
+			vehicle="Land_TentA_F";
+			skill=0.60000002;
+		};
+		class Item14
+		{
+			position[]={14647.441,17.91,16643.615};
+			id=17;
+			side="EMPTY";
+			vehicle="Land_TentA_F";
 			skill=0.60000002;
 		};
 	};

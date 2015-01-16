@@ -4,7 +4,6 @@ call compile preprocessFileLineNumbers "server\core\lootSpawner\lootDespawner.sq
 call compile preprocessFileLineNumbers "server\core\AI\zombieBehaviour.sqf";
 call compile preprocessFileLineNumbers "server\LOOT_TABLE.sqf";
 call compile preprocessFileLineNumbers "server\VEHICLE_TABLE.sqf";
-
 fnc_set_player_data = compile preprocessFileLineNumbers "server\initPlayer\playerSetData.sqf";
 fnc_setup_new_player = compile preprocessFileLineNumbers "server\initPlayer\playerSetDefaults.sqf";
 fnc_player_ready = compile preprocessFileLineNumbers "server\initPlayer\playerReady.sqf";
@@ -17,7 +16,7 @@ fnc_setup_add_weapons = compile preprocessFileLineNumbers "server\initPlayer\add
 fnc_load_data = compile preprocessFileLineNumbers "server\initServer\serverGetData.sqf";
 fnc_new_data = compile preprocessFileLineNumbers "server\initServer\serverDataDefaults.sqf";
 fnc_ready_data = compile preprocessFileLineNumbers "server\initServer\serverDataReady.sqf";
-fnc_spawn_existing_vehicles = compile preprocessFileLineNumbers "server\initServer\serverSpawnSavedVehicles.sqf";
+fnc_spawn_saved_objects = compile preprocessFileLineNumbers "server\initServer\serverSpawnSavedObjects.sqf";
 
 fnc_status_hunger = compile preprocessFileLineNumbers "server\core\playerStatusMonitor\updateHunger.sqf";
 fnc_status_thirst = compile preprocessFileLineNumbers "server\core\playerStatusMonitor\updateThirst.sqf";

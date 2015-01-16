@@ -12,6 +12,7 @@ if (!isServer && (player != player)) then { waitUntil {player == player}; waitUn
 "PV_playerLoaded" addPublicVariableEventHandler {
 	[] call fnc_print_environment;
 	[] call fnc_reset_gun;
+	[] call fnc_set_keydown_handler;
 
 };
 

@@ -1,3 +1,5 @@
+private["_veh"];
+
 _currentVehicleAmount = count vehicles;
 _currentVehicles = vehicles;
 
@@ -27,6 +29,7 @@ while {(_currentLandCount <= VEHICLE_MAX_LAND) && (_currentSeaCount <= VEHICLE_M
 	if (_currentLandCount < VEHICLE_MAX_LAND) then 
 		{
 			_veh = createVehicle [(VEHICLES_LAND call BIS_fnc_selectRandom), (getMarkerPos (VEHICLE_LAND_SPAWN call BIS_fnc_selectRandom)), [], 30, "NONE"];
+
 			_currentLandCount = _currentLandCount + 1;
 			systemChat format["Spawning %1", _veh];
 		};
@@ -44,4 +47,9 @@ while {(_currentLandCount <= VEHICLE_MAX_LAND) && (_currentSeaCount <= VEHICLE_M
 			_currentAirCount = _currentAirCount + 1;
 			systemChat format["Spawning %1", _veh];
 		};
+
+		clearItemCargoGlobal _veh;
+		clearMagazineCargoGlobal _veh;
+		clearWeaponCargoGlobal _veh;
+		clearBackpackCargoGlobal _veh;
 };
