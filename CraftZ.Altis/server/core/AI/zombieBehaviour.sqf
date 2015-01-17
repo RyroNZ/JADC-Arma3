@@ -89,9 +89,7 @@ fn_zombieDespawner = {
 	_noPlayersNearby = true;
 	_zombie = _this select 0;
 
-	//systemChat "item spawned";
 	sleep ZOMBIE_SPAWN_RESET;
-	//systemChat "item spawned can now be removed";
 
 	while {true} do {
 	

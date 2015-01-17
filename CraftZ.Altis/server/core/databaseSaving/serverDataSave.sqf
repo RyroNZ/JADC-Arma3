@@ -31,8 +31,6 @@ fn_save_tents = {
 
 	} forEach AllUnits;
 
-
-	systemChat str _currentTents;
 	_toSaveTents = [];
 	_count = 0;
 	{
@@ -99,8 +97,7 @@ while {true} do {
 		[_profile] call fn_save_tents;
 		[_profile] call fn_save_vehicles;
 		
-		systemChat "Saving server data";
 	};
-	sleep 5;
+	sleep SERVER_SAVE_DATA_REFRESH;
 };
 

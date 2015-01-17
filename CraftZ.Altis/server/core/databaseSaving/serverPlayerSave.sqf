@@ -54,9 +54,9 @@ while {true} do {
 
 				
 				diag_log format["[server\core\serverPlayerSave.sqf]: Saving profile for player (%1)", name _x];
-			};
-			sleep SERVER_PLAYER_SAVE_REFRESH;
-			
+			};	
+			sleep 0.5;
 		} forEach readyUnits;
+		sleep SERVER_PLAYER_SAVE_REFRESH;
 
 	};

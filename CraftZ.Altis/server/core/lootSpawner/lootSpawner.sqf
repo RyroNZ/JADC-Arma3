@@ -5,7 +5,6 @@ currentItemPos_array = [nil];
 
 while {true} do {
 	
-	systemChat format["updating loot"];
 	{	
 			private["_loot", "_lootPos", "_player"];
 			_player = _x;
@@ -19,13 +18,11 @@ while {true} do {
 			{	
 				if (!([(_x select 0), (_x select 1)] in currentItemPos_array)) then {
 					[_x, _building] call fn_spawnLoot;
-					//diag_log format["Spawning item at %1", _x];
-					//diag_log format["Current Loot Array: %1", currentItemPos_array];
 
-					//[_building] execVM "server\core\ai\zombieSpawner.sqf";
+					[_building] execVM "server\core\ai\zombieSpawner.sqf";
 
 				};
-				//sleep 0.001;
+				sleep 0.001;
 			} forEach _buildingPositions;
 		} forEach _buildingsNearby_array;
 

@@ -44,7 +44,7 @@ _currentTents = [DB_SUB_CATAGORY_TENTS] call fn_get_items;
 
 PV_currentWeather = [_serverRain, _serverFog, _serverOvercast, _serverWind, _serverDateTime];
 PV_currentTemperatures = [_serverAirTemp, _serverWaterTemp];
-//[_currentVehicles] call fnc_spawn_saved_objects;
+[_currentVehicles] call fnc_spawn_saved_objects;
 [_currentTents] call fnc_spawn_saved_objects;
 
 if (_serverReadFailed) then {

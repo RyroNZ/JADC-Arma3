@@ -4,8 +4,8 @@ PLAYER_PATH = "player\init.sqf";
 SERVER_PATH = "server\init.sqf";
 
 SERVER_STATUS_MONITOR_REFRESH = 10;
-SERVER_SAVE_DATA_REFRESH = 30;
-SERVER_PLAYER_SAVE_REFRESH = 2.5;
+SERVER_SAVE_DATA_REFRESH = 60;
+SERVER_PLAYER_SAVE_REFRESH = 45;
 CLIENT_GUI_REFRESH = 2;
 
 
@@ -249,7 +249,7 @@ DB_SUB_CATAGORY_TOXICITY = "toxicity";
 
 
 LOOT_RESPAWN_TIME = 10; //Check for new loot to spawn every 30 seconds.
-LOOT_SPAWN_DISTANCE =  450; //spawn loot within xm of any player
+LOOT_SPAWN_DISTANCE =  250; //spawn loot within xm of any player
 LOOT_SPAWN_RESET = 900; //have option to despawn loot after this amount of time
 LOOT_DESPAWN_DISTANCE = 1000; //despawn loot after reset and player is = distance away
 LOOT_MUST_SPAWN_M_APART = 1; //loot must spawn at least this far away. DO NOT SET TO 0
@@ -263,7 +263,7 @@ AI_ZOMBIE_CHARS = ["C_man_p_fugitive_F_asia"];
 ZOMBIE_SPAWN_RESET = 900;
 ZOMBIE_DESPAWN_DISTANCE = 1000;
 ZOMBIE_SPAWN_CHANCE = 0.5;
-MAX_ZOMBIES_IN_AREA = 2;
+MAX_ZOMBIES_IN_AREA = 30;
 
 
 VEHICLE_MAX_AIR = 5;

@@ -12,7 +12,7 @@ item7[] = {"",7,210,33.859432,280.312500,41.859425,288.312500,0.000000,""};
 item8[] = {"",7,210,149.135620,281.485291,157.135620,289.485291,0.000000,""};
 item9[] = {"",7,210,148.896072,377.300751,156.896072,385.300751,0.000000,""};
 item10[] = {"Target_",4,218,4.616638,361.050842,94.616653,411.050842,0.000000,"Target?"};
-item11[] = {"CHASE",2,250,6.008307,477.914246,96.008354,527.914185,0.000000,"CHASE"};
+item11[] = {"CHASE",2,4346,6.008307,477.914246,96.008354,527.914185,0.000000,"CHASE"};
 item12[] = {"No_Target_",4,218,-262.759033,362.908417,-172.758972,412.908386,0.000000,"No Target?"};
 item13[] = {"Time_Check",4,218,157.454773,480.988464,247.454773,530.988464,0.000000,"Time Check"};
 item14[] = {"valid",8,218,-218.704163,-32.107769,-128.704178,17.892250,0.000000,"valid"};
@@ -21,7 +21,7 @@ item16[] = {"attack_",4,218,-99.415375,567.563477,-9.415375,617.563477,0.000000,
 item17[] = {"DO_ATTACK",2,250,-33.635025,683.938293,56.365044,733.938293,0.000000,"DO ATTACK"};
 item18[] = {"target_out_of_range",4,218,10.785469,569.034912,100.785469,619.034912,0.000000,"target out of range?"};
 item19[] = {"Time_Check_Damag",4,218,-109.415527,783.871277,-19.415518,833.871277,0.000000,"Time Check" \n "Damage"};
-item20[] = {"Time_Check_Anima",4,4314,130.535172,784.882996,220.535126,834.882996,0.000000,"Time Check Animation"};
+item20[] = {"Time_Check_Anima",4,218,130.535172,784.882996,220.535126,834.882996,0.000000,"Time Check Animation"};
 item21[] = {"BLANK",2,250,19.624435,824.763733,109.624451,874.763733,0.000000,"BLANK"};
 link0[] = {0,1};
 link1[] = {1,2};
@@ -52,8 +52,8 @@ link25[] = {18,11};
 link26[] = {19,21};
 link27[] = {20,17};
 link28[] = {21,20};
-globals[] = {0.000000,0,0,0,0,640,480,1,47,6316128,1,-181.250153,270.665863,1034.967896,377.174713,582,582,1};
-window[] = {0,-1,-1,-32000,-32000,728,8,1030,0,1,600};
+globals[] = {0.000000,0,0,0,0,640,480,1,47,6316128,1,-595.031250,1359.989746,1301.435547,-460.170593,1405,1266,1};
+window[] = {0,-1,-1,-32000,-32000,1412,2,2370,0,1,1423};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -68,9 +68,7 @@ class FSM
        "_agentStartPos = getPosATL _agent;" \n
        "" \n
        "_target = ObjNull;" \n
-       "_lastTime = 0;" \n
-       "" \n
-       "//systemChat format[""Normal Zombie %1 spawned at %2"", _zombieAI, _zPos];"/*%FSM</STATEINIT""">*/;
+       "_lastTime = 0;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -93,8 +91,7 @@ class FSM
       name = "Wander";
       init = /*%FSM<STATEINIT""">*/"_newPos = [_agent, _agentStartPos] call fn_zombieWander;" \n
        "_prevTarget = _target;" \n
-       "_target = [_agent, _prevTarget] call fn_zombieFindTarget;" \n
-       "systemChat ""Agent wandering"";"/*%FSM</STATEINIT""">*/;
+       "_target = [_agent, _prevTarget] call fn_zombieFindTarget;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -165,8 +162,7 @@ class FSM
     class CHASE
     {
       name = "CHASE";
-      init = /*%FSM<STATEINIT""">*/"systemChat format[""%1 found target: %2"",_agent,  _target];" \n
-       "_target = [_agent] call fn_zombieFindTarget;"/*%FSM</STATEINIT""">*/;
+      init = /*%FSM<STATEINIT""">*/"_target = [_agent] call fn_zombieFindTarget;"/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {

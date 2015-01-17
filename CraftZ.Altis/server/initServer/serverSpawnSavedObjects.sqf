@@ -20,6 +20,7 @@ _currentObjects = _this select 0;
 		_gwh setVectorUp vectorUp _obj;
 		_obj setVariable ["_gwh", _gwh, true];
 		_obj = _gwh;
+		detach _gwh;
 	};
 
 	//clearItemCargoGlobal _obj;
@@ -32,26 +33,24 @@ _currentObjects = _this select 0;
 	for "_i" from 0 to ((count (_objectItems select 0)) - 1) do {
 		_objectItem = (_objectItems select 0) select _i;
 		_objectItemCount = (_objectItems select 1) select _i;
-		_gwh addItemCargoGlobal [_objectItem, _objectItemCount];
+		_obj addItemCargoGlobal [_objectItem, _objectItemCount];
 	};
 	for "_i" from 0 to ((count (_objectMags select 0)) - 1) do {
 		_objectMag = (_objectMags select 0) select _i;
 		_objectMagCount = (_objectMags select 1) select _i;
-		_gwh addMagazineCargoGlobal [_objectMag, _objectMagCount];
+		_obj addMagazineCargoGlobal [_objectMag, _objectMagCount];
 	};
 
 	for "_i" from 0 to ((count (_objectWeps select 0)) - 1) do {
 		_objectWep = (_objectWeps select 0) select _i;
 		_objectWepCount = (_objectWeps select 1) select _i;
-		_gwh addWeaponCargoGlobal [_objectWep, _objectWepCount];
+		_obj addWeaponCargoGlobal [_objectWep, _objectWepCount];
 	};
 
 	for "_i" from 0 to ((count (_objectBackpacks select 0)) - 1) do {
 		_objectBackpack = (_objectBackpacks select 0) select _i;
 		_objectBackpackCount = (_objectBackpacks select 1) select _i;
-		_gwh addItemCargoGlobal [_objectBackpack, _objectBackpackCount];
+		_obj addItemCargoGlobal [_objectBackpack, _objectBackpackCount];
 	};
-
-
 
 } forEach _currentObjects;
