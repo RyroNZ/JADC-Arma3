@@ -11,6 +11,7 @@ removeUniform player;
 removeHeadgear player;  
 removeGoggles player;  
 removeAllWeapons player; 
+player enableFatigue false;
 
 diag_log format["[onPlayerRespawn.sqf]: Player: %1 PlayerHasDied? %2", name player, str playerHasDied];
 if (playerHasDied) then {

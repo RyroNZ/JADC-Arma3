@@ -26,20 +26,20 @@ _currentAirCount = 0;
 
 
 while {(_currentLandCount <= VEHICLE_MAX_LAND) && (_currentSeaCount <= VEHICLE_MAX_SEA) && (_currentAirCount <= VEHICLE_MAX_AIR) } do {
-	if (_currentLandCount < VEHICLE_MAX_LAND) then 
+	if (_currentLandCount <= VEHICLE_MAX_LAND) then 
 		{
 			_veh = createVehicle [(VEHICLES_LAND call BIS_fnc_selectRandom), (getMarkerPos (VEHICLE_LAND_SPAWN call BIS_fnc_selectRandom)), [], 30, "NONE"];
 
 			_currentLandCount = _currentLandCount + 1;
 		};
 
-	if (_currentSeaCount < VEHICLE_MAX_SEA) then
+	if (_currentSeaCount <= VEHICLE_MAX_SEA) then
 		{
 			_veh = createVehicle [(VEHICLES_SEA call BIS_fnc_selectRandom), (getMarkerPos (VEHICLE_SEA_SPAWN call BIS_fnc_selectRandom)), [], 30, "NONE"];
 			_currentSeaCount = _currentSeaCount + 1;
 		};
 
-	if (_currentAirCount < VEHICLE_MAX_AIR) then
+	if (_currentAirCount <= VEHICLE_MAX_AIR) then
 		{
 			_veh = createVehicle [(VEHICLES_AIR call BIS_fnc_selectRandom), (getMarkerPos (VEHICLE_AIR_SPAWN call BIS_fnc_selectRandom)), [], 30, "NONE"];
 			_currentAirCount = _currentAirCount + 1;

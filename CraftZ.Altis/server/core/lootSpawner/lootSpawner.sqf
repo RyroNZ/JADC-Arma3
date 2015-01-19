@@ -31,19 +31,3 @@ while {true} do {
 	diag_log format["[%1 Items] current items", str (count currentItemPos_array)];
 	sleep LOOT_RESPAWN_TIME;
 };
-
-
-
-
-/* Things the loot spawner must do
-
-Spawn loot for player around a distance.. frequently check this
-Despawn loot after player has left that distance for a certain time diag_frame
-Only spawn loot in some locations // not every single location should have loot
-Once loot has spawned, stop checking that area for loot for specified time frame
-
-
-
-Get buildings nearby of player
-spawn loot for player
-attach despawner to loot

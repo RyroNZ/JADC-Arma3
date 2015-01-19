@@ -42,9 +42,11 @@ fn_save_tents = {
 			_tentWeps = getWeaponCargo _tentGWH;
 			_tentBackpacks = getBackpackCargo _tentGWH;
 		};
-		_tentComplete = [typeOf _x, getPos _x, getDir _x,  _tentItems, _tentMags, _tentWeps, _tentBackpacks];
-		[_profile, DB_CATAGORY_SAVED_OBJECTS, (format["%1_%2", DB_SUB_CATAGORY_TENTS, _count]), _tentComplete] call iniDB_write;
-		_count = _count + 1;
+		if (alive _x) then {
+			_tentComplete = [typeOf _x, getPos _x, getDir _x,  _tentItems, _tentMags, _tentWeps, _tentBackpacks];
+			[_profile, DB_CATAGORY_SAVED_OBJECTS, (format["%1_%2", DB_SUB_CATAGORY_TENTS, _count]), _tentComplete] call iniDB_write;
+			_count = _count + 1;
+		};
 	} forEach _currentTents;
 	
 };
@@ -54,7 +56,7 @@ fn_save_vehicles = {
 
 	_count = 0;
 	{
-		if (typeOf _x in VEHICLES_AIR || typeOf _x in VEHICLES_LAND || typeOf _x in VEHICLES_SEA) then {
+		if (typeOf _x in VEHICLES_AIR || typeOf _x in VEHICLES_LAND || typeOf _x in VEHICLES_SEA && alive _x) then {
 			_vehicleItems = [];
 			_vehicleMags = [];
 			_vehicleWeps = [];
