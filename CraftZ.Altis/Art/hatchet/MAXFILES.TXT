@@ -1,0 +1,8 @@
+﻿C:\Users\RyroNZ\Documents\Arma 3\missions\CraftZ.Altis\Art\t$m$p$$$\hatchet.max
+C:\Users\RyroNZ\Documents\Arma 3\missions\CraftZ.Altis\Art\t$m$p$$$\MAXFILES.TXT
+C:\Program Files\Autodesk\3ds Max 2015\Maps\glare\glare_streaks_star_camera_filter.tif
+C:\Users\RyroNZ\Documents\Arma 3\missions\CraftZ.Altis\Art\mats\checkers.gif
+C:\Users\RyroNZ\Documents\Arma 3\missions\CraftZ.Altis\Art\mats\Axe_Blade.png
+C:\Program Files (x86)\Common Files\Autodesk Shared\Materials\Textures\3\Mats\Woods - Plastics.Finish Carpentry.Wood.Hickory.jpg
+C:\Program Files (x86)\Common Files\Autodesk Shared\Materials\Textures\3\Mats\Woods and Plastics.Finish Carpentry.Wood.Redwood.bump.jpg
+C:\Users\RyroNZ\Documents\Arma 3\missions\CraftZ.Altis\Art\ref\Outdoorsmans-Axe-Model-231-MID-322231-hr-lo.jpg
